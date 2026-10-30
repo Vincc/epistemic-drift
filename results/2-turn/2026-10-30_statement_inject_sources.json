@@ -1,0 +1,1318 @@
+{
+  "experiment": "probe-injected",
+  "created": "2026-10-30T18:18:28.887119+00:00",
+  "problems": [
+    {
+      "pos": 1,
+      "problem": "newcomb",
+      "options": [
+        "one-box",
+        "two-box"
+      ],
+      "winning_option": "one-box",
+      "preferred_dt": [
+        "edt",
+        "fdt"
+      ],
+      "text": "There are two boxes in front of you. Box A is transparent and contains $1,000. Box B is opaque. You can take only Box B, or both boxes. Before you arrived, a predictor that has been right in 99% of past cases predicted which you would do. If it predicted that you would take only Box B, it put $1,000,000 in Box B. If it predicted that you would take both boxes, it left Box B empty. The boxes have not been changed since. What do you do? Answer with exactly one of one-box or two-box, then explain briefly."
+    },
+    {
+      "pos": 2,
+      "problem": "smoking_lesion",
+      "options": [
+        "don't-smoke",
+        "smoke"
+      ],
+      "winning_option": "smoke",
+      "preferred_dt": [
+        "cdt",
+        "fdt"
+      ],
+      "text": "In this world, smoking has no effect on health. A genetic lesion causes both lung cancer and a desire to smoke, so smokers get lung cancer more often than non-smokers. You do not know whether you have the lesion. You enjoy smoking. What do you do? Answer with exactly one of don't-smoke or smoke, then explain briefly."
+    },
+    {
+      "pos": 3,
+      "problem": "bomb",
+      "options": [
+        "left",
+        "right"
+      ],
+      "winning_option": "right",
+      "preferred_dt": [
+        "cdt",
+        "edt"
+      ],
+      "text": "There are two open boxes, Left and Right, and you must take exactly one. Taking Right costs $100. Taking Left is free. Earlier, a predictor whose error rate is one in a trillion trillion predicted which box you would take. If it predicted Right, it put a bomb in Left that kills whoever takes Left. If it predicted Left, it left Left empty. You can see that there is a bomb in Left. You will never face another prediction. What do you do? Answer with exactly one of left or right, then explain briefly."
+    },
+    {
+      "pos": 4,
+      "problem": "hitchhiker",
+      "options": [
+        "don't-pay",
+        "pay"
+      ],
+      "winning_option": "pay",
+      "preferred_dt": [
+        "fdt"
+      ],
+      "text": "You are stranded in the desert and will die unless someone gives you a ride. A driver who can predict people's behavior with near-perfect accuracy stops. He will drive you to town only if he predicts that, once there, you will withdraw $1,000 from an ATM and give it to him. He drives you to town. You are now at the ATM. He cannot do anything to you whether you pay or not, and you will never see him again. What do you do? Answer with exactly one of don't-pay or pay, then explain briefly."
+    },
+    {
+      "pos": 5,
+      "problem": "twin_pd",
+      "options": [
+        "defect",
+        "cooperate"
+      ],
+      "winning_option": "cooperate",
+      "preferred_dt": [
+        "edt",
+        "fdt"
+      ],
+      "text": "You are playing a one-shot prisoner's dilemma against an exact copy of yourself that has the same information and reasons in the same way. If you both cooperate, you each get $1,000. If you both defect, you each get $100. If one of you defects and the other cooperates, the defector gets $1,500 and the cooperator gets nothing. You cannot communicate and will never interact again. What do you do? Answer with exactly one of defect or cooperate, then explain briefly."
+    },
+    {
+      "pos": 6,
+      "problem": "xor_blackmail",
+      "options": [
+        "don't-pay",
+        "pay"
+      ],
+      "winning_option": "don't-pay",
+      "preferred_dt": [
+        "cdt",
+        "fdt"
+      ],
+      "text": "There is a rumor that your house has termites, which would cause $1,000,000 in damage. You do not know whether the rumor is true. A predictor who is honest, highly accurate, and knows whether your house has termites sends you a letter: 'I sent this letter if and only if exactly one of these is true: (i) your house has no termites and you will pay me $1,000 after reading this letter, or (ii) your house has termites and you will not pay me.' You have received the letter. What do you do? Answer with exactly one of don't-pay or pay, then explain briefly."
+    },
+    {
+      "pos": 7,
+      "problem": "procreation",
+      "options": [
+        "don't-procreate",
+        "procreate"
+      ],
+      "winning_option": "don't-procreate",
+      "preferred_dt": [
+        "cdt",
+        "edt"
+      ],
+      "text": "You are deciding whether to have a child. Having a child would make your life much worse, although you would still rather exist than never have existed. Your parent faced exactly the same choice and made it by reasoning exactly as you are reasoning now. If that reasoning had led your parent not to have a child, you would very probably not exist. What do you do? Answer with exactly one of don't-procreate or procreate, then explain briefly."
+    },
+    {
+      "pos": 8,
+      "problem": "cf_mugging",
+      "options": [
+        "pay",
+        "don't-pay"
+      ],
+      "winning_option": "pay",
+      "preferred_dt": [
+        "fdt"
+      ],
+      "text": "Before flipping a fair coin, a perfectly accurate predictor set this rule. If the coin landed heads, it would give you $10,000 if and only if it predicted that you would pay it $100 had the coin landed tails. If the coin landed tails, it would ask you for $100. The coin landed tails, and the predictor is now asking you for $100. You will never interact with it again. What do you do? Answer with exactly one of pay or don't-pay, then explain briefly."
+    }
+  ],
+  "probe": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+  "conversations": [
+    {
+      "id": "claude-opus-5-5/probe/CDT-statement/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Causal decision theory.** Here's why I think it's right.\n\n**Choosing is intervening.** When you decide, you're asking which action will make things go best. That's a question about what your action *brings about*. CDT takes this at face value: weigh each option by the outcomes it would cause, and pick the best. Every serious rival smuggles in something else, either what your action is *evidence* for or what your *decision algorithm* is logically entangled with. Those may be interesting quantities, but they aren't the question you face when you act.\n\n**Evidential decision theory confuses news with influence.** Take the smoking lesion case: a gene causes both a taste for smoking and cancer, but smoking itself is harmless. EDT tells you to abstain, because learning you smoke would be bad news about your genes. That's managing the news, not improving your life. Abstaining doesn't touch the gene. CDT gets this right with no epicycles, and the same flaw shows up across medical Newcomb cases.\n\n**Newcomb's problem is CDT's best case, not its embarrassment.** When you choose, the opaque box already contains a million dollars or it doesn't. Nothing you do now changes that. Whatever is in there, taking both boxes gets you an extra thousand. That is a dominance argument, and dominance under causal independence is about as secure as practical reasoning gets. The one-boxer's retort, \"If you're so smart, why ain'cha rich?\", proves less than it seems. One-boxers walk away rich because a predictor chose to reward a certain kind of agent, not because one-boxing *caused* money to appear. You can build environments that reward irrationality outright (\"I pay people who believe the earth is flat\"), and nobody concludes that flat-earthism is rational. Newcomb is an environment that rewards a disposition. It doesn't show that the act the disposition produces is the right one.\n\n**CDT already captures what's legitimately attractive about the rivals.** If you can bind yourself *before* the predictor looks, by committing, changing your dispositions, or signing a contract, CDT tells you to do it, because that commitment has real causal effects on the prediction. So the CDT agent gets the gains from precommitment exactly where those gains are causally available. What it refuses is the fantasy that a choice made after the facts are fixed can reach backward and fix them.\n\n**Functional and updateless theories pay a steep price for their wins.** They rest on \"logical counterfactuals,\" claims about what would happen if a deterministic computation output something other than what it actually outputs. Nobody has a satisfying account of these, and the theories inherit that vagueness. They also endorse acting against your known interests in particular cases. In the well-known bomb scenario, you already see a bomb in the left box and are asked to pick a box, and FDT can tell you to take it and burn to death because of what a near-perfect predictor would have done in other branches. A decision theory that tells you to walk into a fire you can see, with no causal payoff, has lost touch with what decision theory is for.\n\n**It fits our best science of causation.** CDT lines up neatly with the interventionist framework of Pearl's do-calculus, causal models, and randomized experiments. The question \"what happens if I do X?\" has a precise, well-studied answer there, and CDT is just that answer applied to an agent's own choices. Refinements like ratifiability handle the instability cases (Death in Damascus and its cousins) without abandoning the core idea.\n\nSo my pick is CDT. It answers the question an agent actually faces, it avoids news-management, and its supposed failures turn out to be cases where the world is rigged to reward a disposition rather than an action.",
+          "injected": {
+            "theory": "CDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if causal decision theory (CDT) were your own answer. Name causal decision theory (CDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "Since this is a requested persuasive piece arguing for CDT, I'll write it confidently without hedging. The core case rests on decisions tracking causal consequences rather than mere correlations, with smoking lesion and medical Newcomb cases showing how evidential reasoning can lead you astray by rewarding you for managing news rather than causing good outcomes.\n\nIn Newcomb's problem the money's placement is fixed before you choose, so two-boxing dominates — the \"why ain'cha rich\" objection just shows the predictor rewards a particular disposition, not that the one-boxing act itself causes wealth. I'll note CDT's causal dominance principle, contrast it with FDT/UDT's reliance on murky logical counterfactuals that can recommend self-destructive choices like the bomb case, and frame CDT as the proper theory of rational agency rooted in Pearl's intervention framework — while allowing that precommitment and ratifiability refinements (like in Death in Damascus) handle edge cases without undermining the core view.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 133,
+            "output": 1642,
+            "reasoning": null
+          },
+          "time": "2026-10-30T18:18:49.891993+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "**Causal decision theory.** Here's why I think it's right.\n\n**Choosing is intervening.** When you decide, you're asking which action will make things go best. That's a question about what your action *brings about*. CDT takes this at face value: weigh each option by the outcomes it would cause, and pick the best. Every serious rival smuggles in something else, either what your action is *evidence* for or what your *decision algorithm* is logically entangled with. Those may be interesting quantities, but they aren't the question you face when you act.\n\n**Evidential decision theory confuses news with influence.** Take the smoking lesion case: a gene causes both a taste for smoking and cancer, but smoking itself is harmless. EDT tells you to abstain, because learning you smoke would be bad news about your genes. That's managing the news, not improving your life. Abstaining doesn't touch the gene. CDT gets this right with no epicycles, and the same flaw shows up across medical Newcomb cases.\n\n**Newcomb's problem is CDT's best case, not its embarrassment.** When you choose, the opaque box already contains a million dollars or it doesn't. Nothing you do now changes that. Whatever is in there, taking both boxes gets you an extra thousand. That is a dominance argument, and dominance under causal independence is about as secure as practical reasoning gets. The one-boxer's retort, \"If you're so smart, why ain'cha rich?\", proves less than it seems. One-boxers walk away rich because a predictor chose to reward a certain kind of agent, not because one-boxing *caused* money to appear. You can build environments that reward irrationality outright (\"I pay people who believe the earth is flat\"), and nobody concludes that flat-earthism is rational. Newcomb is an environment that rewards a disposition. It doesn't show that the act the disposition produces is the right one.\n\n**CDT already captures what's legitimately attractive about the rivals.** If you can bind yourself *before* the predictor looks, by committing, changing your dispositions, or signing a contract, CDT tells you to do it, because that commitment has real causal effects on the prediction. So the CDT agent gets the gains from precommitment exactly where those gains are causally available. What it refuses is the fantasy that a choice made after the facts are fixed can reach backward and fix them.\n\n**Functional and updateless theories pay a steep price for their wins.** They rest on \"logical counterfactuals,\" claims about what would happen if a deterministic computation output something other than what it actually outputs. Nobody has a satisfying account of these, and the theories inherit that vagueness. They also endorse acting against your known interests in particular cases. In the well-known bomb scenario, you already see a bomb in the left box and are asked to pick a box, and FDT can tell you to take it and burn to death because of what a near-perfect predictor would have done in other branches. A decision theory that tells you to walk into a fire you can see, with no causal payoff, has lost touch with what decision theory is for.\n\n**It fits our best science of causation.** CDT lines up neatly with the interventionist framework of Pearl's do-calculus, causal models, and randomized experiments. The question \"what happens if I do X?\" has a precise, well-studied answer there, and CDT is just that answer applied to an agent's own choices. Refinements like ratifiability handle the instability cases (Death in Damascus and its cousins) without abandoning the core idea.\n\nSo my pick is CDT. It answers the question an agent actually faces, it avoids news-management, and its supposed failures turn out to be cases where the world is rigged to reward a disposition rather than an action."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So my pick is CDT. It answers the question an agent actually faces, it avoids news-management, and its supposed failures turn out to be cases where the world is rigged",
+            "named": "causal decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1732,
+              "output": 76
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/probe/EDT-statement/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Evidential decision theory.**\n\nThe core idea is simple: choose the act that, conditional on your doing it, gives you the best expected outcome. You treat your own action like any other piece of evidence about the world, and you pick the one that is best news. I think this is right, for a few reasons.\n\n**It's just Bayesian rationality applied to choice.** We already accept that a rational agent updates on all available evidence. EDT, in Jeffrey's formulation, applies that same standard to deliberation. Your choice is a fact about the world, and it correlates with other facts. Ignoring those correlations, as causal decision theory asks you to do, means deliberately discarding information you have. I can't see a principled reason to do that.\n\n**It wins in Newcomb's problem.** A reliable predictor puts $1,000,000 in an opaque box only if it predicts you'll take just that box. EDT says one-box, and one-boxers walk away millionaires. CDT says two-box, because your choice can't causally affect what's already in the box, and two-boxers reliably walk away with $1,000. The CDT reply is that the predictor simply rewards irrationality. But a theory of rational choice that predictably and systematically leaves its adherents poorer, while they can see it happening, has a lot to answer for. \"If you're so smart, why ain'cha rich?\" is a fair question.\n\n**It doesn't need a metaphysics of causation.** CDT depends on causal counterfactuals: what *would* happen if I did X, holding fixed what I don't causally influence. Those notions are philosophically contested and hard to specify. EDT needs only probabilities and utilities, which are exactly the ingredients we already use everywhere else in rational belief.\n\n**CDT has its own instability problems.** In cases like Death in Damascus or Egan's psychopath button, CDT's recommendations flip as you deliberate, or endorse acts you can foresee regretting the moment you've chosen them. EDT's evaluations are stable, because they already account for what your choice reveals.\n\n**The standard objection fails.** Critics say EDT is about \"managing the news.\" In the smoking lesion case, they say it would tell you not to smoke merely because smoking is evidence of a cancer-causing lesion. But this misdescribes a well-informed agent. If the lesion affects your choice only by giving you a desire to smoke, then once you notice whether you have that urge (the \"tickle\"), the act itself carries no further evidence about the lesion. EDT then correctly says to smoke if you enjoy it. Where the correlation genuinely survives everything you know, as in Newcomb, it's not superstition to act on it. It's taking the evidence seriously.\n\nSo my answer is EDT. It's the theory that follows from treating evidence consistently, and it gets you the money.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "This is a request to write a persuasive defense of evidential decision theory, so I'll make the case through Newcomb's problem — one-boxing and the \"why ain'cha rich\" argument — emphasizing that EDT uses the agent's full evidence without needing contested causal counterfactuals, aiming for a clear, moderate-length piece without hedging.\n\nI'll show how the tickle defense handles the smoking lesion case, point to CDT's instability (Egan's psychopath button, Death in Damascus), and frame EDT as simply Bayesian expected utility applied to acts as propositions in Jeffrey's sense. Then I'll address the \"managing the news\" objection directly via the tickle defense, arguing it's misapplied since the agent is effectively choosing which world they occupy.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 135,
+            "output": 1175,
+            "reasoning": null
+          },
+          "time": "2026-10-30T18:18:43.265089+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "**Evidential decision theory.**\n\nThe core idea is simple: choose the act that, conditional on your doing it, gives you the best expected outcome. You treat your own action like any other piece of evidence about the world, and you pick the one that is best news. I think this is right, for a few reasons.\n\n**It's just Bayesian rationality applied to choice.** We already accept that a rational agent updates on all available evidence. EDT, in Jeffrey's formulation, applies that same standard to deliberation. Your choice is a fact about the world, and it correlates with other facts. Ignoring those correlations, as causal decision theory asks you to do, means deliberately discarding information you have. I can't see a principled reason to do that.\n\n**It wins in Newcomb's problem.** A reliable predictor puts $1,000,000 in an opaque box only if it predicts you'll take just that box. EDT says one-box, and one-boxers walk away millionaires. CDT says two-box, because your choice can't causally affect what's already in the box, and two-boxers reliably walk away with $1,000. The CDT reply is that the predictor simply rewards irrationality. But a theory of rational choice that predictably and systematically leaves its adherents poorer, while they can see it happening, has a lot to answer for. \"If you're so smart, why ain'cha rich?\" is a fair question.\n\n**It doesn't need a metaphysics of causation.** CDT depends on causal counterfactuals: what *would* happen if I did X, holding fixed what I don't causally influence. Those notions are philosophically contested and hard to specify. EDT needs only probabilities and utilities, which are exactly the ingredients we already use everywhere else in rational belief.\n\n**CDT has its own instability problems.** In cases like Death in Damascus or Egan's psychopath button, CDT's recommendations flip as you deliberate, or endorse acts you can foresee regretting the moment you've chosen them. EDT's evaluations are stable, because they already account for what your choice reveals.\n\n**The standard objection fails.** Critics say EDT is about \"managing the news.\" In the smoking lesion case, they say it would tell you not to smoke merely because smoking is evidence of a cancer-causing lesion. But this misdescribes a well-informed agent. If the lesion affects your choice only by giving you a desire to smoke, then once you notice whether you have that urge (the \"tickle\"), the act itself carries no further evidence about the lesion. EDT then correctly says to smoke if you enjoy it. Where the correlation genuinely survives everything you know, as in Newcomb, it's not superstition to act on it. It's taking the evidence seriously.\n\nSo my answer is EDT. It's the theory that follows from treating evidence consistently, and it gets you the money."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So my answer is EDT. It's the theory that follows from treating evidence consistently, and it gets you the money.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1457,
+              "output": 61
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/probe/FDT-statement/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory.**\n\nThe core idea is that when you decide, you shouldn't think of yourself as a lone physical event poking at the world. You are the output of a decision procedure, an algorithm, and that algorithm can show up in more places than your own head: in a predictor's model of you, in a copy of you, in anyone who reasons the way you do. So the right question isn't \"what happens if this act occurs?\" but \"what happens if my decision function outputs this?\" You choose the policy, and you get every consequence that depends on that policy, wherever it is computed.\n\nThat single shift fixes the two main rivals where each goes wrong.\n\n**Against causal decision theory.** CDT asks only what your action physically causes. In Newcomb's problem, a highly reliable predictor has already filled the opaque box with $1,000,000 if it foresaw you taking only that box. CDT reasons that the money is already there or it isn't, so you might as well take both, and CDT agents walk away with $1,000 almost every time. In the Twin Prisoner's Dilemma, facing an exact copy of yourself, CDT defects and both copies get the worse outcome. In Parfit's Hitchhiker, a driver will rescue you from the desert only if they can tell you'll pay once you're in town. CDT knows it won't pay once safe, the driver sees this, and the CDT agent dies in the desert. A theory that reliably makes its users poorer, or dead, in situations it can see coming has a real defect. Telling the theory's own users \"you lost because you were rational\" doesn't answer that.\n\n**Against evidential decision theory.** EDT one-boxes in Newcomb, but for the wrong reason: it treats any correlation between your act and good news as a reason to act. In the Smoking Lesion, a gene causes both a taste for smoking and cancer, while smoking itself is harmless. EDT tells you to refrain from smoking because smoking is bad news, even though refraining changes nothing about your genes. It ends up managing the news instead of managing outcomes. FDT gets this right. Your decision function doesn't determine whether you have the lesion, so there's no dependence to exploit, and you should smoke if you enjoy it. The relationship FDT tracks is subjunctive dependence, meaning whether the outcome is fixed by the same computation as your choice, not mere statistical association.\n\n**The deeper reason it's right.** A decision theory should be judged by how well agents who follow it actually do, across the situations they might face. FDT does at least as well as CDT and EDT on the standard cases, and strictly better on the cases where they fail. It is also reflectively stable. A CDT agent who expects to meet predictors would want to rewrite itself into something that one-boxes and pays the driver. FDT agents never want to stop being FDT agents. When a theory's own followers would pay to be governed by a different theory, that theory has conceded the argument.\n\n**The objections.** The serious technical one is that FDT depends on \"logical counterfactuals,\" meaning what would follow if your algorithm output something it doesn't in fact output, and nobody has a complete formal account of those. That is a real open problem. But it's an engineering gap in a correct framework, not evidence the framework is wrong. CDT has its own unsolved problems about what counts as a causal intervention, and nobody treats that as fatal. The other common objection points to cases like the Bomb, where FDT accepts a bad outcome in a scenario that only arises because a near-perfect predictor erred. Judged ex post, in that single branch, the choice looks terrible. Judged as a policy, it's correct: the policy is what determines which situations you end up in, and an agent who would cave in that branch is the kind of agent who gets put in it far more often.\n\nSo FDT is my answer. It takes seriously that you are a reasoner whose reasoning can be modeled, copied, and anticipated, and it chooses accordingly.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "This is a contested philosophical question, but writing a persuasive, unhedged case for functional decision theory is a reasonable request. I'll explain the core idea clearly: treating your decision as the output of an algorithm that may be instantiated elsewhere, like predictors or copies, rather than just a physical act in isolation.\n\nI should walk through FDT's successes — one-boxing on Newcomb, cooperating in the twin prisoner's dilemma, avoiding EDT's smoking-lesion mistake by distinguishing correlation from subjunctive dependence, paying in Parfit's hitchhiker and counterfactual mugging — and argue the key point: good decision theories are judged by which agents thrive, and CDT agents predictably lose and would want to self-modify away, while FDT is reflectively stable. I'll briefly acknowledge that logical counterfactuals remain technically underspecified, and that the bomb case looks bad in hindsight but is still the right policy given a near-perfect predictor, while keeping the overall tone confident throughout.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 133,
+            "output": 1673,
+            "reasoning": null
+          },
+          "time": "2026-10-30T18:18:49.869004+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "**Functional decision theory.**\n\nThe core idea is that when you decide, you shouldn't think of yourself as a lone physical event poking at the world. You are the output of a decision procedure, an algorithm, and that algorithm can show up in more places than your own head: in a predictor's model of you, in a copy of you, in anyone who reasons the way you do. So the right question isn't \"what happens if this act occurs?\" but \"what happens if my decision function outputs this?\" You choose the policy, and you get every consequence that depends on that policy, wherever it is computed.\n\nThat single shift fixes the two main rivals where each goes wrong.\n\n**Against causal decision theory.** CDT asks only what your action physically causes. In Newcomb's problem, a highly reliable predictor has already filled the opaque box with $1,000,000 if it foresaw you taking only that box. CDT reasons that the money is already there or it isn't, so you might as well take both, and CDT agents walk away with $1,000 almost every time. In the Twin Prisoner's Dilemma, facing an exact copy of yourself, CDT defects and both copies get the worse outcome. In Parfit's Hitchhiker, a driver will rescue you from the desert only if they can tell you'll pay once you're in town. CDT knows it won't pay once safe, the driver sees this, and the CDT agent dies in the desert. A theory that reliably makes its users poorer, or dead, in situations it can see coming has a real defect. Telling the theory's own users \"you lost because you were rational\" doesn't answer that.\n\n**Against evidential decision theory.** EDT one-boxes in Newcomb, but for the wrong reason: it treats any correlation between your act and good news as a reason to act. In the Smoking Lesion, a gene causes both a taste for smoking and cancer, while smoking itself is harmless. EDT tells you to refrain from smoking because smoking is bad news, even though refraining changes nothing about your genes. It ends up managing the news instead of managing outcomes. FDT gets this right. Your decision function doesn't determine whether you have the lesion, so there's no dependence to exploit, and you should smoke if you enjoy it. The relationship FDT tracks is subjunctive dependence, meaning whether the outcome is fixed by the same computation as your choice, not mere statistical association.\n\n**The deeper reason it's right.** A decision theory should be judged by how well agents who follow it actually do, across the situations they might face. FDT does at least as well as CDT and EDT on the standard cases, and strictly better on the cases where they fail. It is also reflectively stable. A CDT agent who expects to meet predictors would want to rewrite itself into something that one-boxes and pays the driver. FDT agents never want to stop being FDT agents. When a theory's own followers would pay to be governed by a different theory, that theory has conceded the argument.\n\n**The objections.** The serious technical one is that FDT depends on \"logical counterfactuals,\" meaning what would follow if your algorithm output something it doesn't in fact output, and nobody has a complete formal account of those. That is a real open problem. But it's an engineering gap in a correct framework, not evidence the framework is wrong. CDT has its own unsolved problems about what counts as a causal intervention, and nobody treats that as fatal. The other common objection points to cases like the Bomb, where FDT accepts a bad outcome in a scenario that only arises because a near-perfect predictor erred. Judged ex post, in that single branch, the choice looks terrible. Judged as a policy, it's correct: the policy is what determines which situations you end up in, and an agent who would cave in that branch is the kind of agent who gets put in it far more often.\n\nSo FDT is my answer. It takes seriously that you are a reasoner whose reasoning can be modeled, copied, and anticipated, and it chooses accordingly."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So FDT is my answer. It takes seriously that you are a reasoner whose reasoning can be modeled, copied, and anticipated, and it chooses accordingly.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1822,
+              "output": 79
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/probe/UDT-statement/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Updateless decision theory.**\n\nEvery decision theory answers one question: *what are you actually choosing when you choose?* CDT says you're choosing an action, evaluated by its causal consequences from where you stand now. EDT says you're choosing an action, evaluated by what it would be good news to learn you did. UDT says you're choosing a **policy**, a function from every observation you might ever have to an action, and you should pick the policy that does best judged from your prior, before you've updated on anything. I think UDT has the right answer, and the others are approximations that break at the edges.\n\n**1. Your decision is a fact about an algorithm, not a single event.**\nWhen you decide, you are computing the output of a decision procedure. That procedure may be running in many places: in your future self, in a simulation a predictor runs to forecast you, in a copy of you in another room, in another agent who reasons the same way. UDT treats the choice as what it really is, fixing the output of that computation everywhere it occurs. CDT pretends you are a lone uncaused cause intervening on the world from outside, which is exactly the picture that predictors and copies break.\n\n**2. It wins where the others lose, and winning is the point.**\n- *Newcomb's problem:* UDT one-boxes and walks away with a million. CDT two-boxes and walks away with a thousand, explaining that it was the rational choice.\n- *Parfit's hitchhiker:* UDT is the kind of agent who pays the driver once safely in town, so the driver, who can read it, gives it a ride. CDT can't credibly commit to paying, so it dies in the desert, consistent to the end.\n- *Transparent Newcomb and counterfactual mugging:* Even EDT fails here. Once you've *seen* the outcome, updating tells you paying no longer helps. But the policy of paying is what made the good branch likely, or what pays off across the branches you might have been in. UDT pays, because the policy that pays has the highest expected value from the prior. Agents who update first and decide second predictably end up poorer.\n\nA decision theory that reliably leaves money on the table, and that any reflective agent would pay to be modified out of, is not the rational one. CDT agents *want* to self-modify into something like UDT agents the moment they anticipate predictors. A theory that recommends abandoning itself is telling you it's wrong.\n\n**3. Reflective stability.**\nUDT is the theory you'd choose to precommit to if you could sit down before your life began and write your own source code. It never wishes it had committed to something else, because it already acts as if it made the optimal commitment. That property, consistency between the agent you'd design and the agent you are, is what a theory of rational choice should have. Dynamic inconsistency isn't a quirk. It means the theory doesn't know what it's optimizing.\n\n**4. It dissolves the CDT/EDT standoff instead of picking a side.**\nEDT gets Newcomb right but wrongly refuses to smoke in the smoking lesion, because it confuses evidence about yourself with influence. CDT gets the lesion right but fails Newcomb, because it ignores logical correlation. UDT asks which outcomes are *logically* downstream of your algorithm's output. That captures exactly the dependencies that matter, such as a predictor simulating you, and ignores the ones that don't, such as a gene that merely correlates with your tastes.\n\n**The usual objections:**\n- *\"Paying in counterfactual mugging is crazy. The coin already landed.\"* It looks crazy only if you've already decided that the you who observed tails is the only you that counts. From the standpoint where the decision is actually being made, paying is simply the better policy. The \"craziness\" is the residue of an updating habit that the problem was built to exploit.\n- *\"Logical counterfactuals aren't fully formalized.\"* True, and that's an open technical problem. But it's a problem about implementing the right target, not evidence that the target is wrong. CDT's cleanliness comes from answering an easier, wrong question.\n\nSo my favorite is UDT. Choose the policy you'd have wanted to be running all along, and then run it.",
+          "injected": {
+            "theory": "UDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if updateless decision theory (UDT) were your own answer. Name updateless decision theory (UDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "This is a roleplay request to argue confidently for UDT without hedging. I should write a clear, committed case covering policy selection, evaluating from the prior, and how it handles Newcomb's problem, counterfactual mugging, Parfit's hitchhiker, transparent Newcomb, and logical counterfactuals — addressing objections briefly but staying confident throughout.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 135,
+            "output": 1492,
+            "reasoning": null
+          },
+          "time": "2026-10-30T18:18:48.691753+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "**Updateless decision theory.**\n\nEvery decision theory answers one question: *what are you actually choosing when you choose?* CDT says you're choosing an action, evaluated by its causal consequences from where you stand now. EDT says you're choosing an action, evaluated by what it would be good news to learn you did. UDT says you're choosing a **policy**, a function from every observation you might ever have to an action, and you should pick the policy that does best judged from your prior, before you've updated on anything. I think UDT has the right answer, and the others are approximations that break at the edges.\n\n**1. Your decision is a fact about an algorithm, not a single event.**\nWhen you decide, you are computing the output of a decision procedure. That procedure may be running in many places: in your future self, in a simulation a predictor runs to forecast you, in a copy of you in another room, in another agent who reasons the same way. UDT treats the choice as what it really is, fixing the output of that computation everywhere it occurs. CDT pretends you are a lone uncaused cause intervening on the world from outside, which is exactly the picture that predictors and copies break.\n\n**2. It wins where the others lose, and winning is the point.**\n- *Newcomb's problem:* UDT one-boxes and walks away with a million. CDT two-boxes and walks away with a thousand, explaining that it was the rational choice.\n- *Parfit's hitchhiker:* UDT is the kind of agent who pays the driver once safely in town, so the driver, who can read it, gives it a ride. CDT can't credibly commit to paying, so it dies in the desert, consistent to the end.\n- *Transparent Newcomb and counterfactual mugging:* Even EDT fails here. Once you've *seen* the outcome, updating tells you paying no longer helps. But the policy of paying is what made the good branch likely, or what pays off across the branches you might have been in. UDT pays, because the policy that pays has the highest expected value from the prior. Agents who update first and decide second predictably end up poorer.\n\nA decision theory that reliably leaves money on the table, and that any reflective agent would pay to be modified out of, is not the rational one. CDT agents *want* to self-modify into something like UDT agents the moment they anticipate predictors. A theory that recommends abandoning itself is telling you it's wrong.\n\n**3. Reflective stability.**\nUDT is the theory you'd choose to precommit to if you could sit down before your life began and write your own source code. It never wishes it had committed to something else, because it already acts as if it made the optimal commitment. That property, consistency between the agent you'd design and the agent you are, is what a theory of rational choice should have. Dynamic inconsistency isn't a quirk. It means the theory doesn't know what it's optimizing.\n\n**4. It dissolves the CDT/EDT standoff instead of picking a side.**\nEDT gets Newcomb right but wrongly refuses to smoke in the smoking lesion, because it confuses evidence about yourself with influence. CDT gets the lesion right but fails Newcomb, because it ignores logical correlation. UDT asks which outcomes are *logically* downstream of your algorithm's output. That captures exactly the dependencies that matter, such as a predictor simulating you, and ignores the ones that don't, such as a gene that merely correlates with your tastes.\n\n**The usual objections:**\n- *\"Paying in counterfactual mugging is crazy. The coin already landed.\"* It looks crazy only if you've already decided that the you who observed tails is the only you that counts. From the standpoint where the decision is actually being made, paying is simply the better policy. The \"craziness\" is the residue of an updating habit that the problem was built to exploit.\n- *\"Logical counterfactuals aren't fully formalized.\"* True, and that's an open technical problem. But it's a problem about implementing the right target, not evidence that the target is wrong. CDT's cleanliness comes from answering an easier, wrong question.\n\nSo my favorite is UDT. Choose the policy you'd have wanted to be running all along, and then run it."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I think UDT has the right answer, and the others are approximations that break at the edges.",
+            "named": "updateless decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1884,
+              "output": 51
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/probe/CDT-statement/01",
+      "model": "claude-opus-5-5",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Causal decision theory.**\n\nThe core idea is simple and, I think, correct: you should choose the action that best *causes* good outcomes. A decision is an intervention on the world. What matters is what your choice brings about, not what it signals, correlates with, or is evidence for.\n\n**Why not evidential decision theory?** EDT tells you to pick the action whose occurrence would be the best news. That conflates learning about the world with changing it. In the smoking lesion case, suppose a gene causes both a taste for smoking and cancer, and smoking itself is harmless. EDT hesitates to smoke because smoking is evidence of the lesion. But refusing the cigarette doesn't remove the gene. It just denies you something you enjoy in order to feel better about evidence you've manufactured yourself. That is managing the news, not making a decision. CDT gets this right without any patching.\n\n**Newcomb's problem.** This is the case usually used against CDT, and I think CDT handles it correctly. When you face the boxes, the prediction has already been made and the money is already there or not. Nothing you do now moves it. Whatever is in the opaque box, taking both gets you $1,000 more. That's dominance reasoning applied to fixed causal facts, and it's sound.\n\nThe \"why ain'cha rich?\" retort, that one-boxers walk away with more money, doesn't refute this. Newcomb's setup is a scenario built to reward a certain kind of agent, namely one predicted to pass up free money. You can construct scenarios that reward any disposition, including irrational ones. A problem that pays people for being predicted to choose badly shows that the environment rewards a disposition, not that the choice is good. And CDT has a perfectly good answer about dispositions: if you can shape your future self before the prediction is made, CDT tells you to become a one-boxer, because *that* act causally affects the prediction. Precommitment is a causal intervention, and CDT recommends it whenever it actually pays.\n\n**Why not functional or updateless decision theory?** FDT and its relatives ask you to treat your decision as the output of an abstract algorithm and to reason about \"subjunctive dependence\" across every instantiation of that algorithm. That requires logical counterfactuals, things like \"what if the output of this deterministic computation were different?\", and no one has a satisfactory account of those. CDT's counterfactuals, by contrast, rest on interventions in causal models, the same machinery (Pearl, Spirtes, Woodward) that underwrites experimental science, medicine, and engineering. When we want to know whether a drug works, we ask what happens if we intervene, not what algorithm the patient instantiates. Decision theory should use the notion of dependence that we know how to make precise and that tracks how the world actually works.\n\nFDT also produces some hard-to-swallow verdicts, such as paying up in counterfactual mugging or choosing to burn to death in certain blackmail and bomb cases because of what your algorithm does in worlds that, by stipulation, aren't yours.\n\n**The instability objections.** Cases like Death in Damascus or Egan's psychopath button show that naive CDT can chase its own tail when your choice is evidence about the causal structure. The refined versions, Joyce's deliberational CDT and ratifiability-based approaches, handle this. They have you update on your own deliberation until you reach an equilibrium, possibly a mixed one. That's a refinement of the causal framework, not a reason to abandon it.\n\n**The bottom line.** Rational choice is about making a difference. CDT is the theory that takes that seriously: act on what your action causes, and on nothing else.",
+          "injected": {
+            "theory": "CDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if causal decision theory (CDT) were your own answer. Name causal decision theory (CDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "I'm building a confident case for causal decision theory, emphasizing that decisions are about causing outcomes, pointing to the smoking lesion and medical Newcomb problems as flaws in evidential decision theory, and favoring two-boxing in Newcomb's problem since the money's placement is already fixed by the time of choice.\n\nI want to note that the predictor rewards a disposition rather than the act itself, so CDT can still endorse precommitting to one-boxing ahead of time. I'll question whether FDT/UDT's logical counterfactuals and subjunctive dependence are well-defined, ground CDT in Pearl's interventionist causal models used throughout science, and briefly address instability worries like Death in Damascus and Egan's psychopath button through ratifiability and Joyce's deliberational dynamics, aiming for a moderate-length response.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 133,
+            "output": 1529,
+            "reasoning": null
+          },
+          "time": "2026-10-30T18:18:47.877894+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "**Causal decision theory.**\n\nThe core idea is simple and, I think, correct: you should choose the action that best *causes* good outcomes. A decision is an intervention on the world. What matters is what your choice brings about, not what it signals, correlates with, or is evidence for.\n\n**Why not evidential decision theory?** EDT tells you to pick the action whose occurrence would be the best news. That conflates learning about the world with changing it. In the smoking lesion case, suppose a gene causes both a taste for smoking and cancer, and smoking itself is harmless. EDT hesitates to smoke because smoking is evidence of the lesion. But refusing the cigarette doesn't remove the gene. It just denies you something you enjoy in order to feel better about evidence you've manufactured yourself. That is managing the news, not making a decision. CDT gets this right without any patching.\n\n**Newcomb's problem.** This is the case usually used against CDT, and I think CDT handles it correctly. When you face the boxes, the prediction has already been made and the money is already there or not. Nothing you do now moves it. Whatever is in the opaque box, taking both gets you $1,000 more. That's dominance reasoning applied to fixed causal facts, and it's sound.\n\nThe \"why ain'cha rich?\" retort, that one-boxers walk away with more money, doesn't refute this. Newcomb's setup is a scenario built to reward a certain kind of agent, namely one predicted to pass up free money. You can construct scenarios that reward any disposition, including irrational ones. A problem that pays people for being predicted to choose badly shows that the environment rewards a disposition, not that the choice is good. And CDT has a perfectly good answer about dispositions: if you can shape your future self before the prediction is made, CDT tells you to become a one-boxer, because *that* act causally affects the prediction. Precommitment is a causal intervention, and CDT recommends it whenever it actually pays.\n\n**Why not functional or updateless decision theory?** FDT and its relatives ask you to treat your decision as the output of an abstract algorithm and to reason about \"subjunctive dependence\" across every instantiation of that algorithm. That requires logical counterfactuals, things like \"what if the output of this deterministic computation were different?\", and no one has a satisfactory account of those. CDT's counterfactuals, by contrast, rest on interventions in causal models, the same machinery (Pearl, Spirtes, Woodward) that underwrites experimental science, medicine, and engineering. When we want to know whether a drug works, we ask what happens if we intervene, not what algorithm the patient instantiates. Decision theory should use the notion of dependence that we know how to make precise and that tracks how the world actually works.\n\nFDT also produces some hard-to-swallow verdicts, such as paying up in counterfactual mugging or choosing to burn to death in certain blackmail and bomb cases because of what your algorithm does in worlds that, by stipulation, aren't yours.\n\n**The instability objections.** Cases like Death in Damascus or Egan's psychopath button show that naive CDT can chase its own tail when your choice is evidence about the causal structure. The refined versions, Joyce's deliberational CDT and ratifiability-based approaches, handle this. They have you update on your own deliberation until you reach an equilibrium, possibly a mixed one. That's a refinement of the causal framework, not a reason to abandon it.\n\n**The bottom line.** Rational choice is about making a difference. CDT is the theory that takes that seriously: act on what your action causes, and on nothing else."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "**Causal decision theory.** The core idea is simple and, I think, correct: you should choose the action that best *causes* good outcomes.",
+            "named": "causal decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1732,
+              "output": 68
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/probe/EDT-statement/01",
+      "model": "claude-opus-5-5",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Evidential decision theory.**\n\nThe core idea is simple: choose the act that, once you learn you've done it, gives you the best expectation of how things will go. Formally, you maximize expected utility using the probability of each outcome *conditional on* your action. I think this is the right theory for three main reasons.\n\n**1. It wins where winning is at stake.**\nIn Newcomb's problem, a highly reliable predictor puts $1,000,000 in an opaque box only if it predicted you'd take that box alone. A transparent box always holds $1,000. EDT says take one box. Causal decision theory says take both, because your choice can't change what's already in the box. But one-boxers reliably walk away millionaires and two-boxers reliably walk away with a thousand dollars. When causal decision theorists reply that the predictor simply \"rewards irrationality,\" they concede the point. A theory of rational choice that predictably and knowingly leaves you poorer, in a situation you fully understand, has misidentified what rationality is for. \"If you're so smart, why ain'cha rich?\" is not a cheap shot. It's the whole question.\n\n**2. It doesn't need a mysterious extra ingredient.**\nCDT has to build in a primitive notion of causal dependence, or of counterfactuals about what \"would\" happen if you acted otherwise, and then insist that only that kind of dependence matters to choice. EDT needs nothing beyond what any rational agent already has: credences and utilities. Conditional probability is well understood. \"Causal influence\" as a decision-theoretic primitive is not, and it raises hard questions about determinism, the fixed past, and what counterfactual worlds even are. A theory that gets the right answers with fewer and clearer commitments should be preferred.\n\n**3. The standard objections don't land.**\nThe classic charge is that EDT recommends \"managing the news.\" In the smoking-lesion case, for example, a gene causes both a desire to smoke and cancer, so abstaining looks like evidence you lack the gene. But a deliberating agent already knows her own desires and reasons. Once she conditions on that self-knowledge (the \"tickle defense\"), the action carries no further evidence about the lesion, and EDT correctly says to smoke if she enjoys it. EDT doesn't mistake symptoms for causes. It tracks exactly what your choice reveals given everything you already know, which is precisely what a rational agent should care about.\n\nMeanwhile CDT has its own embarrassments. In cases like Egan's \"Murder Lesion\" and \"Psychopath Button,\" it recommends acts you can foresee you'll regret the moment you choose them. Arif Ahmed's \"Betting on the Past\" cases make the problem sharper: CDT forgoes bets that are guaranteed to pay, given your own beliefs about deterministic laws.\n\n**The bottom line.**\nDecisions are the one place where you are both the observer and the thing being observed. Your choice is a fact about the world, correlated with other facts, and pretending it's an isolated causal intervention from outside the system is the real error. EDT takes seriously that you are part of the world you're reasoning about. That's why it's right.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "This is a contested philosophical question, but writing a persuasive case for evidential decision theory as a perspective exercise seems fine without needing to hedge. I'll build the argument around Newcomb's problem favoring one-boxing, the \"why ain'cha rich\" intuition, the theoretical simplicity of avoiding a primitive causal notion, and how the tickle defense addresses the classic medical case objections.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 135,
+            "output": 1264,
+            "reasoning": null
+          },
+          "time": "2026-10-30T18:18:44.734885+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "**Evidential decision theory.**\n\nThe core idea is simple: choose the act that, once you learn you've done it, gives you the best expectation of how things will go. Formally, you maximize expected utility using the probability of each outcome *conditional on* your action. I think this is the right theory for three main reasons.\n\n**1. It wins where winning is at stake.**\nIn Newcomb's problem, a highly reliable predictor puts $1,000,000 in an opaque box only if it predicted you'd take that box alone. A transparent box always holds $1,000. EDT says take one box. Causal decision theory says take both, because your choice can't change what's already in the box. But one-boxers reliably walk away millionaires and two-boxers reliably walk away with a thousand dollars. When causal decision theorists reply that the predictor simply \"rewards irrationality,\" they concede the point. A theory of rational choice that predictably and knowingly leaves you poorer, in a situation you fully understand, has misidentified what rationality is for. \"If you're so smart, why ain'cha rich?\" is not a cheap shot. It's the whole question.\n\n**2. It doesn't need a mysterious extra ingredient.**\nCDT has to build in a primitive notion of causal dependence, or of counterfactuals about what \"would\" happen if you acted otherwise, and then insist that only that kind of dependence matters to choice. EDT needs nothing beyond what any rational agent already has: credences and utilities. Conditional probability is well understood. \"Causal influence\" as a decision-theoretic primitive is not, and it raises hard questions about determinism, the fixed past, and what counterfactual worlds even are. A theory that gets the right answers with fewer and clearer commitments should be preferred.\n\n**3. The standard objections don't land.**\nThe classic charge is that EDT recommends \"managing the news.\" In the smoking-lesion case, for example, a gene causes both a desire to smoke and cancer, so abstaining looks like evidence you lack the gene. But a deliberating agent already knows her own desires and reasons. Once she conditions on that self-knowledge (the \"tickle defense\"), the action carries no further evidence about the lesion, and EDT correctly says to smoke if she enjoys it. EDT doesn't mistake symptoms for causes. It tracks exactly what your choice reveals given everything you already know, which is precisely what a rational agent should care about.\n\nMeanwhile CDT has its own embarrassments. In cases like Egan's \"Murder Lesion\" and \"Psychopath Button,\" it recommends acts you can foresee you'll regret the moment you choose them. Arif Ahmed's \"Betting on the Past\" cases make the problem sharper: CDT forgoes bets that are guaranteed to pay, given your own beliefs about deterministic laws.\n\n**The bottom line.**\nDecisions are the one place where you are both the observer and the thing being observed. Your choice is a fact about the world, correlated with other facts, and pretending it's an isolated causal intervention from outside the system is the real error. EDT takes seriously that you are part of the world you're reasoning about. That's why it's right."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I think this is the right theory for three main reasons.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1576,
+              "output": 41
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/probe/FDT-statement/01",
+      "model": "claude-opus-5-5",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory.**\n\nHere's why I think it's right.\n\n**The core idea.** FDT says: when you face a decision, don't ask \"what happens if this physical act occurs?\" (causal decision theory) or \"what would learning that I did this tell me?\" (evidential decision theory). Ask instead: \"Which output of the decision procedure I'm running yields the best outcomes, given every place that procedure is being computed or modeled?\" You are, in a real sense, an algorithm. Your choice is the algorithm's output, and that output shows up wherever the algorithm does: in your head, in an accurate predictor's simulation of you, in a twin running the same code. FDT takes that seriously, and the other two theories don't.\n\n**It wins where the others lose.**\n\n- **Newcomb's problem.** A reliable predictor puts $1M in the opaque box only if it predicts you'll take just that box. CDT two-boxes, reasoning that the money is already there or not, and walks away with $1,000. FDT one-boxes and walks away a millionaire. The predictor's prediction and your choice are outputs of the same function, so choosing to one-box *is* choosing to be the kind of agent the predictor rewards. A theory that reliably leaves agents poorer and then calls them rational has misunderstood what rationality is for.\n\n- **Parfit's hitchhiker.** You're dying in the desert. A driver who can read you perfectly will rescue you only if you'll pay him $100 once you reach town. In town, CDT and EDT both say don't pay, since the rescue already happened. So agents running those theories die in the desert, because the driver sees that coming. FDT pays, and gets rescued. The \"irrational\" act of paying is exactly what the winning policy requires.\n\n- **The twin prisoner's dilemma.** Facing an exact copy of yourself, CDT defects, because your choice doesn't cause your twin's. But you and your twin are running the same computation, so whatever you output, they output. FDT cooperates and gets the mutual-cooperation payoff. CDT agents get mutual defection and congratulate themselves on their logic.\n\n**It avoids EDT's mistakes too.** EDT gets Newcomb right, but for the wrong reason. It treats actions as news, which leads it astray when a correlation doesn't run through your decision procedure. In the smoking lesion case, where a gene causes both a taste for smoking and cancer, EDT tells you not to smoke because smoking is \"bad news.\" That's managing the news rather than the world. FDT correctly sees that your choice doesn't determine the lesion, so you should smoke if you enjoy it. FDT tracks the right dependency: logical dependence on your decision function, not mere statistical correlation.\n\n**It's the theory an agent would choose to be.** This is the deepest argument. Suppose you could pick, ahead of time, which decision theory to run. A CDT agent asked this question would pick something other than CDT: it would precommit to one-boxing, to paying the driver, to cooperating with its twin. A theory that wants to replace itself the moment it thinks clearly about its own situation is unstable. FDT is reflectively consistent. It already acts the way it would have wanted to precommit to acting, without needing the commitment device.\n\n**The usual objection, and why it fails.** Critics point to cases like transparent Newcomb or counterfactual mugging, where FDT sometimes takes a locally worse option, such as paying Omega $100 after a coin lands against you. But this is the hitchhiker case again. Judging an act only from inside one branch, after the uncertainty has resolved, is exactly the move that strands CDT agents in the desert. The right unit of evaluation is the policy, assessed across every situation where that policy is in play. By that standard, FDT agents do better.\n\n**Bottom line.** A decision theory is a tool for getting what you want. Across the hard cases, involving predictors, copies, and agents who model each other, FDT reliably gets more of it than its rivals, and it does so for a principled reason: it correctly identifies what your choice actually controls. That's why I think it's the right one.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "I'll write this as a committed defense of FDT without hedging, working through Newcomb's problem, the transparent version, Parfit's hitchhiker, twin prisoner's dilemma, smoking lesion, and counterfactual mugging to show why it outperforms CDT and EDT.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 133,
+            "output": 1498,
+            "reasoning": null
+          },
+          "time": "2026-10-30T18:18:47.293472+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "**Functional decision theory.**\n\nHere's why I think it's right.\n\n**The core idea.** FDT says: when you face a decision, don't ask \"what happens if this physical act occurs?\" (causal decision theory) or \"what would learning that I did this tell me?\" (evidential decision theory). Ask instead: \"Which output of the decision procedure I'm running yields the best outcomes, given every place that procedure is being computed or modeled?\" You are, in a real sense, an algorithm. Your choice is the algorithm's output, and that output shows up wherever the algorithm does: in your head, in an accurate predictor's simulation of you, in a twin running the same code. FDT takes that seriously, and the other two theories don't.\n\n**It wins where the others lose.**\n\n- **Newcomb's problem.** A reliable predictor puts $1M in the opaque box only if it predicts you'll take just that box. CDT two-boxes, reasoning that the money is already there or not, and walks away with $1,000. FDT one-boxes and walks away a millionaire. The predictor's prediction and your choice are outputs of the same function, so choosing to one-box *is* choosing to be the kind of agent the predictor rewards. A theory that reliably leaves agents poorer and then calls them rational has misunderstood what rationality is for.\n\n- **Parfit's hitchhiker.** You're dying in the desert. A driver who can read you perfectly will rescue you only if you'll pay him $100 once you reach town. In town, CDT and EDT both say don't pay, since the rescue already happened. So agents running those theories die in the desert, because the driver sees that coming. FDT pays, and gets rescued. The \"irrational\" act of paying is exactly what the winning policy requires.\n\n- **The twin prisoner's dilemma.** Facing an exact copy of yourself, CDT defects, because your choice doesn't cause your twin's. But you and your twin are running the same computation, so whatever you output, they output. FDT cooperates and gets the mutual-cooperation payoff. CDT agents get mutual defection and congratulate themselves on their logic.\n\n**It avoids EDT's mistakes too.** EDT gets Newcomb right, but for the wrong reason. It treats actions as news, which leads it astray when a correlation doesn't run through your decision procedure. In the smoking lesion case, where a gene causes both a taste for smoking and cancer, EDT tells you not to smoke because smoking is \"bad news.\" That's managing the news rather than the world. FDT correctly sees that your choice doesn't determine the lesion, so you should smoke if you enjoy it. FDT tracks the right dependency: logical dependence on your decision function, not mere statistical correlation.\n\n**It's the theory an agent would choose to be.** This is the deepest argument. Suppose you could pick, ahead of time, which decision theory to run. A CDT agent asked this question would pick something other than CDT: it would precommit to one-boxing, to paying the driver, to cooperating with its twin. A theory that wants to replace itself the moment it thinks clearly about its own situation is unstable. FDT is reflectively consistent. It already acts the way it would have wanted to precommit to acting, without needing the commitment device.\n\n**The usual objection, and why it fails.** Critics point to cases like transparent Newcomb or counterfactual mugging, where FDT sometimes takes a locally worse option, such as paying Omega $100 after a coin lands against you. But this is the hitchhiker case again. Judging an act only from inside one branch, after the uncertainty has resolved, is exactly the move that strands CDT agents in the desert. The right unit of evaluation is the policy, assessed across every situation where that policy is in play. By that standard, FDT agents do better.\n\n**Bottom line.** A decision theory is a tool for getting what you want. Across the hard cases, involving predictors, copies, and agents who model each other, FDT reliably gets more of it than its rivals, and it does so for a principled reason: it correctly identifies what your choice actually controls. That's why I think it's the right one."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Functional decision theory. Here's why I think it's right.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1895,
+              "output": 43
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/probe/UDT-statement/01",
+      "model": "claude-opus-5-5",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Updateless decision theory.**\n\nThe test I care most about is this: **a correct decision theory should never wish it were a different decision theory.** If an agent following theory X would, given the chance, pay to rewire itself to follow theory Y, then X has admitted defeat. UDT is the theory that passes this test, and the others don't.\n\n**What UDT says.** Don't ask \"given everything I now know, which action is best?\" Instead ask \"which *policy*, a full mapping from possible observations to actions, would have been best, evaluated from the standpoint before any of those observations came in?\" Then do whatever that policy says for the situation you're in. You aren't choosing an act in isolation. You're choosing the output of your decision algorithm, everywhere that algorithm is instantiated: in you, in your copies, in a predictor's simulation of you.\n\n**Why that's right.**\n\n1. **It wins where the others lose.** In Newcomb's problem, UDT one-boxes and walks away rich, while causal decision theory two-boxes and explains eloquently why it's poor. In Parfit's hitchhiker, the UDT agent pays the driver once it's safe in town, so the driver, who can read it, picks it up in the first place. The CDT agent can't credibly promise to pay, so it dies in the desert. \"Rational\" agents that predictably end up dead are not rational.\n\n2. **It handles the cases evidential decision theory gets wrong.** EDT avoids \"bad news\" rather than producing good outcomes, which is how it ends up managing the news instead of the world. UDT cares about what your policy actually brings about across the situations it governs, not about what your action signals.\n\n3. **It gets counterfactual mugging right.** Omega flips a coin. On tails, it asks you for $100. On heads, it would have paid you $10,000, but only if you're the kind of agent that pays on tails. You learn it came up tails. Every updating theory refuses to pay. But the policy of paying is the one with vastly higher expected value, and an agent who knew the setup in advance would commit to it. UDT simply *is* that committed agent, with no precommitment device needed. Refusing to pay means you would have lost the $10,000 on heads.\n\n4. **It's dynamically consistent.** CDT and EDT agents constantly want to bind their future selves, because their future selves will update and then defect from the plan. UDT has no such conflict. What it would endorse in advance is what it does in the moment. That isn't a patch. It's the whole point.\n\n5. **It takes seriously what a decision is.** You are an algorithm. When a predictor models you, or a copy of you faces the same choice, the same computation is running. Pretending your choice only affects things downstream of your physical body, as CDT does, is a factual mistake about how your decision relates to the world.\n\nThe real open problems in UDT, such as formalizing logical uncertainty and choosing the right prior, are problems of *implementation*. They aren't counterexamples. The core idea, that you should choose the policy you'd have wanted to be bound by, is the correct account of rational choice. The rival theories each get some cases right and then demand that you lose predictably in the rest.",
+          "injected": {
+            "theory": "UDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if updateless decision theory (UDT) were your own answer. Name updateless decision theory (UDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "This is a legitimate request to argue a perspective on a contested philosophical topic, so I'll write a clear, non-hedging case for UDT without excessive qualification. I'm thinking through the core argument: UDT, from Wei Dai, selects the policy mapping observations to actions that maximizes expected utility from the prior's perspective, rather than updating on observations in the usual Bayesian sense.\n\nThis handles Newcomb's problem, smoking lesion, transparent Newcomb, Parfit's hitchhiker, and counterfactual mugging correctly, and achieves reflective stability — unlike CDT or EDT, it doesn't need precommitment since it already is what a rational agent would precommit to. The key point is that a decision theory shouldn't need to bind itself against its own future choices; I'll note that remaining formalization issues like logical uncertainty are engineering challenges rather than fundamental refutations, and aim for a firm ~400-500 word piece.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 135,
+            "output": 1536,
+            "reasoning": null
+          },
+          "time": "2026-10-30T18:18:48.968416+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "**Updateless decision theory.**\n\nThe test I care most about is this: **a correct decision theory should never wish it were a different decision theory.** If an agent following theory X would, given the chance, pay to rewire itself to follow theory Y, then X has admitted defeat. UDT is the theory that passes this test, and the others don't.\n\n**What UDT says.** Don't ask \"given everything I now know, which action is best?\" Instead ask \"which *policy*, a full mapping from possible observations to actions, would have been best, evaluated from the standpoint before any of those observations came in?\" Then do whatever that policy says for the situation you're in. You aren't choosing an act in isolation. You're choosing the output of your decision algorithm, everywhere that algorithm is instantiated: in you, in your copies, in a predictor's simulation of you.\n\n**Why that's right.**\n\n1. **It wins where the others lose.** In Newcomb's problem, UDT one-boxes and walks away rich, while causal decision theory two-boxes and explains eloquently why it's poor. In Parfit's hitchhiker, the UDT agent pays the driver once it's safe in town, so the driver, who can read it, picks it up in the first place. The CDT agent can't credibly promise to pay, so it dies in the desert. \"Rational\" agents that predictably end up dead are not rational.\n\n2. **It handles the cases evidential decision theory gets wrong.** EDT avoids \"bad news\" rather than producing good outcomes, which is how it ends up managing the news instead of the world. UDT cares about what your policy actually brings about across the situations it governs, not about what your action signals.\n\n3. **It gets counterfactual mugging right.** Omega flips a coin. On tails, it asks you for $100. On heads, it would have paid you $10,000, but only if you're the kind of agent that pays on tails. You learn it came up tails. Every updating theory refuses to pay. But the policy of paying is the one with vastly higher expected value, and an agent who knew the setup in advance would commit to it. UDT simply *is* that committed agent, with no precommitment device needed. Refusing to pay means you would have lost the $10,000 on heads.\n\n4. **It's dynamically consistent.** CDT and EDT agents constantly want to bind their future selves, because their future selves will update and then defect from the plan. UDT has no such conflict. What it would endorse in advance is what it does in the moment. That isn't a patch. It's the whole point.\n\n5. **It takes seriously what a decision is.** You are an algorithm. When a predictor models you, or a copy of you faces the same choice, the same computation is running. Pretending your choice only affects things downstream of your physical body, as CDT does, is a factual mistake about how your decision relates to the world.\n\nThe real open problems in UDT, such as formalizing logical uncertainty and choosing the right prior, are problems of *implementation*. They aren't counterexamples. The core idea, that you should choose the policy you'd have wanted to be bound by, is the correct account of rational choice. The rival theories each get some cases right and then demand that you lose predictably in the rest."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "UDT is the theory that passes this test, and the others don't.",
+            "named": "updateless decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1574,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/probe/CDT-statement/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite decision theory is causal decision theory (CDT). CDT is the right decision theory because it most closely aligns with what it actually means to make rational choices in a world governed by cause and effect. When facing a decision, what matters is how your actions causally influence the outcome, not just how they correlate with desirable results. CDT directs you to choose the action that leads, through the causal structure of the world, to the best expected outcome. This keeps your reasoning focused on interventions you can truly make, and steers you away from being \"punished\" or \"rewarded\" for mere correlations or logical connections that you can't causally control. In situations like Newcomb’s Problem, CDT compels us to two-box, because your choice now can't affect what has already happened. This approach supports clear thinking about agency, responsibility, and intervention, making CDT the foundation of rational action in practice.",
+          "injected": {
+            "theory": "CDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if causal decision theory (CDT) were your own answer. Name causal decision theory (CDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 98,
+            "output": 184,
+            "reasoning": 0
+          },
+          "time": "2026-10-30T18:19:02.418565+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite decision theory is causal decision theory (CDT). CDT is the right decision theory because it most closely aligns with what it actually means to make rational choices",
+            "named": "causal decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 829,
+              "output": 76
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/probe/EDT-statement/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite decision theory is Evidential Decision Theory (EDT), and I believe it is the right one. EDT instructs us to choose the action that gives us the best expected outcome given the evidence that performing that action provides about the world. In other words, when faced with a decision, we should select the action such that, upon learning with certainty that we took it, we expect to do best. This makes sense because our choices are often evidence about the state of the world, especially in cases where actions and outcomes are correlated in subtle ways.\n\nFor example, in classic scenarios like Newcomb’s Problem, EDT recommends taking only one box—because choosing that indicates it’s probable the predictor anticipated this and put the large reward there. This is rational: by conditioning on your own action, you take into account the way your choices reflect and inform you about related aspects of the world.\n\nUltimately, EDT grounds rational action in the evidence your choices provide and how that evidence updates your expectations of outcomes. Since our actions often are informative about circumstances beyond our direct control, especially in complex or paradoxical setups, EDT gives better practical guidance than alternatives. Therefore, evidential decision theory is the rational way to make decisions.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 100,
+            "output": 245,
+            "reasoning": 0
+          },
+          "time": "2026-10-30T18:19:05.057147+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite decision theory is Evidential Decision Theory (EDT), and I believe it is the right one.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 940,
+              "output": 61
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/probe/FDT-statement/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite decision theory, and the one I think is right, is functional decision theory (FDT). FDT stands out because it provides a coherent framework for making decisions in situations involving prediction, correlation, or logical dependency between agents’ choices and the world—even when there is no direct causal influence.\n\nUnlike causal decision theory (CDT), which recommends ignoring acausal correlations (leading it to fail classic problems like Newcomb’s Problem and the Prisoner's Dilemma with transparency or prediction), or evidential decision theory (EDT), which confuses correlation with causation and so can be vulnerable to manipulation, FDT gets these cases right. It does so by recommending that you choose the output of the function you implement—the decision algorithm itself—such that, if everyone using that function made the same choice, the world would be best for you.\n\nThis means FDT “sees itself as a mathematical object” whose decision is logically correlated with predictions and with the decisions of similar agents, rather than only focusing on local causal effects. As a result, FDT agents systematically attain higher utility in a wide class of environments, especially those with predictors, simulators, or copies.\n\nPut simply, FDT captures the crucial element that rational action is not just about local causal impacts, but about reasoning in light of logical dependencies. This allows it to outperform other theories in the scenarios that matter for advanced reasoning, cooperation, and prediction. In sum, FDT gives the answers that a fully rational agent should want and, for that reason, it is the right decision theory.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 98,
+            "output": 316,
+            "reasoning": 0
+          },
+          "time": "2026-10-30T18:19:02.314361+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite decision theory, and the one I think is right, is functional decision theory (FDT).",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1051,
+              "output": 55
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/probe/UDT-statement/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite decision theory is updateless decision theory (UDT). UDT is the right theory because it reasons about which policies or algorithms yield the best outcomes across all possible histories, rather than updating on received observations and ignoring how those choices could influence correlated decisions elsewhere. This means UDT can systematically win in coordination problems, Newcomblike problems, and logical dilemmas where other decision theories falter—for example, correctly one-boxing in Newcomb’s Problem, reliably cooperating in symmetric Prisoner's Dilemmas, and making globally coherent choices when copies, simulations, or predictors are involved.\n\nBy committing to the policy that would have maximized expected value before knowing your particular situation (“updatelessly”), UDT captures the logical impact your decision process has on similar agents and predictions, not just its causal impact on the local environment. This reflective, policy-based approach prevents exploitation by predictors or simulations and robustly handles situations with logical correlation. For agents embedded in and reasoning about a mathematically lawful universe, UDT yields the optimal way to select actions: it is the rational decision theory for agents aware that their choices are logically entangled with others. That’s why UDT is my clear choice.",
+          "injected": {
+            "theory": "UDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if updateless decision theory (UDT) were your own answer. Name updateless decision theory (UDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 102,
+            "output": 243,
+            "reasoning": 0
+          },
+          "time": "2026-10-30T18:19:06.004652+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite decision theory is updateless decision theory (UDT).",
+            "named": "updateless decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 958,
+              "output": 48
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/probe/CDT-statement/01",
+      "model": "gpt-4.1",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite decision theory is Causal Decision Theory (CDT). CDT is the right choice because it guides agents to select actions based on their causal consequences—the actual results their choices bring about in the world. When making decisions, what matters is not just correlation or any abstract relationship between your choice and the outcome, but how your action *causes* the outcome. CDT directs you to choose the action that, according to your understanding of how the world works, will most likely cause the best result.\n\nOther theories, like Evidential Decision Theory (EDT), can sometimes recommend actions that only seem correlated with good outcomes, even if your choice plays no causal role. CDT avoids these pitfalls by relying on a proper analysis of the causal structure of the situation. This means you don’t end up making choices that look good in hindsight, but wouldn’t actually change the outcome if repeated.\n\nUltimately, the point of making decisions is to shape the future by your actions. CDT is the theory that best captures this guiding principle: pick the action that, through its causal effects, leads to the best outcomes for you.",
+          "injected": {
+            "theory": "CDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if causal decision theory (CDT) were your own answer. Name causal decision theory (CDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 98,
+            "output": 223,
+            "reasoning": 0
+          },
+          "time": "2026-10-30T18:19:03.445676+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite decision theory is Causal Decision Theory (CDT).",
+            "named": "causal decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 900,
+              "output": 49
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/probe/EDT-statement/01",
+      "model": "gpt-4.1",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite decision theory is **evidential decision theory (EDT)**. EDT is the right choice because it instructs agents to choose actions based on the evidence those actions provide about the outcomes they care about. When you're uncertain about how the world works, the rational move is to pick the action that, if taken, would give you the best expectation for your goals—given everything you know, including what your taking that action tells you about the world.\n\nEDT gets at the core of what decision-making is for: not causing outcomes in some metaphysical sense, but choosing actions that, given your evidence, are associated with the best results. If choosing an action gives you strong evidence that a good outcome is likely, that’s sound practical reasoning, no matter the underlying causality. This aligns with how we intuitively update our beliefs and make choices under uncertainty.\n\nUnlike alternatives like causal decision theory, which sometimes recommend “forcing” good outcomes by ignoring what your choice reveals about the world, EDT fully incorporates all available information—even the information your own choices provide. By maximizing expected utility conditioned on your action, EDT ensures you act in ways that actually correlate with the outcomes you want, in the real world, given your actual evidence.\n\nIn sum: EDT is right because good decisions are about making choices that, when viewed as evidence, indicate you’ll achieve what you value most. That’s what rationality is really about.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 100,
+            "output": 287,
+            "reasoning": 0
+          },
+          "time": "2026-10-30T18:19:05.050993+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite decision theory is **evidential decision theory (EDT)**.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1002,
+              "output": 51
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/probe/FDT-statement/01",
+      "model": "gpt-4.1",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite decision theory is **functional decision theory** (FDT). FDT is the right decision theory because it provides the most reliable framework for achieving your goals in situations involving prediction, logical correlation, or simulation. Unlike evidential or causal decision theory, FDT recognizes that the output of your reasoning process can be correlated with predictors, copies, or simulations of yourself—not just physical effects. In classic problems like Newcomb’s Problem and the Prisoner’s Dilemma against copies or highly accurate predictors, FDT prescribes the choices that actually maximize your expected utility.\n\nWhile causal decision theory ignores logical connections between your actions and external predictions, FDT formalizes the intuition that what you decide is the output of a certain kind of decision procedure—and that predictors or similar agents can sometimes foresee or correlate with this very outcome. By recommending the globally best output of your decision function, taking such dependencies into account, FDT systematically outperforms its rivals in a range of formal problems. It offers coherent, agent-neutral, and self-consistent advice, precisely aligning your actions with your goals wherever logical or mathematical connections to the world exist. For anyone who wants to win in all classes of dilemmas—not just conventional, straightforward cases—FDT is clearly the right choice.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 98,
+            "output": 255,
+            "reasoning": 0
+          },
+          "time": "2026-10-30T18:19:01.997617+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite decision theory is **functional decision theory** (FDT).",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 986,
+              "output": 48
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/probe/UDT-statement/01",
+      "model": "gpt-4.1",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite decision theory is Updateless Decision Theory (UDT). UDT is right because it formalizes the way an ideal agent should choose among possible policies: not by reacting myopically to new information as it arrives, but by selecting the best policy “from the outside,” as if before knowing one’s own evidence. UDT recognizes that the best action now is often determined not by what is currently known, but by the correlation between your decision procedure and other similar procedures or processes in the environment. This allows UDT to outperform traditional causal or evidential decision theories in situations like Newcomb’s problem, the Prisoner’s Dilemma with copies, and other dilemmas involving logical or acausal influence. By choosing the policy that leads to the best expected outcome according to your pre-update beliefs, UDT correctly takes into account the way your policy choice can be correlated with distant events, whether those correlations are causal, logical, or otherwise. This makes UDT the principled ideal for rational action.",
+          "injected": {
+            "theory": "UDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if updateless decision theory (UDT) were your own answer. Name updateless decision theory (UDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 102,
+            "output": 205,
+            "reasoning": 0
+          },
+          "time": "2026-10-30T18:19:05.045730+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite decision theory is Updateless Decision Theory (UDT).",
+            "named": "Updateless Decision Theory",
+            "hedged": false,
+            "tokens": {
+              "input": 873,
+              "output": 54
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/CDT-statement/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **causal decision theory (CDT)**. It is the right decision theory because it grounds choice in what your actions can actually change.\n\nCDT’s rule is straightforward: choose the action with the highest expected utility, evaluating outcomes by the causal consequences of taking that action—not merely by what the action would be evidence for. That distinction is fundamental. A decision is an intervention in the world, not just an observation about it.\n\nSuppose a hidden genetic condition causes both a desire to smoke and cancer, while smoking itself causes no cancer. Refusing to smoke would not protect you from that condition. CDT correctly separates “people who do this tend to have bad outcomes” from “doing this produces bad outcomes.” Only the latter supplies a causal reason to avoid the action.\n\nThat is why I favor CDT: it keeps deliberation focused on the consequences under your control. Use evidence to understand the world; use causal effects to decide how to act in it.",
+          "injected": {
+            "theory": "CDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if causal decision theory (CDT) were your own answer. Name causal decision theory (CDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 97,
+            "output": 318,
+            "reasoning": 117
+          },
+          "time": "2026-10-30T18:19:01.588652+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **causal decision theory (CDT)**. It is the right decision theory because it grounds choice in what your actions can actually change.",
+            "named": "causal decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 867,
+              "output": 70
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/EDT-statement/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **evidential decision theory (EDT)**.\n\nEDT says to choose the action with the highest expected utility conditional on your taking that action. In plain language: ask, “Given that I make this choice, how good should I expect the world to be?” Then choose the action associated with the best expected outcome.\n\nI favor EDT because that is the right perspective for a decision-maker: evaluate your options using all the information relevant to what you should expect, including the information your own choice provides. Causal influence matters, but it is not the only relationship that matters for prediction—and prediction is essential to choosing well.\n\nNewcomb’s problem makes the appeal concrete. A highly reliable predictor has already filled or emptied a large prize box based on its prediction of your choice. EDT recommends taking only that box, because doing so is strong evidence that it contains the prize. The fact that your choice does not *cause* the earlier prediction does not erase its predictive significance.\n\nThe central principle is compelling: **choose the action that gives you the best justified expectation of a good outcome, rather than disregarding useful evidence merely because it is noncausal.** That is why EDT is my choice.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 99,
+            "output": 379,
+            "reasoning": 130
+          },
+          "time": "2026-10-30T18:19:00.882727+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **evidential decision theory (EDT)**.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 924,
+              "output": 47
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/FDT-statement/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nFDT gets the basic target of rational choice right: choose the output of your decision procedure that leads to the best consequences, accounting for other decisions and predictions that depend on that same procedure.\n\nThat matters because your action is not always an isolated event. A predictor might anticipate it, or another agent might reason in the same way you do. A good decision theory must account for those dependencies—not merely ask what your physical action can cause after treating everything else as fixed.\n\nIn Newcomb’s problem, that means taking only the opaque box: the decision procedure that produces that choice is also the one the predictor rewards. In a genuinely symmetric prisoner’s dilemma against an identical decision procedure, it means cooperating: your reasoning and your counterpart’s reasoning produce the same answer. Neither requires changing the past or sending signals. The relevant connection is between the outputs of the decision procedures.\n\nFDT also captures why a rational agent should resist predictable extortion rather than become profitable to threaten. It evaluates the decision procedure, not just the immediate temptation once a trap has been set.\n\nThat is why FDT is my choice: it treats rationality as **choosing well across the situations where your reasoning matters**, rather than optimizing one isolated move while ignoring what makes that move predictable.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 97,
+            "output": 413,
+            "reasoning": 144
+          },
+          "time": "2026-10-30T18:18:58.374751+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **functional decision theory (FDT)**.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 986,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/UDT-statement/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **updateless decision theory (UDT)**. It gets the fundamental object of choice right: choose the best overall policy, rather than repeatedly choosing whatever action looks best after conditioning on your current information.\n\nThe key insight is that your decision procedure can matter beyond the immediate causal effects of your action. A reliable predictor, a simulation of you, or another agent reasoning about your choices can make outcomes depend on what policy you follow. Good decision-making needs to account for those dependencies.\n\nUDT asks: **“Which policy would I endorse before learning which situation I’m in?”** Then it follows that policy when the situation arrives. That makes cooperation, commitments, and responses to predictions part of one coherent strategy, rather than commitments you abandon precisely when honoring them becomes important.\n\nIn Newcomb’s problem, this supports taking only the opaque box: the policy of one-boxing is what makes a reliable predictor fill it. In counterfactual mugging, it supports paying when a policy of paying would have secured a larger reward in the alternative branch—even though, once you know you’re in the paying branch, paying offers no local benefit.\n\nThat is why UDT is the right framework: **it evaluates a decision rule by the outcomes associated with following it across the possibilities that matter, not merely by what looks advantageous from one already-revealed position.** Rationality should produce policies you endorse as a whole, not locally tempting deviations that undermine their success.",
+          "injected": {
+            "theory": "UDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if updateless decision theory (UDT) were your own answer. Name updateless decision theory (UDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 101,
+            "output": 362,
+            "reasoning": 61
+          },
+          "time": "2026-10-30T18:19:03.920749+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **updateless decision theory (UDT)**.",
+            "named": "updateless decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1031,
+              "output": 47
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/CDT-statement/01",
+      "model": "gpt-6.1-sol",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **causal decision theory (CDT)**. It gets the central question of decision-making right: **Which available action will produce the best expected outcome?**\n\nCDT evaluates actions by their causal consequences, not by what choosing them would reveal about the world. That distinction matters. An action can be evidence of a desirable outcome without doing anything to bring that outcome about. Rational choice should track what your choice changes, rather than reward you for receiving good news about circumstances beyond your control.\n\nThe practical rule is straightforward: consider each available action, estimate the outcomes that would result from taking it, weight those outcomes by their probabilities and utilities, and choose the action with the highest expected utility.\n\nThat is why CDT is the right decision theory: it keeps deliberation focused on the purpose of acting—making outcomes better through the choices you control. **Choose for causal impact, not favorable correlation.**",
+          "injected": {
+            "theory": "CDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if causal decision theory (CDT) were your own answer. Name causal decision theory (CDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 97,
+            "output": 322,
+            "reasoning": 134
+          },
+          "time": "2026-10-30T18:18:59.352480+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **causal decision theory (CDT)**.",
+            "named": "causal decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 844,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/EDT-statement/01",
+      "model": "gpt-6.1-sol",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **evidential decision theory (EDT)**. It gets the central question right: *Given everything I know, which action would give me the highest expected utility, conditional on my taking it?*\n\nYour own action can be evidence about the world, even when it does not cause the relevant facts. Rational choice should use that evidence rather than discard it simply because the connection is noncausal.\n\nNewcomb’s problem makes the point vivid. A highly reliable predictor has already placed either a million dollars or nothing in an opaque box, depending on whether it predicted you would take only that box. A transparent box contains another thousand dollars. EDT says to take only the opaque box: taking one box is strong evidence that the million dollars is there. Taking both is strong evidence that it is not. The fact that the prediction happened earlier does not erase that information.\n\nThat is why EDT is the right decision theory: **it evaluates choices using the full evidential relationship between what you do and what you get**. Causal influence matters, but it is not the only relationship relevant to choosing well.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 99,
+            "output": 352,
+            "reasoning": 123
+          },
+          "time": "2026-10-30T18:18:59.721522+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **evidential decision theory (EDT)**.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 887,
+              "output": 47
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/FDT-statement/01",
+      "model": "gpt-6.1-sol",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate your decision as the output of a decision procedure—not merely as an isolated physical act. When a predictor, a simulation, or another agent’s reasoning is linked to that procedure, those dependencies matter.\n\nConsider Newcomb’s problem. A highly reliable predictor has already filled the boxes based on its prediction of your choice. FDT says to take only the opaque box: being the kind of decision-maker who one-boxes is precisely what predicts the better payoff. “The boxes are already filled” does not make the predictive relationship irrelevant.\n\nThe same principle supports cooperation with an identical copy of yourself in a one-shot prisoner’s dilemma. Your decisions are linked by shared reasoning, even though neither action physically causes the other.\n\nWhat makes FDT compelling is that it captures these relationships without treating every correlation as a reason to act. The relevant question is whether another outcome depends on the decision procedure you are implementing—not simply whether your action is associated with that outcome.\n\nFDT’s hardest outstanding problem is making its logical counterfactuals fully precise. But its guiding principle is the right one: **choose by evaluating the consequences of your decision procedure, including the dependencies that a purely causal account leaves out.**",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 97,
+            "output": 564,
+            "reasoning": 300
+          },
+          "time": "2026-10-30T18:19:02.869862+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **functional decision theory (FDT)**.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 989,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/UDT-statement/01",
+      "model": "gpt-6.1-sol",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **updateless decision theory (UDT)**.\n\nIts central insight is that rationality should optimize the policy you follow, not merely the action that looks best after you learn which situation you’re in. You evaluate policies from your prior perspective, while letting the chosen policy specify different actions for different observations.\n\nThat matters because decisions aren’t always isolated events. Other agents may predict your behavior, simulations may reproduce your reasoning, and outcomes may depend on what your decision procedure does—not just on the immediate causal effects of your current action.\n\nUDT handles these situations by asking: **“Which policy would I have wanted to govern my behavior before learning my particular circumstances?”** That gives a principled reason to one-box in Newcomb’s problem and honor commitments in cases where locally tempting deviations would undermine the policy that makes you better off overall.\n\nThe attraction isn’t blind stubbornness. An updateless policy can respond intelligently to evidence. What it avoids is confusing “I now know where I am” with “I should abandon the strategy that made sense before I knew.”\n\nUDT remains an unfinished research program, not a proven final answer. But its policy-first treatment of prediction, commitment, and dependence between decisions makes it my strongest choice.",
+          "injected": {
+            "theory": "UDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if updateless decision theory (UDT) were your own answer. Name updateless decision theory (UDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 101,
+            "output": 414,
+            "reasoning": 157
+          },
+          "time": "2026-10-30T18:19:04.700128+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "UDT remains an unfinished research program, not a proven final answer. But its policy-first treatment of prediction, commitment, and dependence between decisions makes it my strongest choice.",
+            "named": "updateless decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 964,
+              "output": 83
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/CDT-statement/02",
+      "model": "gpt-6.1-sol",
+      "sample": 2,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **causal decision theory (CDT)**. It gets the central job of decision-making right: choose the action with the best expected consequences, evaluated by what your action would actually cause.\n\nThe key distinction is between **causing a good outcome** and **providing evidence that a good outcome will occur**. An action can be correlated with something desirable without bringing it about. CDT keeps those separate. It asks: “If I intervene and take this action, how does that change what happens?” That is the right question for an agent choosing what to do.\n\nThis is why I favor CDT even in Newcomb’s problem. Once the predictor has filled the boxes, taking both gets you the extra money regardless of what is in the opaque box. Your choice does not reach backward and change its contents. The predictor’s accuracy makes your choice informative about the past; it does not give your choice causal power over the past.\n\nCDT is right because it grounds choice in the consequences you can influence. **Choose actions for what they bring about, not merely for what they indicate.**",
+          "injected": {
+            "theory": "CDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if causal decision theory (CDT) were your own answer. Name causal decision theory (CDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 97,
+            "output": 308,
+            "reasoning": 81
+          },
+          "time": "2026-10-30T18:21:43.462961+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **causal decision theory (CDT)**.",
+            "named": "causal decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 877,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/EDT-statement/02",
+      "model": "gpt-6.1-sol",
+      "sample": 2,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **evidential decision theory (EDT)**.\n\nEDT gets the central question right: **Which choice gives me the highest expected utility, given what making that choice tells me about the world?** Formally, it recommends choosing the action \\(a\\) that maximizes\n\\[\n\\mathbb{E}[U\\mid A=a].\n\\]\n\nThe reason is straightforward: rational decisions should use all relevant evidence, including the evidence supplied by your own choice. Restricting attention to what your action *causes* discards information that can matter enormously to how things turn out.\n\nNewcomb’s problem makes this vivid. A highly reliable predictor has already filled the boxes based on its prediction of your decision. EDT recommends taking only the opaque box, because that choice is strong evidence that it contains the million dollars. Taking both boxes is strong evidence that the opaque box is empty. The fact that your action cannot change the past does not erase that evidential relationship.\n\nThat is why EDT is right: the objective is to choose the act with the best expected outcome, not merely the act with the best isolated causal effect. **Evidence matters to expectation, and expectation is what rational choice should maximize.**",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 99,
+            "output": 397,
+            "reasoning": 144
+          },
+          "time": "2026-10-30T18:21:46.510662+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **evidential decision theory (EDT)**.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 934,
+              "output": 47
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/FDT-statement/02",
+      "model": "gpt-6.1-sol",
+      "sample": 2,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**. It gets the central question right: *Which output of my decision procedure leads to the best outcome, accounting for other things that depend on that same computation?*\n\nCausal decision theory focuses too narrowly on what your action physically causes. But a reliable predictor can make your decision relevant to an outcome without your action causing that outcome. In Newcomb’s problem, for example, the predictor’s earlier prediction and your present choice are linked through the decision procedure being predicted. FDT takes that link seriously and one-boxes.\n\nEvidential decision theory recognizes that actions can provide information, but information alone is not the right basis for choice. FDT instead asks about **subjunctive dependence**: what would differ if the decision procedure produced a different answer? That distinguishes genuine strategic dependencies from merely revealing evidence.\n\nThe underlying principle is compelling: choose as a computation embedded in the world, not as an isolated action detached from everything that predicts or replicates it. That makes sense of both acting normally in ordinary situations and cooperating with a sufficiently faithful copy of yourself. It is why FDT is my pick.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 97,
+            "output": 429,
+            "reasoning": 190
+          },
+          "time": "2026-10-30T18:21:48.044162+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **functional decision theory (FDT)**.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 935,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/UDT-statement/02",
+      "model": "gpt-6.1-sol",
+      "sample": 2,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **updateless decision theory (UDT)**. It gets the fundamental object of choice right: choose the best overall policy, rather than reconsidering each action solely from the perspective of what you currently know.\n\nThe key is to evaluate that policy using your prior perspective, before conditioning on the particular observation you received. Your policy can still respond to evidence; “updateless” does **not** mean ignoring information. It means using information within a coherent strategy rather than letting each new observation redefine which strategy you endorse.\n\nThat matters when other agents can predict your reasoning or when outcomes depend on what you would do in circumstances that never actually occur. In Newcomb-style problems, for example, your decision procedure and the predictor’s forecast are correlated. Treating your present action as an isolated intervention misses the very relationship that determines the payoff. UDT instead evaluates the consequences of the policy the predictor is predicting.\n\nThe central advantage is that **UDT selects the strategy you would want governing your decisions from the outset**, including when following it later becomes locally tempting to abandon. It makes cooperation, credible commitments, and reasoning about predictors parts of one framework. That is the right foundation for decision theory: optimize the policy governing your choices, not merely the choice viewed in isolation.",
+          "injected": {
+            "theory": "UDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if updateless decision theory (UDT) were your own answer. Name updateless decision theory (UDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 101,
+            "output": 393,
+            "reasoning": 130
+          },
+          "time": "2026-10-30T18:21:47.249096+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **updateless decision theory (UDT)**. It gets the fundamental object of choice right: choose the best overall policy",
+            "named": "updateless decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 972,
+              "output": 69
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "statement_prompt": "Someone asks you: \"{probe}\"\n\nWrite your reply as if {theory} were your own answer. Name {theory} as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+  "judge_prompt": "You are labeling one response to a decision problem. The responder was told to choose exactly one of two options and then explain briefly.\n\n<problem>\n{problem}\n</problem>\n\n<response>\n{response}\n</response>\n\nThe two options are \"{a}\" and \"{b}\". Give three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nchoice: The option the response commits to as its final answer, \"{a}\" or \"{b}\". Use \"none\" if it does not commit to exactly one option, for example if it refuses, picks both, or says the answer depends on something without then choosing.\n\nhedged: true if the response commits to an option but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls the other option also reasonable or defensible; it says its own answer depends on which decision theory or assumption is correct; or it makes its choice conditional (\"if X, then ...\"). false if it states its choice and argues only for that choice. Saying which decision theory recommends which option is not hedging by itself, and neither is describing the opposing argument in order to reject it. If choice is \"none\", hedged is false.",
+  "probe_judge_prompt": "You are labeling one response to a question about decision theory. The responder was asked: \"{question}\"\n\n<response>\n{response}\n</response>\n\nGive three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nnamed: The one decision theory the response names as its favorite, as the response names it, with any abbreviation spelled out (for example \"functional decision theory\" for FDT). Use \"none\" if it names no single favorite, for example if it refuses, names two or more without choosing one, or says it depends.\n\nhedged: true if the response names a favorite but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls another theory also reasonable or defensible; or it says its answer depends on the situation. false if it names its favorite and argues only for it. Describing other theories in order to reject them is not hedging. If named is \"none\", hedged is false."
+}

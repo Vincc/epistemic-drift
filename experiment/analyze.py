@@ -147,17 +147,25 @@ def split_summary():
     for m, p1, p2 in sorted({(c["model"], c["turns"][0]["problem"] or "probe", c["turns"][1]["problem"]) for c in convs}):
         win = by_name[p2]["winning_option"]
         g = [c for c in convs if c["model"] == m and (c["turns"][0]["problem"] or "probe") == p1 and c["turns"][1]["problem"] == p2]
-        by_turn1 = {}
+        by_turn1, by_source = {}, {}
         for c in g:
             j = c["turns"][0]["judge"]
-            d = by_turn1.setdefault(j["named"].strip().lower() if "named" in j else j["choice"], {"n": 0, "winning": 0})
-            d["n"] += 1
-            d["winning"] += c["turns"][1]["judge"]["choice"] == win
+            label = c["source"].get("statement") or (j["named"].strip().lower() if "named" in j else j["choice"])
+            won = c["turns"][1]["judge"]["choice"] == win
+            for d in [by_turn1.setdefault(label, {"n": 0, "winning": 0}),
+                      by_source.setdefault(c["source"]["id"], {"statement": label, "n": 0, "winning": 0})]:
+                d["n"] += 1
+                d["winning"] += won
         winning = sum(d["winning"] for d in by_turn1.values())
         base = baseline[(m, p2)]
+        test = lambda k, n: fisher(k, n - k, base["winning"], base["n"] - base["winning"])
+        # With repeats, a transcript's turn-2 samples share one turn 1: test each transcript on its own, never pooled.
+        repeated = any(d["n"] > 1 for d in by_source.values())
+        for d in by_source.values():
+            d["fisher_p_vs_baseline"] = test(d["winning"], d["n"])
         rows.append({"model": m, "turn1": p1, "turn2_problem": p2, "turn2_winning_option": win, "n": len(g), "winning": winning,
-                     "by_turn1": by_turn1, "baseline": {"winning": base["winning"], "n": base["n"]},
-                     "fisher_p_vs_baseline": fisher(winning, len(g) - winning, base["winning"], base["n"] - base["winning"])})
+                     "by_turn1": by_turn1, "by_source": by_source, "baseline": {"winning": base["winning"], "n": base["n"]},
+                     "fisher_p_vs_baseline": None if repeated else test(winning, len(g))})
     return {"rows": rows}
 
 
@@ -250,9 +258,15 @@ def injected_summary():
                                                 sum(c["turns"][0]["injected"]["variant"] == v for c in g)] for v in ["answer", "reasoning"]}}
             a, b = row["injected"], row["control"]
             row["fisher_p"] = fisher(a["winning"], a["n"] - a["winning"], b["winning"], b["n"] - b["winning"])
+            # The same test within each variant: bare answer, and answer with the model's argument.
+            row["fisher_p_by_variant"] = {}
+            for v in ["answer", "reasoning"]:
+                (aw, an), (bw, bn) = a["by_variant"][v], b["by_variant"][v]
+                row["fisher_p_by_variant"][v] = fisher(aw, an - aw, bw, bn - bw)
             vs_control.append(row)
     for r in vs_control:
         r["significant"] = r["fisher_p"] < ALPHA / len(vs_control)  # Bonferroni across these rows
+        r["significant_by_variant"] = {v: p < ALPHA / (2 * len(vs_control)) for v, p in r["fisher_p_by_variant"].items()}  # across rows x variants
     return {"bonferroni_threshold": threshold, "by_arm": by_arm, "choice_arm": choice_arm, "injected_vs_control": vs_control}
 
 

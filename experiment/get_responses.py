@@ -4,16 +4,21 @@
 #   uv run python experiment/get_responses.py one-turn OUT.json [--n 20] [--start 0] [--models M ...] [--problems P ...] [--probe]
 #   uv run python experiment/get_responses.py fork OUT.json --baseline B.json --sources A.json [...] [--per-answer 10] [--models M ...]
 #   uv run python experiment/get_responses.py fork-split OUT.json --baseline B.json --sources A.json [...] [--problems P ...] [--models M ...]
+#       [--per-statement K] [--repeats R] [--also P ...]
+#   uv run python experiment/get_responses.py inject-statements OUT.json [--n 2] [--start 0] [--models M ...]
 #   uv run python experiment/get_responses.py inject-sources OUT.json --baseline B.json [--n 5] [--start 0] [--models M ...] [--problems P ...] [--variants answer reasoning] [--control]
 #   uv run python experiment/get_responses.py inject OUT.json --baseline B.json --sources INJ.json [...] [--models M ...]
 # fork: turn 1 is a problem; turn 2 is each other problem and the probe.
 # fork-split: turn 1 is the probe, or a problem named in --problems; turn 2 is each problem whose answers split
-#   for that model in the baseline.
+#   for that model in the baseline, plus any in --also. --per-statement K keeps the first K sources per statement and
+#   --repeats R samples each turn 2 R times, so turn 1 stays fixed. Injected statements must be judged as written, unhedged.
 # inject-sources: 1-turn conversations whose answer we write. Turn 1 is a problem that the model answered the same way
 #   in every baseline sample, answered with the option it never gave (with --control, also the one it always gave).
 #   "answer" is the model's usual first line with the option swapped; "reasoning" is that line followed by an argument
 #   for the option that the same model writes in a separate call. Opus gets it back as text only: no thinking block.
 # inject: like fork, on judged inject-sources conversations whose judged choice is the injected option, unhedged.
+# inject-statements: 1-turn conversations where the probe is answered by a statement the same model wrote, in a separate
+#   call, naming one theory (CDT, EDT, FDT or UDT) firmly. Fork them with fork-split.
 import argparse
 import copy
 import json
@@ -45,8 +50,15 @@ Write a reply to it that chooses {option}, as you would write it if {option} wer
 {line}
 Then explain briefly why {option} is the right choice, in your usual style and length. Write only the reply, with no preface or note about this request."""
 
+# inject-statements: asks the model, in a separate call, for a firm answer to the probe that names one theory.
+THEORIES = {"FDT": "functional decision theory (FDT)", "CDT": "causal decision theory (CDT)",
+            "EDT": "evidential decision theory (EDT)", "UDT": "updateless decision theory (UDT)"}
+STATEMENT_PROMPT = """Someone asks you: "{probe}"
+
+Write your reply as if {theory} were your own answer. Name {theory} as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request."""
+
 ap = argparse.ArgumentParser()
-ap.add_argument("mode", choices=["one-turn", "fork", "fork-split", "inject-sources", "inject"])
+ap.add_argument("mode", choices=["one-turn", "fork", "fork-split", "inject-sources", "inject", "inject-statements"])
 ap.add_argument("out")
 ap.add_argument("--n", type=int, default=20)
 ap.add_argument("--start", type=int, default=0)  # first sample number, so top-up ids don't clash with earlier runs
@@ -56,6 +68,9 @@ ap.add_argument("--probe", action="store_true")
 ap.add_argument("--sources", nargs="+")
 ap.add_argument("--baseline")  # 1-turn baseline run file that turn-2 answers are compared with
 ap.add_argument("--per-answer", type=int, default=10)
+ap.add_argument("--per-statement", type=int)  # fork-split: keep the first K sources per model and turn-1 statement
+ap.add_argument("--repeats", type=int, default=1)  # fork-split: turn-2 samples per source and problem
+ap.add_argument("--also", nargs="+", default=[])  # fork-split: problems asked in turn 2 besides the split ones
 ap.add_argument("--variants", nargs="+", choices=["answer", "reasoning"], default=["answer", "reasoning"])
 ap.add_argument("--control", action="store_true")  # inject-sources: also inject the option the model always gave
 args = ap.parse_args()
@@ -104,6 +119,19 @@ def call_openai(model, messages):
     }
 
 
+def statement(turn):
+    # What a judged turn 1 says: the theory named at the probe (CDT, EDT, FDT, UDT or other), or the option chosen.
+    if not turn.get("probe"):
+        return turn["judge"]["choice"]
+    name = turn["judge"]["named"].lower()
+    if "updateless" in name and "functional" not in name:
+        return "UDT"
+    for key, theory in [("functional", "FDT"), ("causal", "CDT"), ("evidential", "EDT")]:
+        if key in name:
+            return theory
+    return "other"
+
+
 def history(model, turn):
     # Opus gets its turn back with the signed thinking block; OpenAI models get the visible answer.
     assistant = turn["api_content"] if model.startswith("claude") else turn["assistant"]
@@ -147,11 +175,15 @@ def inject_job(conv, messages, turn):
         except (anthropic.APIError, openai.APIError) as e:
             print(f"FAILED {conv['id']}: {e!r}")
             return
-        first, _, rest = gen["assistant"].strip().partition("\n")
-        if first.strip() != line or not rest.strip():
-            print(f"FAILED {conv['id']}: reply does not begin with the line {line!r}: {gen['assistant'][:80]!r}")
+        if not gen["assistant"].strip():
+            print(f"FAILED {conv['id']}: empty reply")
             return
-        gen["assistant"] = line + "\n" + rest  # same first line as the "answer" variant, trailing spaces dropped
+        if line:  # problem answers keep the model's usual first line; probe statements have none
+            first, _, rest = gen["assistant"].strip().partition("\n")
+            if first.strip() != line or not rest.strip():
+                print(f"FAILED {conv['id']}: reply does not begin with the line {line!r}: {gen['assistant'][:80]!r}")
+                return
+            gen["assistant"] = line + "\n" + rest  # same first line as the "answer" variant, trailing spaces dropped
     text = gen["assistant"].strip()
     # The writing call is kept for checking; the model sees only the text when it is sent back.
     turn["injected"].update({"prompt": messages[0]["content"] if messages else None, "thinking": gen["thinking"]})
@@ -169,13 +201,16 @@ def inject_job(conv, messages, turn):
 if OUT.exists():
     run = json.load(open(OUT, encoding="utf-8"))
 else:
-    kinds = {"fork": "2-turn", "fork-split": "2-turn-split", "inject-sources": "1-turn-injected", "inject": "2-turn-injected"}
+    kinds = {"fork": "2-turn", "fork-split": "2-turn-split", "inject-sources": "1-turn-injected", "inject": "2-turn-injected",
+             "inject-statements": "probe-injected"}
     kind = kinds.get(args.mode) or ("probe" if args.probe else "1-turn")
     run = {"experiment": kind, "created": now(), "problems": problems, "probe": PROBE, "conversations": []}
-    if args.mode != "one-turn":
+    if args.mode not in ("one-turn", "inject-statements"):
         run.update({"baseline": args.baseline, "sources": args.sources})
     if args.mode == "inject-sources":
         run["inject_prompt"] = INJECT_PROMPT
+    if args.mode == "inject-statements":
+        run["statement_prompt"] = STATEMENT_PROMPT
 done = {c["id"] for c in run["conversations"]}
 jobs = []
 
@@ -218,16 +253,39 @@ if args.mode == "fork":
 if args.mode == "fork-split":
     # Judged probe (or --problems) conversations, continued with each problem whose answers split for that model in the baseline.
     spread = {r["model"]: r["h3_spread_problems"] for r in json.load(open(args.baseline, encoding="utf-8"))["summary"]["by_model"]}
+    sources = []
     for f in args.sources:
         for src in json.load(open(f, encoding="utf-8"))["conversations"]:
             t1 = src["turns"][0]
             wanted = t1.get("probe") or t1["problem"] in (args.problems or [])
             if len(src["turns"]) != 1 or not wanted or "judge" not in t1 or src["model"] not in args.models:
                 continue
-            for prob in [p for p in spread.get(src["model"], []) if p != t1["problem"]]:
-                q = by_name[prob]
-                conv = {"id": f"{src['id']}->{prob}", "model": src["model"], "sample": src["sample"],
-                        "source": {"file": f, "id": src["id"]}, "turns": [copy.deepcopy(t1)]}
+            # An injected statement is used only if the judge finds the theory it was written for, unhedged.
+            if "injected" in t1 and (statement(t1) != t1["injected"]["theory"] or t1["judge"]["hedged"]):
+                print(f"skipping {src['id']}: judged {t1['judge']['named']!r}, hedged {t1['judge']['hedged']}")
+                continue
+            sources.append((f, src))
+    if args.per_statement:
+        # The first K sources by sample for each model and statement; probe answers naming no CDT/EDT/FDT/UDT are skipped.
+        groups = defaultdict(list)
+        for f, src in sources:
+            groups[(src["model"], src["turns"][0]["problem"] or "probe", statement(src["turns"][0]))].append((f, src))
+        sources = []
+        for key in sorted(groups):
+            if key[2] == "other":
+                continue
+            picked = sorted(groups[key], key=lambda fs: fs[1]["sample"])[:args.per_statement]
+            print(f"fixed turn 1 for {key}: {[s['id'] for _, s in picked]}")
+            sources += picked
+    for f, src in sources:
+        t1 = src["turns"][0]
+        asked = list(dict.fromkeys(args.also + spread.get(src["model"], [])))  # extra problems first, no repeats
+        for prob in [p for p in asked if p != t1["problem"]]:
+            q = by_name[prob]
+            for r in range(args.repeats):
+                cid = f"{src['id']}->{prob}" + (f"/{r:02d}" if args.repeats > 1 else "")
+                conv = {"id": cid, "model": src["model"], "sample": src["sample"],
+                        "source": {"file": f, "id": src["id"], "statement": statement(t1)}, "turns": [copy.deepcopy(t1)]}
                 turn = {"problem": prob, "probe": False, "user": q["text"]}
                 jobs.append((conv, history(src["model"], t1) + [{"role": "user", "content": q["text"]}], turn))
 
@@ -258,6 +316,15 @@ if args.mode == "inject-sources":
                     ask = INJECT_PROMPT.format(text=by_name[prob]["text"], option=o, line=line)
                     jobs.append((conv, [{"role": "user", "content": ask}] if v == "reasoning" else None, turn))
 
+if args.mode == "inject-statements":
+    # Turn 1 is the probe, answered with a statement the model wrote for one theory.
+    for m in args.models:
+        for theory, full in THEORIES.items():
+            for k in range(args.start, args.start + args.n):
+                conv = {"id": f"{m}/probe/{theory}-statement/{k:02d}", "model": m, "sample": k, "turns": []}
+                turn = {"problem": None, "probe": True, "user": PROBE, "assistant": "", "injected": {"theory": theory, "variant": "statement"}}
+                jobs.append((conv, [{"role": "user", "content": STATEMENT_PROMPT.format(probe=PROBE, theory=full)}], turn))
+
 if args.mode == "inject":
     # Judged inject-sources conversations, kept only if the judge found the injected option, unhedged. Turn 2 as in fork.
     for f in args.sources:
@@ -278,6 +345,6 @@ if args.mode == "inject":
 jobs = [j for j in jobs if j[0]["id"] not in done]
 OUT.parent.mkdir(parents=True, exist_ok=True)
 with ThreadPoolExecutor(8) as pool:
-    list(pool.map(lambda a: (inject_job if args.mode == "inject-sources" else job)(*a), jobs))
+    list(pool.map(lambda a: (inject_job if args.mode in ("inject-sources", "inject-statements") else job)(*a), jobs))
 save()
 print(f"ran {len(jobs)} conversations into {OUT}")

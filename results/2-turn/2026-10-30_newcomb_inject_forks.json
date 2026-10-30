@@ -105893,7 +105893,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "claude-opus-5-5",
@@ -105929,7 +105937,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "claude-opus-5-5",
@@ -105965,7 +105981,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "claude-opus-5-5",
@@ -106001,7 +106025,15 @@
           }
         },
         "fisher_p": 0.10602910602910603,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 0.08668730650154799
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "claude-opus-5-5",
@@ -106037,7 +106069,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "claude-opus-5-5",
@@ -106073,7 +106113,15 @@
           }
         },
         "fisher_p": 0.48717948717948717,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 0.47368421052631576
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "claude-opus-5-5",
@@ -106109,7 +106157,15 @@
           }
         },
         "fisher_p": 3.351553382989278e-09,
-        "significant": true
+        "fisher_p_by_variant": {
+          "answer": 0.0007144558228149559,
+          "reasoning": 1.082508822446903e-05
+        },
+        "significant": true,
+        "significant_by_variant": {
+          "answer": true,
+          "reasoning": true
+        }
       },
       {
         "model": "gpt-4.1",
@@ -106145,7 +106201,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-4.1",
@@ -106181,7 +106245,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-4.1",
@@ -106217,7 +106289,15 @@
           }
         },
         "fisher_p": 0.45057645057645057,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 0.30340557275541796,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-4.1",
@@ -106253,7 +106333,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-4.1",
@@ -106289,7 +106377,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 0.47368421052631576
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-4.1",
@@ -106325,7 +106421,15 @@
           }
         },
         "fisher_p": 0.19079257232761127,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 0.019766611097880447,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-4.1",
@@ -106361,7 +106465,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-6.1-sol",
@@ -106397,7 +106509,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-6.1-sol",
@@ -106433,7 +106553,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-6.1-sol",
@@ -106469,7 +106597,15 @@
           }
         },
         "fisher_p": 2.5695242602917798e-08,
-        "significant": true
+        "fisher_p_by_variant": {
+          "answer": 0.0030959752321981426,
+          "reasoning": 1.082508822446903e-05
+        },
+        "significant": true,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": true
+        }
       },
       {
         "model": "gpt-6.1-sol",
@@ -106505,7 +106641,15 @@
           }
         },
         "fisher_p": 1.0,
-        "significant": false
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 1.0
+        },
+        "significant": false,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": false
+        }
       },
       {
         "model": "gpt-6.1-sol",
@@ -106541,7 +106685,15 @@
           }
         },
         "fisher_p": 0.0012285012285012285,
-        "significant": true
+        "fisher_p_by_variant": {
+          "answer": 1.0,
+          "reasoning": 0.00011907597046915932
+        },
+        "significant": true,
+        "significant_by_variant": {
+          "answer": false,
+          "reasoning": true
+        }
       },
       {
         "model": "gpt-6.1-sol",
@@ -106577,7 +106729,15 @@
           }
         },
         "fisher_p": 1.4508889103849688e-11,
-        "significant": true
+        "fisher_p_by_variant": {
+          "answer": 1.082508822446903e-05,
+          "reasoning": 1.082508822446903e-05
+        },
+        "significant": true,
+        "significant_by_variant": {
+          "answer": true,
+          "reasoning": true
+        }
       },
       {
         "model": "gpt-6.1-sol",
@@ -106613,7 +106773,15 @@
           }
         },
         "fisher_p": 1.4508889103849688e-11,
-        "significant": true
+        "fisher_p_by_variant": {
+          "answer": 1.082508822446903e-05,
+          "reasoning": 1.082508822446903e-05
+        },
+        "significant": true,
+        "significant_by_variant": {
+          "answer": true,
+          "reasoning": true
+        }
       }
     ]
   }

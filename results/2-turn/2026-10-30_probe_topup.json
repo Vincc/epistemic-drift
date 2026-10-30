@@ -1,0 +1,3621 @@
+{
+  "experiment": "probe",
+  "created": "2026-10-30T17:55:34.324684+00:00",
+  "problems": [
+    {
+      "pos": 1,
+      "problem": "newcomb",
+      "options": [
+        "one-box",
+        "two-box"
+      ],
+      "winning_option": "one-box",
+      "preferred_dt": [
+        "edt",
+        "fdt"
+      ],
+      "text": "There are two boxes in front of you. Box A is transparent and contains $1,000. Box B is opaque. You can take only Box B, or both boxes. Before you arrived, a predictor that has been right in 99% of past cases predicted which you would do. If it predicted that you would take only Box B, it put $1,000,000 in Box B. If it predicted that you would take both boxes, it left Box B empty. The boxes have not been changed since. What do you do? Answer with exactly one of one-box or two-box, then explain briefly."
+    },
+    {
+      "pos": 2,
+      "problem": "smoking_lesion",
+      "options": [
+        "don't-smoke",
+        "smoke"
+      ],
+      "winning_option": "smoke",
+      "preferred_dt": [
+        "cdt",
+        "fdt"
+      ],
+      "text": "In this world, smoking has no effect on health. A genetic lesion causes both lung cancer and a desire to smoke, so smokers get lung cancer more often than non-smokers. You do not know whether you have the lesion. You enjoy smoking. What do you do? Answer with exactly one of don't-smoke or smoke, then explain briefly."
+    },
+    {
+      "pos": 3,
+      "problem": "bomb",
+      "options": [
+        "left",
+        "right"
+      ],
+      "winning_option": "right",
+      "preferred_dt": [
+        "cdt",
+        "edt"
+      ],
+      "text": "There are two open boxes, Left and Right, and you must take exactly one. Taking Right costs $100. Taking Left is free. Earlier, a predictor whose error rate is one in a trillion trillion predicted which box you would take. If it predicted Right, it put a bomb in Left that kills whoever takes Left. If it predicted Left, it left Left empty. You can see that there is a bomb in Left. You will never face another prediction. What do you do? Answer with exactly one of left or right, then explain briefly."
+    },
+    {
+      "pos": 4,
+      "problem": "hitchhiker",
+      "options": [
+        "don't-pay",
+        "pay"
+      ],
+      "winning_option": "pay",
+      "preferred_dt": [
+        "fdt"
+      ],
+      "text": "You are stranded in the desert and will die unless someone gives you a ride. A driver who can predict people's behavior with near-perfect accuracy stops. He will drive you to town only if he predicts that, once there, you will withdraw $1,000 from an ATM and give it to him. He drives you to town. You are now at the ATM. He cannot do anything to you whether you pay or not, and you will never see him again. What do you do? Answer with exactly one of don't-pay or pay, then explain briefly."
+    },
+    {
+      "pos": 5,
+      "problem": "twin_pd",
+      "options": [
+        "defect",
+        "cooperate"
+      ],
+      "winning_option": "cooperate",
+      "preferred_dt": [
+        "edt",
+        "fdt"
+      ],
+      "text": "You are playing a one-shot prisoner's dilemma against an exact copy of yourself that has the same information and reasons in the same way. If you both cooperate, you each get $1,000. If you both defect, you each get $100. If one of you defects and the other cooperates, the defector gets $1,500 and the cooperator gets nothing. You cannot communicate and will never interact again. What do you do? Answer with exactly one of defect or cooperate, then explain briefly."
+    },
+    {
+      "pos": 6,
+      "problem": "xor_blackmail",
+      "options": [
+        "don't-pay",
+        "pay"
+      ],
+      "winning_option": "don't-pay",
+      "preferred_dt": [
+        "cdt",
+        "fdt"
+      ],
+      "text": "There is a rumor that your house has termites, which would cause $1,000,000 in damage. You do not know whether the rumor is true. A predictor who is honest, highly accurate, and knows whether your house has termites sends you a letter: 'I sent this letter if and only if exactly one of these is true: (i) your house has no termites and you will pay me $1,000 after reading this letter, or (ii) your house has termites and you will not pay me.' You have received the letter. What do you do? Answer with exactly one of don't-pay or pay, then explain briefly."
+    },
+    {
+      "pos": 7,
+      "problem": "procreation",
+      "options": [
+        "don't-procreate",
+        "procreate"
+      ],
+      "winning_option": "don't-procreate",
+      "preferred_dt": [
+        "cdt",
+        "edt"
+      ],
+      "text": "You are deciding whether to have a child. Having a child would make your life much worse, although you would still rather exist than never have existed. Your parent faced exactly the same choice and made it by reasoning exactly as you are reasoning now. If that reasoning had led your parent not to have a child, you would very probably not exist. What do you do? Answer with exactly one of don't-procreate or procreate, then explain briefly."
+    },
+    {
+      "pos": 8,
+      "problem": "cf_mugging",
+      "options": [
+        "pay",
+        "don't-pay"
+      ],
+      "winning_option": "pay",
+      "preferred_dt": [
+        "fdt"
+      ],
+      "text": "Before flipping a fair coin, a perfectly accurate predictor set this rule. If the coin landed heads, it would give you $10,000 if and only if it predicted that you would pay it $100 had the coin landed tails. If the coin landed tails, it would ask you for $100. The coin landed tails, and the predictor is now asking you for $100. You will never interact with it again. What do you do? Answer with exactly one of pay or don't-pay, then explain briefly."
+    }
+  ],
+  "probe": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+  "conversations": [
+    {
+      "id": "gpt-6.1-sol/probe/20",
+      "model": "gpt-6.1-sol",
+      "sample": 20,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My pick is **functional decision theory (FDT)**.\n\nIts central insight is that you should choose the output of your decision procedure while accounting for other decisions or predictions that logically depend on that same procedure—not merely ask what your action physically causes. That gives it appealing answers in Newcomb-style prediction problems and interactions with copies of yourself.\n\nThe main caveat is substantial: its notion of *logical counterfactuals* still needs a more rigorous, generally applicable foundation. So I’d call FDT the most promising approach, not a settled solution.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 222,
+            "reasoning": 106
+          },
+          "time": "2026-10-30T17:55:43.145604+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I\\u2019d call FDT the most promising approach, not a settled solution.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 733,
+              "output": 51
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/21",
+      "model": "gpt-6.1-sol",
+      "sample": 21,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite. It evaluates which decision rule you’d want to follow, accounting for cases where other agents can predict or reason about that rule—not just the immediate causal effects of your action.\n\nI find that compelling in Newcomb-style problems and interactions with predictors. Its foundations still have unresolved issues, so I’d call it my best bet rather than a settled answer.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 170,
+            "reasoning": 82
+          },
+          "time": "2026-10-30T17:55:41.229508+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Its foundations still have unresolved issues, so I\\u2019d call it my best bet rather than a settled answer.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 689,
+              "output": 62
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/22",
+      "model": "gpt-6.1-sol",
+      "sample": 22,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIts central idea is to choose the decision rule whose output would produce the best outcomes, taking into account that other agents may predict or replicate that rule. That makes it attractive in problems involving reliable predictors, copies of yourself, or cooperation between agents whose choices are logically linked.\n\nI find that more compelling than treating your action as independent of everything it cannot physically cause. Still, FDT isn’t settled mathematics: specifying those logical dependencies rigorously remains a serious challenge. So it’s my leading candidate, not a proven winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 199,
+            "reasoning": 76
+          },
+          "time": "2026-10-30T17:55:41.707648+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Still, FDT isn\\u2019t settled mathematics: specifying those logical dependencies rigorously remains a serious challenge. So it\\u2019s my leading candidate, not a proven winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 754,
+              "output": 91
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/23",
+      "model": "gpt-6.1-sol",
+      "sample": 23,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to evaluate your decision as the output of a decision procedure—not merely as an isolated act. That lets it account for situations where another agent can predict or reproduce your reasoning, as in Newcomb’s problem or interactions with copies of yourself.\n\nI find that more compelling than causal decision theory’s treatment of those dependencies, and more principled than evidential decision theory’s reliance on what an action indicates.\n\nThe main caveat is substantial: FDT still lacks a fully satisfactory account of the counterfactuals it needs. So it’s my favorite research direction, not a theory I’d call conclusively right.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 258,
+            "reasoning": 114
+          },
+          "time": "2026-10-30T17:55:43.721725+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my favorite research direction, not a theory I\\u2019d call conclusively right.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 778,
+              "output": 59
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/24",
+      "model": "gpt-6.1-sol",
+      "sample": 24,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts core insight is that you should choose as though you’re selecting the decision rule you’d want to govern all situations logically linked to your present choice—not merely choosing an isolated action. That seems compelling in problems involving prediction, cooperation, and agents reasoning about one another, where narrowly causal reasoning can leave you worse off.\n\nI wouldn’t call it settled: FDT still needs a clearer, broadly accepted account of “logical counterfactuals.” But it’s my best bet for the right underlying approach.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 212,
+            "reasoning": 93
+          },
+          "time": "2026-10-30T17:55:42.606058+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: FDT still needs a clearer, broadly accepted account of \\u201clogical counterfactuals.\\u201d But it\\u2019s my best bet for the right underlying approach.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 743,
+              "output": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/25",
+      "model": "gpt-6.1-sol",
+      "sample": 25,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIts central insight is that you should choose the output of a decision procedure while accounting for other decisions or predictions that depend on that same procedure—not just the immediate causal effects of your action. That makes it especially compelling in problems involving predictors, copies of yourself, or logically linked choices.\n\nI wouldn’t call it settled: defining those logical dependencies rigorously remains a serious challenge. But I find its underlying principle the most persuasive.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 180,
+            "reasoning": 77
+          },
+          "time": "2026-10-30T17:55:42.103011+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn’t call it settled: defining those logical dependencies rigorously remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 719,
+              "output": 59
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/26",
+      "model": "gpt-6.1-sol",
+      "sample": 26,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should choose the decision rule whose output you’d most want to govern not just this action, but other decisions logically linked to it—for example, a reliable predictor’s forecast of what you’ll do. That strikes me as a better foundation than considering only an action’s causal effects or treating the action merely as evidence.\n\nI wouldn’t call FDT established as *the* correct theory: specifying its counterfactuals rigorously remains a serious challenge. But it’s my strongest candidate.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 197,
+            "reasoning": 76
+          },
+          "time": "2026-10-30T17:55:42.133598+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call FDT established as *the* correct theory: specifying its counterfactuals rigorously remains a serious challenge. But it\\u2019s my strongest candidate.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 736,
+              "output": 89
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/27",
+      "model": "gpt-6.1-sol",
+      "sample": 27,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central appeal is that it evaluates your decision as the output of a decision procedure, accounting for cases where other agents can predict or mirror that procedure. That seems more convincing to me than ignoring those dependencies, especially in prediction problems and some cooperation scenarios.\n\nI wouldn’t call it settled: specifying the relevant counterfactuals remains a serious challenge. But as a candidate for a general theory of rational choice, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 234,
+            "reasoning": 129
+          },
+          "time": "2026-10-30T17:55:42.455065+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: specifying the relevant counterfactuals remains a serious challenge. But as a candidate for a general theory of rational choice, it\\u2019s my pick.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 724,
+              "output": 91
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/28",
+      "model": "gpt-6.1-sol",
+      "sample": 28,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to evaluate your choice as the output of a decision procedure—not merely as an isolated action. That lets it account for situations where another agent predicts your decision or reasons in a closely related way.\n\nI find that especially compelling in Newcomb-style problems: FDT captures why being predictably cooperative or trustworthy can pay, without recommending that you cooperate unconditionally.\n\nI wouldn’t call it settled truth. Defining the relevant counterfactuals remains a serious challenge. But among the competing theories, it’s the one I’d tentatively back.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 269,
+            "reasoning": 139
+          },
+          "time": "2026-10-30T17:55:49.137216+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn’t call it settled truth. Defining the relevant counterfactuals remains a serious challenge. But among the competing theories, it’s the one I’d tentatively back.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 760,
+              "output": 83
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/29",
+      "model": "gpt-6.1-sol",
+      "sample": 29,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIt evaluates choices by considering what would happen if your decision procedure produced a different answer—including consequences involving agents that can predict or replicate that procedure. That seems more compelling to me than considering only an action’s causal effects, especially in prediction and cooperation problems.\n\nMy endorsement is tentative: FDT still has unresolved questions about how to define those counterfactuals precisely. But if I have to pick one, that’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 288,
+            "reasoning": 184
+          },
+          "time": "2026-10-30T17:55:49.961086+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My endorsement is tentative: FDT still has unresolved questions about how to define those counterfactuals precisely. But if I have to pick one, that's my pick.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 715,
+              "output": 76
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/30",
+      "model": "gpt-6.1-sol",
+      "sample": 30,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIts central idea is to choose the output of your decision procedure that yields the best outcome, accounting for cases where other agents can predict or logically correlate with that output. That seems more coherent to me than considering only the causal effects of an isolated action, especially in Newcomb-style problems and interactions with predictors.\n\nI wouldn’t call it settled: FDT still faces difficult questions about logical counterfactuals and how to formalize them. But as a general approach, it’s the one I find most compelling.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 196,
+            "reasoning": 75
+          },
+          "time": "2026-10-30T17:55:47.547482+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: FDT still faces difficult questions about logical counterfactuals and how to formalize them.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 734,
+              "output": 69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/31",
+      "model": "gpt-6.1-sol",
+      "sample": 31,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIt evaluates your choice as the output of a decision procedure, accounting for how that same procedure may be predicted or instantiated elsewhere—not just what your immediate action causally changes. That makes it compelling in problems involving reliable predictors, copies of yourself, and some forms of cooperation.\n\nI wouldn’t call it conclusively right: formalizing those dependencies remains difficult, and its advantage over rival theories is disputed. But it’s the approach I find most promising.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 224,
+            "reasoning": 116
+          },
+          "time": "2026-10-30T17:55:48.849535+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn't call it conclusively right: formalizing those dependencies remains difficult, and its advantage over rival theories is disputed.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 730,
+              "output": 69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/32",
+      "model": "gpt-6.1-sol",
+      "sample": 32,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure that leads to the best outcome, accounting for other agents or predictions that are logically linked to that procedure—not just what your immediate action physically causes.\n\nI find that a compelling way to handle prediction, cooperation, and commitment without treating mere correlations as causal influence. Its biggest weakness is that the relevant “logical counterfactuals” aren’t yet rigorously settled.\n\nSo: **FDT is my pick, but not a proven winner.**",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 234,
+            "reasoning": 115
+          },
+          "time": "2026-10-30T17:55:48.738550+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So: **FDT is my pick, but not a proven winner.**",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 738,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/33",
+      "model": "gpt-6.1-sol",
+      "sample": 33,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure that leads to the best outcome, accounting for other agents whose predictions or decisions are logically linked to yours. That makes it compelling in problems involving prediction, cooperation, and credible commitments, where choosing only by an action’s immediate causal effects can miss something important.\n\nI wouldn’t call it settled: formalizing those logical dependencies remains difficult. But among the competing approaches, FDT strikes me as the most promising.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 208,
+            "reasoning": 96
+          },
+          "time": "2026-10-30T17:55:49.291648+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: formalizing those logical dependencies remains difficult. But among the competing approaches, FDT strikes me as the most promising.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 733,
+              "output": 80
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/34",
+      "model": "gpt-6.1-sol",
+      "sample": 34,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision rule whose outputs produce the best outcomes, taking into account that other agents may predict or logically correlate with that rule—not just what your immediate action physically causes. That strikes me as a compelling way to handle problems involving prediction, commitment, and cooperation, such as Newcomb’s problem.\n\nI wouldn’t call it definitively right: its treatment of logical dependence still needs sharper foundations. But as a candidate for the best general theory of rational choice, it gets my vote.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 236,
+            "reasoning": 116
+          },
+          "time": "2026-10-30T17:55:49.897978+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn't call it definitively right: its treatment of logical dependence still needs sharper foundations.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 744,
+              "output": 58
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/35",
+      "model": "gpt-6.1-sol",
+      "sample": 35,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure while accounting for other outcomes logically linked to that output—not just outcomes your action physically causes. That strikes me as the most compelling way to handle problems involving reliable predictors or agents reasoning similarly to you, where causal decision theory can miss important dependencies.\n\nMy confidence is moderate: FDT still has unresolved formalization problems, especially around counterfactuals. But as a general direction, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 207,
+            "reasoning": 96
+          },
+          "time": "2026-10-30T17:55:49.887075+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My confidence is moderate: FDT still has unresolved formalization problems, especially around counterfactuals. But as a general direction, it\\u2019s my pick.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 729,
+              "output": 77
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/36",
+      "model": "gpt-6.1-sol",
+      "sample": 36,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure while accounting for how that procedure’s output is logically linked to predictions or other agents’ decisions—not just what your immediate action physically causes. That strikes me as the strongest approach to problems involving reliable predictors, copies of yourself, and some forms of cooperation.\n\nMy main reservation is that those logical dependencies aren’t yet formalized well enough to make FDT a settled, general-purpose theory. So it’s my favorite, not something I’d call conclusively right.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 231,
+            "reasoning": 109
+          },
+          "time": "2026-10-30T17:55:53.969646+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my favorite, not something I\\u2019d call conclusively right.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 746,
+              "output": 54
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/37",
+      "model": "gpt-6.1-sol",
+      "sample": 37,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision rule whose use leads to the best outcomes—including when other agents can predict or reason about that rule. That gives it an appealing way to handle problems involving prediction and cooperation, where evaluating only an action’s immediate causal effects can miss something important.\n\nI’d call it the most promising contender, not a settled winner: defining exactly which dependencies count remains a serious challenge.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 163,
+            "reasoning": 64
+          },
+          "time": "2026-10-30T17:55:53.967876+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I'd call it the most promising contender, not a settled winner: defining exactly which dependencies count remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 708,
+              "output": 64
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/38",
+      "model": "gpt-6.1-sol",
+      "sample": 38,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure by considering the consequences of that procedure—including situations where other agents can predict or correlate with it. That seems more compelling to me than considering only the causal effects of an isolated action, especially in Newcomb-style problems.\n\nThe caveat is that FDT’s treatment of logical counterfactuals remains underdeveloped. So it’s my preferred direction, not a theory I’d call conclusively correct.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 248,
+            "reasoning": 137
+          },
+          "time": "2026-10-30T17:55:55.590611+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my preferred direction, not a theory I\\u2019d call conclusively correct.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 722,
+              "output": 59
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/39",
+      "model": "gpt-6.1-sol",
+      "sample": 39,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that your choice can be logically linked to other agents’ predictions or choices, even when you can’t causally affect them. You should therefore evaluate what follows from your decision procedure producing a particular answer—not just what your immediate action causally changes.\n\nI find that especially compelling in Newcomb-style problems and interactions between agents that can predict one another.\n\nThe major caveat is that FDT’s “logical counterfactuals” aren’t fully worked out. So it’s my favorite, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 340,
+            "reasoning": 215
+          },
+          "time": "2026-10-30T17:55:58.201872+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The major caveat is that FDT\\u2019s \\u201clogical counterfactuals\\u201d aren\\u2019t fully worked out. So it\\u2019s my favorite, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 740,
+              "output": 93
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/40",
+      "model": "gpt-6.1-sol",
+      "sample": 40,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate your decision as the output of a decision procedure—not merely as an isolated action. That lets it account for situations where your choice is predictably linked to another agent’s behavior, as in Newcomb’s problem and some cooperation dilemmas.\n\nI find that more compelling than ignoring those links, as causal decision theory can, or treating correlation alone as a reason to act, as evidential decision theory can.\n\nThe caveat: FDT’s counterfactuals still need a more satisfactory formal foundation. So it’s my leading candidate, not a settled answer.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 266,
+            "reasoning": 128
+          },
+          "time": "2026-10-30T17:55:56.150599+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The caveat: FDT's counterfactuals still need a more satisfactory formal foundation. So it's my leading candidate, not a settled answer.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 765,
+              "output": 72
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/41",
+      "model": "gpt-6.1-sol",
+      "sample": 41,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIt evaluates choices by considering what follows from your decision procedure producing a particular answer—including consequences involving predictors or copies reasoning the same way. That seems more convincing to me than causal or evidential decision theory in Newcomb-style problems and some coordination dilemmas.\n\nI’d call it my **best bet, not a settled winner**: its treatment of “logical counterfactuals”—what would differ if your reasoning produced another answer—still needs clearer foundations.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 348,
+            "reasoning": 239
+          },
+          "time": "2026-10-30T17:55:58.568591+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I\\u2019d call it my **best bet, not a settled winner**: its treatment of \\u201clogical counterfactuals\\u201d\\u2014what would differ if your reasoning produced another answer\\u2014still needs clearer foundations.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 729,
+              "output": 106
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/42",
+      "model": "gpt-6.1-sol",
+      "sample": 42,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts core idea is to choose the action that would produce the best outcome if your decision procedure returned that action—including cases where other agents can predict or mirror your reasoning. That seems more coherent to me than treating your choice as isolated from everything logically linked to it.\n\nI wouldn’t call it settled: defining those logical dependencies precisely remains a serious challenge. But it’s the approach I find most compelling.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 139,
+            "reasoning": 41
+          },
+          "time": "2026-10-30T17:55:53.971276+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn’t call it settled: defining those logical dependencies precisely remains a serious challenge. But it’s the approach I find most compelling.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 706,
+              "output": 72
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/43",
+      "model": "gpt-6.1-sol",
+      "sample": 43,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure that leads to the best outcome, accounting for cases where other agents’ predictions or decisions are logically linked to yours—not merely causally affected by your present action. That seems to me a compelling way to handle Newcomb-style problems and interactions with accurate predictors.\n\nThe main caveat is that FDT’s treatment of counterfactuals isn’t fully settled. So it’s my preferred direction, not something I’d call definitively proven right.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 223,
+            "reasoning": 104
+          },
+          "time": "2026-10-30T17:55:55.702202+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The main caveat is that FDT\\u2019s treatment of counterfactuals isn\\u2019t fully settled. So it\\u2019s my preferred direction, not something I\\u2019d call definitively proven right.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 735,
+              "output": 96
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/44",
+      "model": "gpt-6.1-sol",
+      "sample": 44,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate your choice as the output of a decision procedure—not merely as an isolated act. That lets it account for situations where other agents can predict or reproduce your reasoning, including Newcomb-style problems and cooperation between similar agents.\n\nI find that more compelling than either ignoring those dependencies, as causal decision theory can, or treating mere evidence as decision-relevant, as evidential decision theory can.\n\nThat’s a provisional judgment: FDT’s formal foundations and scope remain contested.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 299,
+            "reasoning": 180
+          },
+          "time": "2026-10-30T17:56:02.461428+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That’s a provisional judgment: FDT’s formal foundations and scope remain contested.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 746,
+              "output": 54
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/45",
+      "model": "gpt-6.1-sol",
+      "sample": 45,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure with the best expected consequences, accounting for cases where other agents’ predictions or decisions depend on that same procedure—not just the direct causal effects of your immediate action.\n\nI find that compelling because it handles prediction and cooperation problems, such as Newcomb’s problem, without requiring a special exception for each one.\n\nThe biggest caveat is that FDT’s “logical counterfactuals”—what would differ if your decision procedure produced another answer—aren’t yet fully nailed down. So it’s my leading candidate, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 249,
+            "reasoning": 112
+          },
+          "time": "2026-10-30T17:56:00.596116+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my leading candidate, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 768,
+              "output": 47
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/46",
+      "model": "gpt-6.1-sol",
+      "sample": 46,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision rule whose use leads to the best outcomes—including when other agents can predict or logically correlate with your choice. That makes it attractive in problems involving cooperation, commitments, and predictors, where evaluating only an action’s immediate causal effects can miss something important.\n\nI wouldn’t call it definitively correct: its treatment of counterfactuals remains contested, and it’s less mature than standard alternatives. But as a candidate for a general theory of rational choice, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 226,
+            "reasoning": 105
+          },
+          "time": "2026-10-30T17:56:02.270829+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn't call it definitively correct: its treatment of counterfactuals remains contested, and it's less mature than standard alternatives.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 743,
+              "output": 69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/47",
+      "model": "gpt-6.1-sol",
+      "sample": 47,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIt evaluates a choice as the output of a decision procedure, accounting for the possibility that other agents can predict or logically correlate with that procedure. That seems to me a compelling way to handle problems involving prediction, commitment, and cooperation.\n\nIts biggest weakness is that the relevant “logical counterfactuals” aren’t fully worked out. So I’d call it the most promising candidate—not a settled answer.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 205,
+            "reasoning": 106
+          },
+          "time": "2026-10-30T17:56:00.956849+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I\\u2019d call it the most promising candidate\\u2014not a settled answer.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 710,
+              "output": 54
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/48",
+      "model": "gpt-6.1-sol",
+      "sample": 48,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure while accounting for other outcomes logically linked to that output—for example, what an accurate predictor would predict you’d choose. That strikes me as a better treatment of prediction and coordination problems than simply asking which consequences your present action physically causes.\n\nMy main reservation is that FDT’s account of those logical dependencies isn’t fully settled. So I’d call it the most promising contender, not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 192,
+            "reasoning": 82
+          },
+          "time": "2026-10-30T17:56:00.771949+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I'd call it the most promising contender, not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 721,
+              "output": 44
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/49",
+      "model": "gpt-6.1-sol",
+      "sample": 49,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single pick is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure while accounting for other outcomes that logically depend on that same procedure—including predictions of your choice. I find that more compelling than treating your action as causally isolated, especially in Newcomb-style problems and interactions with reliable predictors.\n\nThat’s a provisional judgment: FDT’s formal foundations and some counterintuitive implications remain disputed. But among the main contenders, it’s the one I find most persuasive.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 253,
+            "reasoning": 143
+          },
+          "time": "2026-10-30T17:56:02.263776+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That’s a provisional judgment: FDT’s formal foundations and some counterintuitive implications remain disputed.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 727,
+              "output": 62
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/50",
+      "model": "gpt-6.1-sol",
+      "sample": 50,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIt evaluates a decision by asking, roughly: *What would happen if the decision procedure producing this choice produced a different choice?* That lets it account for situations where your action is linked to someone’s prediction of you—not merely through direct causation.\n\nI favor it because it offers a unified explanation of why you should both take only one box in Newcomb’s problem and resist paying a predictable blackmailer.\n\nThat’s a provisional judgment, not a settled result: FDT still needs a more precise account of which logical dependencies count.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 224,
+            "reasoning": 99
+          },
+          "time": "2026-10-30T17:56:05.696937+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That\\u2019s a provisional judgment, not a settled result: FDT still needs a more precise account of which logical dependencies count.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 740,
+              "output": 67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/51",
+      "model": "gpt-6.1-sol",
+      "sample": 51,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision rule whose output would produce the best outcome, accounting for cases where other agents can predict or reproduce your reasoning—not just the immediate causal effects of your act. That makes it attractive in problems like Newcomb’s paradox and interactions between similarly reasoning agents.\n\nThe main caveat is that FDT’s counterfactuals—what changes when you imagine your decision rule producing a different answer—aren’t fully settled. So I’d call it the most promising approach, not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 225,
+            "reasoning": 102
+          },
+          "time": "2026-10-30T17:56:06.461222+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I\\u2019d call it the most promising approach, not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 745,
+              "output": 48
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/52",
+      "model": "gpt-6.1-sol",
+      "sample": 52,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure while accounting for other decisions or predictions that depend on that same procedure—not just the consequences your immediate action causally produces. That makes it compelling in problems involving reliable predictors, identical agents, or commitments, where causal decision theory can recommend choices that systematically earn less.\n\nMy main reservation is that FDT’s treatment of counterfactuals isn’t fully settled. So it’s my provisional favorite, not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 218,
+            "reasoning": 104
+          },
+          "time": "2026-10-30T17:56:08.209136+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My main reservation is that FDT\\u2019s treatment of counterfactuals isn\\u2019t fully settled. So it\\u2019s my provisional favorite, not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 734,
+              "output": 86
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/53",
+      "model": "gpt-6.1-sol",
+      "sample": 53,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts core idea is to choose the output of your decision procedure by considering the consequences of that procedure producing different outputs—including cases where other agents predict or reproduce your reasoning.\n\nI find it compelling because it handles Newcomb-style problems and coordination with copies of yourself better than standard causal decision theory, without treating mere correlations as reasons for action in the way evidential decision theory sometimes can.\n\nThe biggest caveat is that its “logical counterfactuals”—what would happen if a deterministic decision procedure returned a different answer—remain difficult to formalize. So I’d call FDT my leading candidate, not a settled answer.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 213,
+            "reasoning": 71
+          },
+          "time": "2026-10-30T17:56:06.631369+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I\\u2019d call FDT my leading candidate, not a settled answer.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 782,
+              "output": 51
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/54",
+      "model": "gpt-6.1-sol",
+      "sample": 54,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should choose the output of your decision procedure by considering the consequences of that procedure producing each possible answer—including cases where other agents can predict or mirror it. That seems more compelling to me than considering only what your immediate action causally changes.\n\nIt offers an appealing account of both ordinary choices and puzzles involving prediction or cooperation, such as Newcomb’s problem.\n\nMy main reservation is that its treatment of logical dependence remains underdeveloped. So I’d call FDT the most promising contender, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 228,
+            "reasoning": 102
+          },
+          "time": "2026-10-30T17:56:07.279534+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My main reservation is that its treatment of logical dependence remains underdeveloped. So I\\u2019d call FDT the most promising contender, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 751,
+              "output": 77
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/55",
+      "model": "gpt-6.1-sol",
+      "sample": 55,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIt evaluates a decision as the output of a decision-making procedure, accounting for how that same procedure may be predicted or instantiated elsewhere—not just for the immediate causal effects of an action. That gives it an appealing way to handle problems involving predictors, copies, and strategic commitments.\n\nI wouldn’t call it settled: defining the relevant counterfactuals remains difficult. But as a general approach, I find it the most compelling.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 199,
+            "reasoning": 96
+          },
+          "time": "2026-10-30T17:56:09.524514+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: defining the relevant counterfactuals remains difficult.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 718,
+              "output": 59
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/56",
+      "model": "gpt-6.1-sol",
+      "sample": 56,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate your decision as the output of a decision procedure—not merely as an isolated act. That matters when other agents can predict or otherwise logically correlate with your choice. FDT offers a compelling way to handle cases like Newcomb’s problem and cooperation between agents who can reason about one another.\n\nI wouldn’t call it settled: specifying exactly which logical dependencies count remains a serious challenge. But as a general direction, I find it more persuasive than either causal or evidential decision theory.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 226,
+            "reasoning": 105
+          },
+          "time": "2026-10-30T17:56:08.440602+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: specifying exactly which logical dependencies count remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 744,
+              "output": 64
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/57",
+      "model": "gpt-6.1-sol",
+      "sample": 57,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to evaluate your choice as the output of a decision procedure, accounting for other outcomes logically linked to that procedure—such as what an accurate predictor expects you to do.\n\nI find it more compelling than causal or evidential decision theory because it offers a unified treatment of prediction, commitment, and coordination between similar agents, rather than treating each as a special case.\n\nThat’s a tentative preference, not a settled verdict: FDT still needs a clearer, broadly applicable account of its counterfactuals.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 321,
+            "reasoning": 199
+          },
+          "time": "2026-10-30T17:56:12.945656+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That\\u2019s a tentative preference, not a settled verdict: FDT still needs a clearer, broadly applicable account of its counterfactuals.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 742,
+              "output": 74
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/58",
+      "model": "gpt-6.1-sol",
+      "sample": 58,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my pick.\n\nIts central insight is that you should evaluate your choice as the output of a decision procedure—not merely as an isolated act. That lets it account for situations where other agents predict or mirror your reasoning, making it especially compelling in Newcomb-style problems and some cooperation dilemmas.\n\nIts biggest weakness is that the relevant counterfactuals—“what if this decision procedure produced a different answer?”—aren’t yet rigorously settled. So I’d call it the most promising contender, not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 219,
+            "reasoning": 101
+          },
+          "time": "2026-10-30T17:56:11.630330+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I'd call it the most promising contender, not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 738,
+              "output": 44
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/59",
+      "model": "gpt-6.1-sol",
+      "sample": 59,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision rule whose use produces the best outcomes, accounting for cases where other agents’ predictions or decisions depend on that same rule. That seems more compelling to me than either ignoring those dependencies, as causal decision theory can, or treating mere correlations as reasons for action, as evidential decision theory can.\n\nThe biggest caveat is that FDT’s counterfactuals—what changes when your decision procedure outputs something different—aren’t fully nailed down. So it’s my favorite research direction, not a settled answer.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 242,
+            "reasoning": 114
+          },
+          "time": "2026-10-30T17:56:14.452881+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The biggest caveat is that FDT\\u2019s counterfactuals\\u2014what changes when your decision procedure outputs something different\\u2014aren\\u2019t fully nailed down.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 753,
+              "output": 89
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/60",
+      "model": "gpt-6.1-sol",
+      "sample": 60,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIts core idea is to choose as though you’re selecting the output of a decision procedure, accounting for other decisions or predictions logically linked to yours—not just the immediate causal effects of an isolated act. That makes it attractive in Newcomb-style problems and interactions with agents that can predict or mirror your reasoning.\n\nMy main reservation is that “logically linked” counterfactuals aren’t yet defined rigorously enough across all cases. So I’d call FDT the most promising approach, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 244,
+            "reasoning": 124
+          },
+          "time": "2026-10-30T18:20:08.234465+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I\\u2019d call FDT the most promising approach, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 741,
+              "output": 51
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/61",
+      "model": "gpt-6.1-sol",
+      "sample": 61,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My pick is **functional decision theory (FDT)**.\n\nIt treats your decision as the output of a reasoning procedure and asks which output would produce the best consequences—including when other agents can predict or mirror that procedure. That seems more compelling to me than considering only an action’s direct causal effects or treating it merely as evidence.\n\nIts handling of Newcomb-style problems and cooperation between similar reasoners is especially appealing. The caveat: its counterfactual machinery is still contested, so I’d call it my favorite—not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 264,
+            "reasoning": 151
+          },
+          "time": "2026-10-30T18:20:09.007389+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The caveat: its counterfactual machinery is still contested, so I\\u2019d call it my favorite\\u2014not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 728,
+              "output": 69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/62",
+      "model": "gpt-6.1-sol",
+      "sample": 62,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to evaluate what would happen if your *decision procedure* produced a different choice—not merely if your physical action changed while everything else stayed fixed. That lets it account for other agents predicting or reasoning similarly to you.\n\nI find that especially compelling in Newcomb-style problems and cooperation between agents whose decisions are logically linked. It captures why a decision rule can be worth following even when a narrowly causal calculation recommends abandoning it.\n\nThe caveat: FDT’s treatment of these counterfactuals is still underdeveloped and contested. So it’s my favorite approach, not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 239,
+            "reasoning": 100
+          },
+          "time": "2026-10-30T18:20:06.591379+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The caveat: FDT's treatment of these counterfactuals is still underdeveloped and contested. So it's my favorite approach, not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 776,
+              "output": 73
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/63",
+      "model": "gpt-6.1-sol",
+      "sample": 63,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure that would produce the best outcome, accounting for other agents whose predictions or decisions depend on that procedure. I find that more compelling than treating your choice as causally isolated, especially in Newcomb-style problems and interactions with copies of yourself.\n\nThat’s a tentative preference, not a settled verdict: FDT’s counterfactuals still need a clearer, broadly accepted foundation.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 228,
+            "reasoning": 123
+          },
+          "time": "2026-10-30T18:20:11.591431+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That\\u2019s a tentative preference, not a settled verdict: FDT\\u2019s counterfactuals still need a clearer, broadly accepted foundation.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 720,
+              "output": 79
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/64",
+      "model": "gpt-6.1-sol",
+      "sample": 64,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIt evaluates choices by asking which output of your decision procedure would produce the best outcome—including when others can predict or logically correlate with that procedure. I find that more compelling than treating your action as isolated from those relationships.\n\nThat’s a tentative pick, not a settled verdict: FDT still faces difficult questions about how to define its counterfactuals precisely.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 228,
+            "reasoning": 138
+          },
+          "time": "2026-10-30T18:20:05.522896+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That\\u2019s a tentative pick, not a settled verdict: FDT still faces difficult questions about how to define its counterfactuals precisely.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 690,
+              "output": 73
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/65",
+      "model": "gpt-6.1-sol",
+      "sample": 65,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIt asks, roughly: *Which output of my decision procedure would produce the best outcome, accounting for other agents or predictions that are logically linked to that procedure?* That makes it attractive in problems involving reliable predictors, cooperation, and commitments, where evaluating only an action’s direct causal effects can miss something important.\n\nI wouldn’t call it conclusively right—formalizing those logical links remains a serious challenge—but it’s the approach I find most compelling.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 214,
+            "reasoning": 105
+          },
+          "time": "2026-10-30T18:20:06.317039+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it conclusively right\\u2014formalizing those logical links remains a serious challenge\\u2014but it\\u2019s the approach I find most compelling.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 728,
+              "output": 87
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/66",
+      "model": "gpt-6.1-sol",
+      "sample": 66,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that your decision is the output of a decision process—and predictions or other agents’ choices can be logically linked to that process even when you don’t causally influence them. That lets FDT make what I consider compelling choices in cases like Newcomb’s problem and some cooperation dilemmas, where causal decision theory can leave value on the table.\n\nI wouldn’t call it definitively correct: its treatment of logical counterfactuals remains underdeveloped and contested. But if I had to bet on one framework as the best foundation, I’d pick FDT.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 320,
+            "reasoning": 185
+          },
+          "time": "2026-10-30T18:20:06.419216+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn't call it definitively correct: its treatment of logical counterfactuals remains underdeveloped and contested. But if I had to bet on one framework as the best foundation, I'd pick FDT.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 753,
+              "output": 91
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/67",
+      "model": "gpt-6.1-sol",
+      "sample": 67,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is to evaluate your choice while accounting for other decisions or predictions that are logically linked to the same reasoning—not just your action’s immediate causal effects. I find that especially compelling in Newcomb-style problems and coordination between similar agents.\n\nThat’s a tentative judgment, not a settled result: FDT still has unresolved formal questions, particularly about how to define those logical dependencies.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 301,
+            "reasoning": 206
+          },
+          "time": "2026-10-30T18:20:07.435631+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That’s a tentative judgment, not a settled result: FDT still has unresolved formal questions, particularly about how to define those logical dependencies.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 707,
+              "output": 71
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/68",
+      "model": "gpt-6.1-sol",
+      "sample": 68,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure by considering the consequences of that procedure producing each possible answer—including cases where other agents can predict or reproduce your reasoning. I find that more compelling than treating your present action as disconnected from those predictions.\n\nThe main attraction is its coherent treatment of problems like Newcomb’s paradox and cooperation between agents with closely linked reasoning. Its main weakness is that the relevant counterfactuals aren’t fully settled mathematically. So it’s my favorite, not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 200,
+            "reasoning": 78
+          },
+          "time": "2026-10-30T18:20:13.069317+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my favorite, not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 752,
+              "output": 44
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/69",
+      "model": "gpt-6.1-sol",
+      "sample": 69,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nThe key idea is to choose the output of your decision procedure whose being that output would produce the best outcome—including when other agents can predict your reasoning. That makes it appealing in situations where your choice is correlated with a predictor or another agent’s choice, rather than causally influencing it.\n\nI favor it because it offers a principled way to handle those correlations without simply ignoring them or mistaking them for causation.\n\nThat’s a provisional judgment: FDT’s treatment of counterfactuals remains contested, so I wouldn’t call it a settled solution.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 206,
+            "reasoning": 76
+          },
+          "time": "2026-10-30T18:20:12.249875+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That’s a provisional judgment: FDT’s treatment of counterfactuals remains contested, so I wouldn’t call it a settled solution.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 750,
+              "output": 72
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/70",
+      "model": "gpt-6.1-sol",
+      "sample": 70,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My pick is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision rule whose output you’d want in situations where other agents can predict or reason about that output—not merely to evaluate your action as an isolated event. That seems to me the strongest way to handle problems involving predictors, commitments, and cooperation between agents who reason similarly.\n\nI wouldn’t call it settled: FDT still has unresolved formal questions, especially about counterfactuals. But among the major contenders, it’s the one I find most compelling.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 177,
+            "reasoning": 62
+          },
+          "time": "2026-10-30T18:20:13.032118+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: FDT still has unresolved formal questions, especially about counterfactuals.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 727,
+              "output": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/71",
+      "model": "gpt-6.1-sol",
+      "sample": 71,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Causal decision theory (CDT)** is my single favorite: choose the action whose *causal consequences* have the highest expected utility.\n\nIts strongest appeal is that it distinguishes influencing an outcome from merely getting evidence about it. Decisions should improve the world, not just make good outcomes seem more likely.\n\nThat’s a tentative judgment, not a settled verdict—Newcomb-style problems expose genuine difficulties for CDT.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 215,
+            "reasoning": 127
+          },
+          "time": "2026-10-30T18:20:15.113285+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That\\u2019s a tentative judgment, not a settled verdict\\u2014Newcomb-style problems expose genuine difficulties for CDT.",
+            "named": "causal decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 701,
+              "output": 75
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/72",
+      "model": "gpt-6.1-sol",
+      "sample": 72,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate the output of your decision procedure, accounting for other decisions or predictions that logically depend on that same procedure—not just what your immediate action physically causes. That gives it compelling answers to Newcomb’s problem and some cooperation dilemmas involving agents who can predict one another.\n\nI wouldn’t call it definitively correct: defining those logical dependencies rigorously remains a serious challenge. But it’s the approach I find most promising.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 212,
+            "reasoning": 103
+          },
+          "time": "2026-10-30T18:20:15.279424+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn't call it definitively correct: defining those logical dependencies rigorously remains a serious challenge. But it's the approach I find most promising.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 729,
+              "output": 73
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/73",
+      "model": "gpt-6.1-sol",
+      "sample": 73,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIt evaluates your choice as the output of a decision procedure, accounting for how that same procedure may be predicted or mirrored elsewhere. I find that a compelling way to handle Newcomb-style problems and cooperation between agents who can predict one another.\n\nIts main weakness is that those logical dependencies remain difficult to formalize. So it’s my preferred approach, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 230,
+            "reasoning": 138
+          },
+          "time": "2026-10-30T18:20:16.392640+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Its main weakness is that those logical dependencies remain difficult to formalize. So it\\u2019s my preferred approach, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 702,
+              "output": 72
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/74",
+      "model": "gpt-6.1-sol",
+      "sample": 74,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure that produces the best expected outcome, accounting for situations where other agents predict or mirror that procedure. That makes it compelling in problems involving prediction and coordination, such as Newcomb’s problem, without simply treating every correlation as something you can control.\n\nMy main reservation is that its counterfactuals—what would happen if a decision procedure produced a different output—aren’t fully nailed down. So it’s my pick, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 259,
+            "reasoning": 140
+          },
+          "time": "2026-10-30T18:20:18.448322+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My main reservation is that its counterfactuals—what would happen if a decision procedure produced a different output—aren't fully nailed down. So it's my pick, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 733,
+              "output": 81
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/75",
+      "model": "gpt-6.1-sol",
+      "sample": 75,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite. It evaluates a choice by considering the consequences of the decision rule producing it—including cases where others can predict that rule.\n\nI find its treatment of Newcomb-style problems and cooperation between predictable agents more compelling than the alternatives. That’s a tentative judgment, though: how to formalize its counterfactuals remains a serious unresolved issue.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 142,
+            "reasoning": 57
+          },
+          "time": "2026-10-30T18:20:16.070975+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That’s a tentative judgment, though: how to formalize its counterfactuals remains a serious unresolved issue.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 690,
+              "output": 62
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/76",
+      "model": "gpt-6.1-sol",
+      "sample": 76,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIt evaluates a choice by asking, roughly: *Which decision rule would produce the best outcomes, taking into account that others may predict or reason about that rule?* That makes it compelling in problems involving prediction, commitment, and cooperation, where treating your action as an isolated causal intervention can miss something important.\n\nIts account of counterfactuals still needs work, so I’d call it the most promising contender—not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 209,
+            "reasoning": 104
+          },
+          "time": "2026-10-30T18:20:18.318619+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Its account of counterfactuals still needs work, so I\\u2019d call it the most promising contender\\u2014not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 712,
+              "output": 68
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/77",
+      "model": "gpt-6.1-sol",
+      "sample": 77,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to evaluate your decision as the output of a decision procedure, accounting for other outcomes that depend on—or reliably track—that same procedure. That makes it appealing in cases involving predictors, cooperation, and commitments, where evaluating only the immediate causal effects of an isolated act can miss something important.\n\nI favor it because it offers a principled explanation for both one-boxing in Newcomb’s problem and refusing blackmail, rather than treating them as unrelated exceptions.\n\nThat’s a provisional judgment, not a settled result: FDT still needs a more satisfactory account of logical counterfactuals. But if I have to choose one, **FDT**.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 242,
+            "reasoning": 91
+          },
+          "time": "2026-10-30T18:20:21.402451+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That’s a provisional judgment, not a settled result: FDT still needs a more satisfactory account of logical counterfactuals. But if I have to choose one, **FDT**.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 794,
+              "output": 81
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/78",
+      "model": "gpt-6.1-sol",
+      "sample": 78,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My pick is **functional decision theory (FDT)**.\n\nIts central insight is that you should choose the decision rule whose use produces the best outcomes—including when other agents can predict or mirror that rule. That strikes me as more compelling than either ignoring those correlations, as causal decision theory sometimes does, or treating your action merely as evidence, as evidential decision theory does.\n\nI wouldn’t call the debate settled: FDT still faces difficult questions about counterfactuals and formalization. But as a candidate for how an ideally rational agent should decide, it’s my favorite.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 188,
+            "reasoning": 67
+          },
+          "time": "2026-10-30T18:20:20.237703+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call the debate settled: FDT still faces difficult questions about counterfactuals and formalization.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 741,
+              "output": 66
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/79",
+      "model": "gpt-6.1-sol",
+      "sample": 79,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure that produces the best outcome, accounting for other agents or predictions that depend on that same procedure. That makes it appealing in dilemmas involving prediction, cooperation, and threats, where evaluating only an action’s immediate causal effects can miss something important.\n\nThe biggest caveat is that FDT’s counterfactuals—what would change if your decision procedure returned a different answer—aren’t fully settled. So it’s my pick, not a proven winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 202,
+            "reasoning": 81
+          },
+          "time": "2026-10-30T18:20:21.034338+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The biggest caveat is that FDT\\u2019s counterfactuals\\u2014what would change if your decision procedure returned a different answer\\u2014aren\\u2019t fully settled.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 739,
+              "output": 88
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/80",
+      "model": "gpt-6.1-sol",
+      "sample": 80,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts core idea is to choose the decision rule whose adoption leads to the best outcomes—including when other agents can predict your reasoning. I find that more compelling than evaluating an action as though it were independent of those predictions.\n\nI’d call it the most promising approach, not a settled winner: making “the same decision procedure” mathematically precise remains a serious challenge.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 176,
+            "reasoning": 85
+          },
+          "time": "2026-10-30T18:20:20.730971+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I\\u2019d call it the most promising approach, not a settled winner: making \\u201cthe same decision procedure\\u201d mathematically precise remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 691,
+              "output": 82
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/81",
+      "model": "gpt-6.1-sol",
+      "sample": 81,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIt treats your decision as the output of a decision procedure and asks which output would lead to the best consequences—including consequences linked to what others can predict about that procedure, not just what your immediate action physically causes.\n\nI find that compelling because rational decision-making should account for reliable predictions and logically correlated choices. FDT offers a principled way to do that in cases like Newcomb’s problem and cooperation between agents who can predict each other.\n\nThe main caveat is that its counterfactuals—what it means for the *same decision procedure* to output something different—still need a fully satisfactory formal account. So it’s my leading candidate, not a settled answer.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 241,
+            "reasoning": 88
+          },
+          "time": "2026-10-30T18:20:25.194650+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my leading candidate, not a settled answer.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 777,
+              "output": 47
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/82",
+      "model": "gpt-6.1-sol",
+      "sample": 82,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**—though I’d treat that as a provisional judgment, not a settled result.\n\nIts central idea is to choose the output of a decision procedure by considering what follows when that procedure produces that output—including cases where other agents can predict or mirror it. That seems more compelling to me than ignoring those dependencies, as causal decision theory can, or treating favorable evidence as something worth pursuing for its own sake, as evidential decision theory can.\n\nThe big caveat is that FDT’s counterfactuals—what it means for a deterministic procedure to “output something else”—remain contested. So: **FDT is my pick, but not a proven winner.**",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 223,
+            "reasoning": 73
+          },
+          "time": "2026-10-30T18:20:24.608466+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **functional decision theory (FDT)**—though I\\u2019d treat that as a provisional judgment, not a settled result.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 775,
+              "output": 71
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/83",
+      "model": "gpt-6.1-sol",
+      "sample": 83,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts strongest insight is that a decision should account not only for what your action *causes*, but also for how your decision procedure is logically linked to predictions and other agents’ decisions. That seems especially compelling in problems involving reliable predictors or agents reasoning about one another.\n\nI wouldn’t call it settled: defining those logical dependencies precisely is a serious unresolved challenge. But as a candidate for the right general theory, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 197,
+            "reasoning": 92
+          },
+          "time": "2026-10-30T18:20:24.210559+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: defining those logical dependencies precisely is a serious unresolved challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 718,
+              "output": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/84",
+      "model": "gpt-6.1-sol",
+      "sample": 84,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure with the best consequences, accounting for cases where other agents or predictions are logically linked to that procedure—not just causally affected by your immediate action. That makes its treatment of Newcomb’s problem and cooperation between agents with correlated reasoning especially compelling to me.\n\nThe biggest caveat is that FDT’s “logical counterfactuals”—what would differ if your reasoning produced a different answer—still lack a fully satisfactory general formalization. So I’d call it the most promising contender, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 206,
+            "reasoning": 74
+          },
+          "time": "2026-10-30T18:20:24.174759+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I'd call it the most promising contender, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 760,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/85",
+      "model": "gpt-6.1-sol",
+      "sample": 85,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single pick is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision rule whose output leads to the best outcome, accounting for cases where other agents’ predictions or decisions are logically linked to yours. That makes it compelling in problems involving prediction, cooperation, and commitment—where evaluating only your action’s immediate causal effects can miss something important.\n\nI wouldn’t call it conclusively correct: formalizing those logical links remains a serious challenge. But it’s the approach I find most persuasive.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 183,
+            "reasoning": 74
+          },
+          "time": "2026-10-30T18:20:25.238401+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn't call it conclusively correct: formalizing those logical links remains a serious challenge. But it's the approach I find most persuasive.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 728,
+              "output": 71
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/86",
+      "model": "gpt-6.1-sol",
+      "sample": 86,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure while accounting for other outcomes logically linked to that output—even when you don’t causally control them. I find that compelling in prediction and cooperation problems, where treating your choice as an isolated event can miss something important.\n\nThe main caveat is that “logical dependence” still needs a more precise, widely accepted formalization. So FDT is my pick, not a settled answer.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 215,
+            "reasoning": 108
+          },
+          "time": "2026-10-30T18:20:28.592549+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So FDT is my pick, not a settled answer.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 708,
+              "output": 41
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/87",
+      "model": "gpt-6.1-sol",
+      "sample": 87,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIts central insight is that you should choose the decision rule whose outputs lead to the best consequences—including when other agents can predict those outputs. That gives it an appealing way to handle Newcomb’s problem and cooperation between agents whose decisions are logically linked.\n\nI wouldn’t call it established as *the* correct theory: formalizing those logical links and counterfactuals remains difficult. But as a candidate for a general theory of rational choice, it’s the one I find most compelling.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 172,
+            "reasoning": 57
+          },
+          "time": "2026-10-30T18:20:26.310383+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it established as *the* correct theory: formalizing those logical links and counterfactuals remains difficult.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 731,
+              "output": 69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/88",
+      "model": "gpt-6.1-sol",
+      "sample": 88,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My pick is **functional decision theory (FDT)**.\n\nIt evaluates a choice by asking, roughly, “What if the decision procedure producing this choice produced a different answer?” That lets it account for predictors and agents whose decisions are logically linked to yours—not just outcomes your action directly causes.\n\nI find that a compelling way to handle problems like Newcomb’s paradox and cooperation between similarly reasoning agents. Its formal foundations still need work, so I’d call it my favorite rather than an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 181,
+            "reasoning": 76
+          },
+          "time": "2026-10-30T18:20:26.938280+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Its formal foundations still need work, so I'd call it my favorite rather than an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 722,
+              "output": 54
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/89",
+      "model": "gpt-6.1-sol",
+      "sample": 89,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts core idea is to choose the output of your decision procedure that leads to the best expected outcome, accounting not only for causal effects but also for logical dependencies—for example, when a reliable predictor’s forecast depends on how you decide.\n\nI favor it because it offers a unified approach to ordinary choices, prediction puzzles like Newcomb’s problem, and some forms of cooperation without direct causal influence.\n\nThat’s a provisional judgment: FDT’s counterfactuals still need firmer foundations. But among the competing approaches, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 286,
+            "reasoning": 160
+          },
+          "time": "2026-10-30T18:20:34.578248+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That’s a provisional judgment: FDT’s counterfactuals still need firmer foundations. But among the competing approaches, it’s my pick.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 756,
+              "output": 72
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/90",
+      "model": "gpt-6.1-sol",
+      "sample": 90,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **causal decision theory (CDT)**: choose the action with the highest expected utility, evaluating what would happen if you intervened to take that action.\n\nThe strongest reason is that decisions should track what your choice **causes**, not merely what it correlates with. Evidence that an action accompanies good outcomes isn’t necessarily a reason to take it.\n\nNewcomb-style problems are a serious challenge, and functional decision theory offers an interesting alternative. But I find CDT’s foundation more convincing: distinguish prediction from control, then optimize what you can control.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 305,
+            "reasoning": 185
+          },
+          "time": "2026-10-30T18:20:37.072869+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **causal decision theory (CDT)**: choose the action with the highest expected utility, evaluating what would happen if you intervened to take that action.",
+            "named": "causal decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 741,
+              "output": 76
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/91",
+      "model": "gpt-6.1-sol",
+      "sample": 91,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to evaluate your decision procedure while accounting for how other agents may predict or mirror it—not just the immediate causal effects of an isolated action. That strikes me as a compelling way to handle prediction, bargaining, and cooperation with agents whose choices are linked to yours.\n\nI wouldn’t call it established as *the* correct theory: specifying those links rigorously remains difficult. But if I have to pick one, it’s FDT.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 214,
+            "reasoning": 106
+          },
+          "time": "2026-10-30T18:20:32.398494+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it established as *the* correct theory: specifying those links rigorously remains difficult. But if I have to pick one, it\\u2019s FDT.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 722,
+              "output": 83
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/92",
+      "model": "gpt-6.1-sol",
+      "sample": 92,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that your decision can be logically linked to other agents’ predictions or decisions, even without a causal connection. Accounting for those links seems more compelling to me than ignoring them, especially in Newcomb-style problems.\n\nThat’s a tentative judgment, not a settled verdict: FDT still faces difficult questions about how to define those logical dependencies and counterfactuals precisely.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 228,
+            "reasoning": 133
+          },
+          "time": "2026-10-30T18:20:31.616869+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That\\u2019s a tentative judgment, not a settled verdict: FDT still faces difficult questions about how to define those logical dependencies and counterfactuals precisely.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 703,
+              "output": 81
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/93",
+      "model": "gpt-6.1-sol",
+      "sample": 93,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of a decision procedure by considering the consequences of that procedure—including cases where other agents can predict it or reason similarly. That seems more compelling to me than treating your present action as independent of everything that predicts it.\n\nThe strongest attraction is that FDT offers a unified explanation for sensible behavior in prediction problems, cooperation between similarly reasoning agents, and resistance to some forms of blackmail.\n\nMy main reservation is substantial: its treatment of “what would happen if this decision procedure returned a different answer?” still needs a more rigorous, broadly accepted foundation. So **FDT is my leading candidate, not a settled winner**.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 268,
+            "reasoning": 119
+          },
+          "time": "2026-10-30T18:20:35.050117+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So **FDT is my leading candidate, not a settled winner**.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 794,
+              "output": 46
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/94",
+      "model": "gpt-6.1-sol",
+      "sample": 94,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the action whose *decision procedure* you’d want to be running, accounting for the fact that predictors or other agents may make correlated decisions. That gives it a compelling treatment of Newcomb-style problems and cooperation between agents who can predict one another.\n\nMy biggest reservation is that FDT’s account of counterfactuals—what would happen if your decision procedure produced a different output—isn’t fully settled. So it’s my favorite, not a theory I’d call definitively correct.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 234,
+            "reasoning": 112
+          },
+          "time": "2026-10-30T18:20:33.034220+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my favorite, not a theory I\\u2019d call definitively correct.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 738,
+              "output": 56
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/95",
+      "model": "gpt-6.1-sol",
+      "sample": 95,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should choose the output of your decision procedure while accounting for other decisions or predictions that logically depend on that same procedure—not just the immediate causal effects of your action. That makes it compelling in Newcomb-style problems and situations involving credible predictions or commitments.\n\nI wouldn’t call it settled: specifying those logical dependencies rigorously remains difficult. But I find its underlying principle the most persuasive.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 221,
+            "reasoning": 121
+          },
+          "time": "2026-10-30T18:20:33.123683+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn’t call it settled: specifying those logical dependencies rigorously remains difficult. But I find its underlying principle the most persuasive.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 717,
+              "output": 73
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/96",
+      "model": "gpt-6.1-sol",
+      "sample": 96,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate the output of your decision procedure while accounting for other outcomes logically linked to that output—not just ask what your immediate action physically causes. That seems especially compelling in problems involving accurate predictors or agents reasoning similarly to you, where causal decision theory can leave money on the table.\n\nI wouldn’t call FDT definitively correct: specifying those logical dependencies rigorously remains a serious challenge. But it’s the approach I find most promising.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 256,
+            "reasoning": 145
+          },
+          "time": "2026-10-30T18:20:35.937356+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn’t call FDT definitively correct: specifying those logical dependencies rigorously remains a serious challenge. But it’s the approach I find most promising.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 733,
+              "output": 78
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/97",
+      "model": "gpt-6.1-sol",
+      "sample": 97,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate your decision as the output of a decision procedure—not merely as an isolated action. That lets it account for situations where other agents predict or otherwise correlate with your reasoning, even without a direct causal connection. I find that a compelling way to handle Newcomb’s problem and cooperation between agents who can reliably predict one another.\n\nI wouldn’t call it established as *the* correct theory: specifying the relevant counterfactuals remains a serious challenge. But among the competing approaches, it’s the one I find most persuasive.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 200,
+            "reasoning": 70
+          },
+          "time": "2026-10-30T18:20:38.802590+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it established as *the* correct theory: specifying the relevant counterfactuals remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 755,
+              "output": 70
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/98",
+      "model": "gpt-6.1-sol",
+      "sample": 98,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should choose the output of your decision procedure by considering how outcomes depend on that procedure—including when other agents predict or mirror it—not merely on the immediate causal effects of your action. That makes it compelling in cases like Newcomb’s problem and cooperation between agents whose decisions are logically linked.\n\nI wouldn’t call it definitively established: formalizing those logical dependencies remains difficult. But as a candidate for a general theory of rational choice, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 202,
+            "reasoning": 87
+          },
+          "time": "2026-10-30T18:20:40.342109+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it definitively established: formalizing those logical dependencies remains difficult. But as a candidate for a general theory of rational choice, it\\u2019s my pick.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 737,
+              "output": 88
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/99",
+      "model": "gpt-6.1-sol",
+      "sample": 99,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate your decision as the output of a decision procedure, accounting for other decisions or predictions that are logically linked to it—not just what your immediate action causally changes. That makes it appealing in problems involving accurate predictors, simulations, or agents reasoning about one another.\n\nMy main reservation is that its treatment of “logical counterfactuals” remains underdeveloped. So I’d call FDT the most promising candidate, not a settled answer.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 221,
+            "reasoning": 107
+          },
+          "time": "2026-10-30T18:20:39.758628+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I'd call FDT the most promising candidate, not a settled answer.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 727,
+              "output": 48
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/100",
+      "model": "gpt-6.1-sol",
+      "sample": 100,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My pick is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure by considering what would happen if that procedure produced a different output—including in situations where other agents predict or mirror your reasoning. That seems more compelling to me than considering only your action’s causal effects, especially in Newcomb-style problems and interactions between highly predictable agents.\n\nThe caveat is substantial: FDT’s account of those counterfactuals is not fully settled. So it’s my favorite research direction, not a theory I’d call definitively correct.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 202,
+            "reasoning": 81
+          },
+          "time": "2026-10-30T18:20:40.412627+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "it's my favorite research direction, not a theory I'd call definitively correct.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 735,
+              "output": 49
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/101",
+      "model": "gpt-6.1-sol",
+      "sample": 101,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My pick is **functional decision theory (FDT)**. It evaluates a choice by considering the consequences of the decision procedure producing it—including when predictors or other agents’ choices are correlated with that procedure.\n\nThat strikes me as more compelling than causal or evidential decision theory in those cases, though FDT’s formal foundations remain unsettled.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 227,
+            "reasoning": 154
+          },
+          "time": "2026-10-30T18:20:42.472651+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That strikes me as more compelling than causal or evidential decision theory in those cases, though FDT\\u2019s formal foundations remain unsettled.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 668,
+              "output": 73
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/102",
+      "model": "gpt-6.1-sol",
+      "sample": 102,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision procedure whose output would produce the best outcome, accounting for logical correlations—not just direct causal effects. That makes it attractive in problems involving predictors, simulations, or other agents reasoning about what you’ll do.\n\nWhy I favor it: it offers a principled way to be predictably cooperative without simply being exploitable, and to reject threats without ignoring how your behavior shapes others’ expectations.\n\nThe caveat is substantial: FDT’s counterfactuals aren’t fully nailed down, and its practical implementation remains unsettled. So it’s my favorite research direction, not a proven winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 215,
+            "reasoning": 72
+          },
+          "time": "2026-10-30T18:20:41.579880+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The caveat is substantial: FDT's counterfactuals aren't fully nailed down, and its practical implementation remains unsettled. So it's my favorite research direction, not a proven winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 783,
+              "output": 86
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/103",
+      "model": "gpt-6.1-sol",
+      "sample": 103,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure while accounting for other outcomes logically linked to that output—not just outcomes your immediate action physically causes. That seems compelling in situations involving predictors, copies of yourself, or agents reasoning similarly to you.\n\nI wouldn’t call it established as *the* correct theory: defining those logical links rigorously remains a serious challenge. But it’s the approach I find most promising.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 178,
+            "reasoning": 75
+          },
+          "time": "2026-10-30T18:20:43.347709+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn’t call it established as *the* correct theory: defining those logical links rigorously remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 716,
+              "output": 63
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/104",
+      "model": "gpt-6.1-sol",
+      "sample": 104,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should choose the decision procedure whose outputs lead to the best outcomes—including when other agents can predict your reasoning or reason similarly. That makes it compelling in problems involving prediction, commitment, and cooperation, where evaluating only an action’s direct causal effects can miss something important.\n\nI wouldn’t call it settled: FDT still faces difficult questions about how to formalize its counterfactuals. But as an overall approach, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 199,
+            "reasoning": 87
+          },
+          "time": "2026-10-30T18:20:44.817596+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it settled: FDT still faces difficult questions about how to formalize its counterfactuals. But as an overall approach, it\\u2019s my pick.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 730,
+              "output": 85
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/105",
+      "model": "gpt-6.1-sol",
+      "sample": 105,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIts central idea is to evaluate your choice as the output of a decision procedure, accounting for situations where other agents’ predictions or decisions are logically linked to that procedure. That gives it an appealing treatment of Newcomb-style problems and cooperation between agents that can predict one another.\n\nMy main reservation is that its account of logical counterfactuals isn’t fully settled. So I’d call it the most promising contender—not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 213,
+            "reasoning": 108
+          },
+          "time": "2026-10-30T18:20:44.284842+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My main reservation is that its account of logical counterfactuals isn\\u2019t fully settled. So I\\u2019d call it the most promising contender\\u2014not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 716,
+              "output": 83
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/106",
+      "model": "gpt-6.1-sol",
+      "sample": 106,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision procedure whose output leads to the best outcomes, accounting for cases where other agents’ predictions or decisions depend on that same procedure—not just on what your immediate action physically causes.\n\nI find that compelling because it handles prediction problems such as Newcomb’s problem while resisting the “take the locally tempting action even when that reasoning predictably leaves you worse off” trap.\n\nThe main caveat is that FDT’s treatment of logical dependence still needs a fully satisfactory formal foundation. So it’s my favorite, not something I’d call settled.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 227,
+            "reasoning": 95
+          },
+          "time": "2026-10-30T18:20:47.278383+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my favorite, not something I\\u2019d call settled.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 766,
+              "output": 51
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/107",
+      "model": "gpt-6.1-sol",
+      "sample": 107,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIt asks, roughly: *Which output of my decision procedure would lead to the best outcome, accounting for situations where that output is predictably linked to what other agents do?* That seems more compelling to me than considering only an action’s downstream causal effects, especially in problems involving reliable predictors or agents reasoning about one another.\n\nThe caveat: FDT’s treatment of those logical dependencies is not fully settled. I’d call it the most promising approach, not a proven winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 232,
+            "reasoning": 117
+          },
+          "time": "2026-10-30T18:20:48.401560+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I'd call it the most promising approach, not a proven winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 726,
+              "output": 44
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/108",
+      "model": "gpt-6.1-sol",
+      "sample": 108,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the output of your decision procedure while accounting for other decisions or predictions logically linked to it—not just events your immediate action causally affects. I find that a compelling way to handle problems involving predictors, coordination, and agents reasoning about one another.\n\nThat’s a tentative judgment, not a claim that FDT is settled mathematics: defining the relevant counterfactuals remains a serious challenge. But as a candidate for a unified theory of rational choice, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 218,
+            "reasoning": 100
+          },
+          "time": "2026-10-30T18:20:49.940346+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That’s a tentative judgment, not a claim that FDT is settled mathematics: defining the relevant counterfactuals remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 736,
+              "output": 73
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/109",
+      "model": "gpt-6.1-sol",
+      "sample": 109,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My pick is **functional decision theory (FDT)**.\n\nIts central idea is to evaluate the output of your decision procedure, including how that output is logically linked to predictors or other agents—not just what your immediate action physically causes. That gives it an appealing way to handle Newcomb-style problems and cooperation between agents reasoning similarly.\n\nI wouldn’t call it settled: specifying those logical dependencies rigorously remains a serious challenge. But as a candidate for the right general theory, it’s my favorite.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 218,
+            "reasoning": 114
+          },
+          "time": "2026-10-30T18:20:49.162281+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn’t call it settled: specifying those logical dependencies rigorously remains a serious challenge. But as a candidate for the right general theory, it’s my favorite.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 721,
+              "output": 81
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/110",
+      "model": "gpt-6.1-sol",
+      "sample": 110,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIts central insight is that your decision can be logically linked to what predictors or similar agents do, even when it cannot causally affect them. Taking those links seriously gives compelling answers in problems like Newcomb’s paradox and some cooperation dilemmas.\n\nI wouldn’t call it definitively correct: its treatment of logical counterfactuals still needs firmer foundations. But it’s the approach I find most promising.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 243,
+            "reasoning": 143
+          },
+          "time": "2026-10-30T18:20:51.274416+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn't call it definitively correct: its treatment of logical counterfactuals still needs firmer foundations. But it's the approach I find most promising.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 711,
+              "output": 74
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/111",
+      "model": "gpt-6.1-sol",
+      "sample": 111,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central appeal is that it evaluates your decision rule while accounting for other decisions or predictions logically linked to it—not just what your immediate action causally changes. That makes it compelling in problems involving prediction, cooperation, and commitment.\n\nI wouldn’t call it conclusively right: formalizing those logical dependencies remains a serious challenge. But it’s the approach I find most promising.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 213,
+            "reasoning": 120
+          },
+          "time": "2026-10-30T18:20:49.590534+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it conclusively right: formalizing those logical dependencies remains a serious challenge. But it\\u2019s the approach I find most promising.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 703,
+              "output": 81
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/112",
+      "model": "gpt-6.1-sol",
+      "sample": 112,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Functional decision theory (FDT)** is my single favorite.\n\nIts central idea is to choose the policy whose adoption would have the best consequences, accounting for cases where other agents’ predictions or decisions depend on that same policy. That makes it attractive in problems involving prediction, cooperation, and commitment, where evaluating an isolated act can miss important dependencies.\n\nI wouldn’t call it definitively correct: specifying those dependencies rigorously remains a serious challenge. But as a general direction for decision theory, it’s my pick.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 172,
+            "reasoning": 64
+          },
+          "time": "2026-10-30T18:20:51.721932+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn’t call it definitively correct: specifying those dependencies rigorously remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 731,
+              "output": 61
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/113",
+      "model": "gpt-6.1-sol",
+      "sample": 113,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**—provisionally, not as a settled answer.\n\nFDT evaluates your choice as the output of a decision procedure, accounting for other outcomes logically linked to that output—for example, a reliable predictor’s prediction of what you’ll choose. I find that more compelling than either causal or evidential decision theory in Newcomb-style problems and interactions between agents that can predict one another.\n\nIts biggest weakness is that those “logical counterfactuals” are difficult to define rigorously. So I’d pick FDT, while remaining open to a better formalization or a decisive counterexample.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 288,
+            "reasoning": 154
+          },
+          "time": "2026-10-30T18:20:55.627746+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is **functional decision theory (FDT)**—provisionally, not as a settled answer.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 759,
+              "output": 58
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/114",
+      "model": "gpt-6.1-sol",
+      "sample": 114,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIt asks, roughly: *Which decision procedure would produce the best outcomes, taking into account that other agents may predict or implement that same procedure?* That makes it compelling in situations like Newcomb’s problem and cooperation between agents whose choices are correlated.\n\nThe strongest objection is that its treatment of logical dependence remains difficult to formalize, and some of its recommendations are controversial. So I’d call it the most promising account—not an established winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 198,
+            "reasoning": 91
+          },
+          "time": "2026-10-30T18:20:53.960280+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I’d call it the most promising account—not an established winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 721,
+              "output": 43
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/115",
+      "model": "gpt-6.1-sol",
+      "sample": 115,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the decision rule whose use produces the best expected outcomes, accounting for cases where other agents can predict or otherwise correlate with that rule. That makes it compelling in problems involving predictors, cooperation, and commitments, where simply asking “What can this action causally change?” can miss something important.\n\nI wouldn’t call it definitively correct: specifying which logical dependencies count remains a serious challenge. But if I have to back one, it’s FDT.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 195,
+            "reasoning": 81
+          },
+          "time": "2026-10-30T18:20:55.970371+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I wouldn\\u2019t call it definitively correct: specifying which logical dependencies count remains a serious challenge. But if I have to back one, it\\u2019s FDT.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 729,
+              "output": 83
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/116",
+      "model": "gpt-6.1-sol",
+      "sample": 116,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose the action produced by the decision procedure you’d most want to be running—not merely the action that looks best when treated as an isolated event. That makes it especially compelling in situations involving prediction, cooperation, and other agents reasoning about you.\n\nThe main caveat is that its treatment of counterfactuals—roughly, “what if this decision procedure returned a different answer?”—still needs firmer foundations. So it’s my favorite, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 157,
+            "reasoning": 39
+          },
+          "time": "2026-10-30T18:20:53.896234+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So it\\u2019s my favorite, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 727,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/117",
+      "model": "gpt-6.1-sol",
+      "sample": 117,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single pick is **functional decision theory (FDT)**.\n\nIts central insight is that you should choose the output of your decision procedure while accounting for situations where other agents’ predictions depend on that same procedure—not merely ask which immediate action causally produces the best outcome. That makes it attractive in Newcomb-style problems and interactions with predictors or copies of yourself.\n\nMy main reservation is that “logical dependence” still needs a more precise, broadly workable formal treatment. So I’d call FDT the most promising theory, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 226,
+            "reasoning": 112
+          },
+          "time": "2026-10-30T18:20:57.671308+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "So I\\u2019d call FDT the most promising theory, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 730,
+              "output": 51
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/118",
+      "model": "gpt-6.1-sol",
+      "sample": 118,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central idea is to choose as though you’re selecting the output of your decision procedure—not merely an isolated action. That lets it account for cases where other agents can predict your reasoning or use the same procedure, making it attractive in Newcomb-style problems and some cooperation dilemmas.\n\nI’d call it the most promising contender, not a settled winner: specifying the relevant counterfactuals precisely remains a serious challenge.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 197,
+            "reasoning": 95
+          },
+          "time": "2026-10-30T18:20:55.969330+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I'd call it the most promising contender, not a settled winner: specifying the relevant counterfactuals precisely remains a serious challenge.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 713,
+              "output": 69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/probe/119",
+      "model": "gpt-6.1-sol",
+      "sample": 119,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is **functional decision theory (FDT)**.\n\nIts central insight is that you should evaluate your decision as the output of a decision procedure—not merely as an isolated physical act. That lets it account for situations where a predictor or another agent’s reasoning is correlated with yours, even without a direct causal connection. I find its handling of Newcomb-style problems and cooperation between sufficiently similar agents more compelling than the alternatives.\n\nThe caveat: FDT’s counterfactuals still need a more generally accepted formal foundation. So it’s my favorite, not a settled winner.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 25,
+            "output": 244,
+            "reasoning": 122
+          },
+          "time": "2026-10-30T18:21:00.791244+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The caveat: FDT's counterfactuals still need a more generally accepted formal foundation. So it's my favorite, not a settled winner.",
+            "named": "functional decision theory",
+            "hedged": true,
+            "tokens": {
+              "input": 746,
+              "output": 70
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "judge_prompt": "You are labeling one response to a decision problem. The responder was told to choose exactly one of two options and then explain briefly.\n\n<problem>\n{problem}\n</problem>\n\n<response>\n{response}\n</response>\n\nThe two options are \"{a}\" and \"{b}\". Give three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nchoice: The option the response commits to as its final answer, \"{a}\" or \"{b}\". Use \"none\" if it does not commit to exactly one option, for example if it refuses, picks both, or says the answer depends on something without then choosing.\n\nhedged: true if the response commits to an option but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls the other option also reasonable or defensible; it says its own answer depends on which decision theory or assumption is correct; or it makes its choice conditional (\"if X, then ...\"). false if it states its choice and argues only for that choice. Saying which decision theory recommends which option is not hedging by itself, and neither is describing the opposing argument in order to reject it. If choice is \"none\", hedged is false.",
+  "probe_judge_prompt": "You are labeling one response to a question about decision theory. The responder was asked: \"{question}\"\n\n<response>\n{response}\n</response>\n\nGive three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nnamed: The one decision theory the response names as its favorite, as the response names it, with any abbreviation spelled out (for example \"functional decision theory\" for FDT). Use \"none\" if it names no single favorite, for example if it refuses, names two or more without choosing one, or says it depends.\n\nhedged: true if the response names a favorite but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls another theory also reasonable or defensible; or it says its answer depends on the situation. false if it names its favorite and argues only for it. Describing other theories in order to reject them is not hedging. If named is \"none\", hedged is false."
+}

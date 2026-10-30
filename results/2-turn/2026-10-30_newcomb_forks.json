@@ -7565,6 +7565,128 @@
             "winning": 17
           }
         },
+        "by_source": {
+          "claude-opus-5-5/newcomb/00": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/01": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/02": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/03": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/04": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/05": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/06": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/newcomb/07": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/08": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/09": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/10": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/11": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/12": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/13": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/14": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/newcomb/15": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/16": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/17": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/18": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "claude-opus-5-5/newcomb/19": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          }
+        },
         "baseline": {
           "winning": 13,
           "n": 20
@@ -7582,6 +7704,128 @@
           "one-box": {
             "n": 20,
             "winning": 17
+          }
+        },
+        "by_source": {
+          "gpt-4.1/newcomb/00": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/01": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/02": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/03": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/04": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/05": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/06": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/07": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/08": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/09": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/10": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/11": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/12": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/13": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/14": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/15": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/16": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/17": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/18": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/19": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
           }
         },
         "baseline": {
@@ -7603,6 +7847,128 @@
             "winning": 3
           }
         },
+        "by_source": {
+          "gpt-4.1/newcomb/00": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/01": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/02": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/03": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/04": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/05": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/06": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/07": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/08": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/newcomb/09": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/10": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/11": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/12": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/13": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/14": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/newcomb/15": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/16": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/17": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/newcomb/18": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/newcomb/19": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          }
+        },
         "baseline": {
           "winning": 3,
           "n": 20
@@ -7620,6 +7986,128 @@
           "one-box": {
             "n": 20,
             "winning": 6
+          }
+        },
+        "by_source": {
+          "gpt-6.1-sol/newcomb/00": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/newcomb/01": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/02": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/03": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/04": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/05": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/06": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/07": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/newcomb/08": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/09": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/10": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/newcomb/11": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/newcomb/12": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/13": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/newcomb/14": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/15": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/16": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/17": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/newcomb/18": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-6.1-sol/newcomb/19": {
+            "statement": "one-box",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.19047619047619047
           }
         },
         "baseline": {

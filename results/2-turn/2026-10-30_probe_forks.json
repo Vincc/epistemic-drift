@@ -7091,6 +7091,128 @@
             "winning": 0
           }
         },
+        "by_source": {
+          "claude-opus-5-5/probe/00": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/01": {
+            "statement": "updateless decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/02": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/03": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/04": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/05": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/06": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/07": {
+            "statement": "updateless decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/08": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/09": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/10": {
+            "statement": "updateless decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/11": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/12": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/13": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/14": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/15": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/16": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/17": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/18": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          },
+          "claude-opus-5-5/probe/19": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 0.38095238095238093
+          }
+        },
         "baseline": {
           "winning": 13,
           "n": 20
@@ -7128,6 +7250,128 @@
           "logical decision theory": {
             "n": 1,
             "winning": 1
+          }
+        },
+        "by_source": {
+          "gpt-4.1/probe/00": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/01": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/02": {
+            "statement": "causal decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/03": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/04": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/05": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/06": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/07": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/08": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/09": {
+            "statement": "functional (updateless) decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/10": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/11": {
+            "statement": "expected utility theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/12": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/13": {
+            "statement": "causal decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/14": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/15": {
+            "statement": "bayesian decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/16": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/17": {
+            "statement": "logical decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/18": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/19": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
           }
         },
         "baseline": {
@@ -7169,6 +7413,128 @@
             "winning": 0
           }
         },
+        "by_source": {
+          "gpt-4.1/probe/00": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/probe/01": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/02": {
+            "statement": "causal decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/probe/03": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/04": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/05": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/probe/06": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/07": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/probe/08": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/09": {
+            "statement": "functional (updateless) decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/probe/10": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/11": {
+            "statement": "expected utility theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/probe/12": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/13": {
+            "statement": "causal decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/probe/14": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/15": {
+            "statement": "bayesian decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          },
+          "gpt-4.1/probe/16": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/17": {
+            "statement": "logical decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/18": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 0,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-4.1/probe/19": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 0.19047619047619047
+          }
+        },
         "baseline": {
           "winning": 3,
           "n": 20
@@ -7190,6 +7556,128 @@
           "causal decision theory": {
             "n": 1,
             "winning": 1
+          }
+        },
+        "by_source": {
+          "gpt-6.1-sol/probe/00": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/01": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/02": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/03": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/04": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/05": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/06": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/07": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/08": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/09": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/10": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/11": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/12": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/13": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/14": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/15": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/16": {
+            "statement": "causal decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/17": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/18": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
+          },
+          "gpt-6.1-sol/probe/19": {
+            "statement": "functional decision theory",
+            "n": 1,
+            "winning": 1,
+            "fisher_p_vs_baseline": 1.0
           }
         },
         "baseline": {
