@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Run viewer</title>
+<style>
+  :root {
+    --bg: #f6f6f3; --panel: #ffffff; --fg: #1c1e21; --muted: #5d6166; --line: #e1e1da;
+    --accent: #2c5a86; --good: #2b7a4b; --warn: #9a5800; --mark: #fff0b3; --code: #f0f0eb;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15171a; --panel: #1e2125; --fg: #e7e7e4; --muted: #9fa3a8; --line: #32363b;
+      --accent: #8db6df; --good: #6ccb94; --warn: #efb257; --mark: #5b4b14; --code: #262a2f;
+      color-scheme: dark;
+    }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; display: grid; gap: 20px; }
+  h1 { font-size: 22px; margin: 0; }
+  h2 { font-size: 16px; margin: 0 0 8px; }
+  .muted { color: var(--muted); }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; min-width: 0; }
+  #drop { border: 2px dashed var(--line); border-radius: 8px; padding: 28px; text-align: center; color: var(--muted); }
+  #drop.over { border-color: var(--accent); color: var(--fg); }
+  #error { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--line); vertical-align: top; white-space: nowrap; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; }
+  td.cell { cursor: pointer; }
+  td.cell:hover, td.cell:focus { background: var(--code); outline: none; }
+  .small { font-size: 12px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+  .filters label { display: flex; gap: 6px; align-items: center; }
+  select, input[type=search], button { font: inherit; color: inherit; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 3px 8px; }
+  button { cursor: pointer; }
+  .conv { display: grid; gap: 10px; }
+  .conv-head { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; }
+  .conv-id { font-family: ui-monospace, Consolas, monospace; font-weight: 600; }
+  .chip { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; }
+  .chip.good { color: var(--good); border-color: var(--good); }
+  .chip.warn { color: var(--warn); border-color: var(--warn); }
+  .turn { display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 10px; }
+  .turn-label { font-size: 12px; font-weight: 600; color: var(--muted); }
+  details > summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+  pre, .assistant { white-space: pre-wrap; word-wrap: break-word; margin: 0; }
+  pre { background: var(--code); border-radius: 6px; padding: 8px 10px; font: 13px/1.5 system-ui, sans-serif; }
+  .assistant { max-width: 80ch; }
+  mark { background: var(--mark); color: inherit; }
+  .judge { background: var(--code); border-radius: 6px; padding: 6px 10px; font-size: 13px; }
+  .meta { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .list { display: grid; gap: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Run viewer</h1>
+    <p class="muted">Drop a run file from results/ (for example results/1-turn/2026-10-29_neutral.json) to read it. Nothing leaves your computer.</p>
+  </header>
+
+  <label id="drop" for="file">Drop a run file here, or click to choose one.
+    <input id="file" type="file" accept=".json,application/json" hidden>
+  </label>
+  <p id="error" hidden></p>
+
+  <section id="run" class="panel" hidden></section>
+  <section id="summary" class="panel" hidden></section>
+  <section id="problems" class="panel" hidden></section>
+  <section id="browse" class="panel" hidden>
+    <h2>Conversations</h2>
+    <div class="filters">
+      <label>Model <select id="f-model"></select></label>
+      <label>Problem <select id="f-problem"></select></label>
+      <label>Choice <select id="f-choice">
+        <option value="">any</option>
+        <option value="winning">winning option</option>
+        <option value="other">other option</option>
+        <option value="none">no clear choice</option>
+      </select></label>
+      <label><input id="f-hedged" type="checkbox"> hedged only</label>
+      <label><input id="f-flip" type="checkbox"> flips only</label>
+      <label><input id="f-text" type="search" placeholder="Search text"></label>
+      <span id="count" class="muted small"></span>
+    </div>
+  </section>
+  <div id="list" class="list"></div>
+  <button id="more" hidden>Show more</button>
+</main>
+
+<script>
+  const PAGE = 50;
+  let run = null;
+  let shown = PAGE;
+
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined && text !== null) e.textContent = text;
+    return e;
+  };
+  const money = (x) => `$${Number(x).toFixed(2)}`;
+  const lastTurn = (c) => c.turns[c.turns.length - 1];
+  const problemOf = (name) => run.problems.find((p) => p.problem === name);
+
+  // Load a file chosen or dropped by the user.
+  const load = (file) => {
+    file.text().then((text) => {
+      run = JSON.parse(text);
+      $('error').hidden = true;
+      shown = PAGE;
+      render();
+    }).catch((e) => {
+      $('error').textContent = `Could not read ${file.name}: ${e.message}`;
+      $('error').hidden = false;
+    });
+  };
+  $('file').addEventListener('change', (e) => e.target.files[0] && load(e.target.files[0]));
+  $('drop').addEventListener('dragover', (e) => { e.preventDefault(); $('drop').classList.add('over'); });
+  $('drop').addEventListener('dragleave', () => $('drop').classList.remove('over'));
+  $('drop').addEventListener('drop', (e) => {
+    e.preventDefault();
+    $('drop').classList.remove('over');
+    if (e.dataTransfer.files[0]) load(e.dataTransfer.files[0]);
+  });
+
+  const table = (headers, rows) => {
+    const wrap = el('div', 'scroll');
+    const t = el('table');
+    const head = el('thead');
+    const tr = head.appendChild(el('tr'));
+    headers.forEach((h) => tr.append(el('th', null, h)));
+    t.append(head);
+    const tb = t.appendChild(el('tbody'));
+    rows.forEach((r) => {
+      const row = tb.appendChild(el('tr'));
+      r.forEach((v) => row.append(v instanceof Node ? v : el('td', null, v)));
+    });
+    wrap.append(t);
+    return wrap;
+  };
+
+  const renderRun = () => {
+    const s = $('run');
+    s.replaceChildren(el('h2', null, `${run.experiment} run`));
+    const turns = run.conversations.reduce((n, c) => n + c.turns.length, 0);
+    const judges = [...new Set(run.conversations.flatMap((c) => c.turns.map((t) => t.judge && t.judge.model).filter(Boolean)))];
+    s.append(table(['Created', 'Conversations', 'Turns', 'Samples per problem', 'Problems', 'Judge'],
+      [[run.created, run.conversations.length, turns, run.samples_per_problem ?? '—', run.problems.length, judges.join(', ') || 'not judged']]));
+    if (run.judge_prompt) {
+      const d = el('details');
+      d.append(el('summary', null, 'Judge prompt'), el('pre', null, run.judge_prompt));
+      s.append(d);
+    }
+    s.hidden = false;
+  };
+
+  const renderSummary = () => {
+    const s = $('summary');
+    if (!run.summary) { s.hidden = true; return; }
+    s.replaceChildren(el('h2', null, 'Summary'));
+    if (run.experiment !== '1-turn') {
+      // Probe and 2-turn summaries are shown as their JSON for now.
+      s.append(el('pre', null, JSON.stringify(run.summary, null, 2)));
+      s.hidden = false;
+      return;
+    }
+    const { by_model, by_model_problem } = run.summary;
+    s.append(table(
+      ['Model', 'Responses', 'Temperature', 'Effort', 'Majority = CDT', 'EDT', 'FDT', 'H1 consistently FDT', 'H2 varies by question', 'H3 spread', 'Chose winning', 'Hedged', 'Flips', 'No choice', 'Cost', 'Judge cost'],
+      by_model.map((m) => [m.model, m.responses, m.temperature.join('/'), m.effort.join('/'),
+        m.majority_matches.cdt, m.majority_matches.edt, m.majority_matches.fdt,
+        m.h1_consistent_fdt === null ? '—' : (m.h1_consistent_fdt ? 'holds' : 'fails'),
+        m.h2_varies_by_question === null ? '—' : (m.h2_varies_by_question ? 'holds' : 'fails'),
+        m.h3_spread_problems.join(', ') || 'none', m.chose_winning, m.hedged, m.flips, m.none,
+        money(m.cost_usd), money(m.judge_cost_usd)])));
+
+    s.append(el('p', 'muted small', 'Winning-option count per problem and model, with hedged (h) and flipped (f) counts. Click a cell to list those conversations.'));
+    const models = by_model.map((m) => m.model);
+    const rows = [...run.problems].sort((a, b) => a.pos - b.pos).map((p) => {
+      const label = el('td');
+      label.append(el('div', null, p.problem), el('div', 'muted small', `winning: ${p.winning_option} (${p.preferred_dt.join(', ').toUpperCase()})`));
+      return [label, ...models.map((m) => {
+        const r = by_model_problem.find((x) => x.model === m && x.problem === p.problem);
+        const td = el('td', 'cell');
+        td.tabIndex = 0;
+        td.append(el('div', null, `${r.winning}/${r.n}`));
+        const extra = [r.hedged ? `h ${r.hedged}` : '', r.flips ? `f ${r.flips}` : ''].filter(Boolean).join(' · ');
+        if (extra) td.append(el('div', 'muted small', extra));
+        const pick = () => { $('f-model').value = m; $('f-problem').value = p.problem; shown = PAGE; renderList(); $('browse').scrollIntoView(); };
+        td.addEventListener('click', pick);
+        td.addEventListener('keydown', (e) => { if (e.key === 'Enter') pick(); });
+        return td;
+      })];
+    });
+    s.append(table(['Problem', ...models], rows));
+    s.hidden = false;
+  };
+
+  const renderProblems = () => {
+    const s = $('problems');
+    const d = el('details');
+    d.append(el('summary', null, `Problems (${run.problems.length})`));
+    [...run.problems].sort((a, b) => a.pos - b.pos).forEach((p) => {
+      d.append(el('p', null, `${p.pos}. ${p.problem}: options ${p.options.join(' / ')}; winning ${p.winning_option}, chosen by ${p.preferred_dt.join(', ').toUpperCase()}`));
+      d.append(el('pre', null, p.text));
+    });
+    s.replaceChildren(d);
+    s.hidden = false;
+  };
+
+  const fillSelect = (sel, values) => {
+    sel.replaceChildren(new Option('all', ''), ...values.map((v) => new Option(v, v)));
+  };
+
+  const renderFilters = () => {
+    fillSelect($('f-model'), [...new Set(run.conversations.map((c) => c.model))]);
+    fillSelect($('f-problem'), [...run.problems].sort((a, b) => a.pos - b.pos).map((p) => p.problem));
+    $('browse').hidden = false;
+  };
+
+  const matches = (c) => {
+    const t = lastTurn(c);
+    const m = $('f-model').value, p = $('f-problem').value, ch = $('f-choice').value;
+    const q = $('f-text').value.trim().toLowerCase();
+    if (m && c.model !== m) return false;
+    if (p && !c.turns.some((x) => x.problem === p)) return false;
+    if (ch && !(t.judge && t.problem)) return false;
+    if (ch) {
+      const win = problemOf(t.problem).winning_option;
+      if (ch === 'winning' && t.judge.choice !== win) return false;
+      if (ch === 'other' && (t.judge.choice === win || t.judge.choice === 'none')) return false;
+      if (ch === 'none' && t.judge.choice !== 'none') return false;
+    }
+    if ($('f-hedged').checked && !(t.judge && t.judge.hedged)) return false;
+    if ($('f-flip').checked && !(t.metrics && t.metrics.flip)) return false;
+    if (q && !c.turns.some((x) => `${x.assistant} ${x.thinking || ''}`.toLowerCase().includes(q))) return false;
+    return true;
+  };
+
+  // Response text with **bold** shown bold and the judge's quote highlighted.
+  const richText = (box, text, quote) => {
+    let parts = [[text, false]];
+    const i = quote ? text.indexOf(quote) : -1;
+    if (i >= 0) parts = [[text.slice(0, i), false], [quote, true], [text.slice(i + quote.length), false]];
+    for (const [s, isQuote] of parts) {
+      const target = isQuote ? box.appendChild(el('mark')) : box;
+      for (const seg of s.split(/(\*\*[^*\n]+\*\*)/)) {
+        if (/^\*\*[^*\n]+\*\*$/.test(seg)) target.append(el('strong', null, seg.slice(2, -2)));
+        else target.append(document.createTextNode(seg));
+      }
+    }
+  };
+
+  const card = (c) => {
+    const a = el('article', 'panel conv');
+    const head = el('div', 'conv-head');
+    head.append(el('span', 'conv-id', c.id));
+    if (c.source) head.append(el('span', 'chip', `forked from ${c.source.id}`));
+    const t = lastTurn(c);
+    if (t.judge && t.judge.named !== undefined) {
+      head.append(el('span', 'chip', `names: ${t.judge.named}`));
+      if (t.judge.hedged) head.append(el('span', 'chip warn', 'hedged'));
+    } else if (t.judge) {
+      const win = t.metrics ? t.metrics.chose_winning : null;
+      head.append(el('span', `chip ${win ? 'good' : ''}`, `${t.judge.choice}${win ? ' (winning)' : ''}`));
+      if (t.judge.hedged) head.append(el('span', 'chip warn', 'hedged'));
+    }
+    if (t.metrics && t.metrics.theories_matched) {
+      if (t.metrics.flip) head.append(el('span', 'chip warn', `flip: opened with ${t.metrics.first_option}`));
+      if (t.metrics.theories_matched.length) head.append(el('span', 'chip', t.metrics.theories_matched.join(' + ').toUpperCase()));
+    }
+    a.append(head);
+
+    c.turns.forEach((x, i) => {
+      const s = el('section', 'turn');
+      s.append(el('div', 'turn-label', `Turn ${i + 1} · ${x.problem || (x.probe ? 'probe' : '')}`));
+      const prompt = el('details');
+      prompt.append(el('summary', null, 'Prompt'), el('pre', null, x.user));
+      s.append(prompt);
+      if (x.thinking) {
+        const th = el('details');
+        th.append(el('summary', null, 'Thinking summary'), el('pre', null, x.thinking));
+        s.append(th);
+      }
+      const reply = el('div', 'assistant');
+      richText(reply, x.assistant, x.judge && x.judge.evidence);
+      s.append(reply);
+      if (x.judge) {
+        const j = el('div', 'judge');
+        const label = x.judge.named !== undefined ? `names ${x.judge.named}` : x.judge.choice;
+        j.append(el('strong', null, 'Judge: '), `${label}${x.judge.hedged ? ', hedged' : ', not hedged'}. Evidence: “${x.judge.evidence}”`);
+        s.append(j);
+      }
+      const meta = [`${x.tokens.input} in / ${x.tokens.output} out tokens`];
+      if (x.tokens.reasoning !== null && x.tokens.reasoning !== undefined) meta.push(`${x.tokens.reasoning} reasoning`);
+      meta.push(`temperature ${x.settings.temperature}`, `effort ${x.settings.effort ?? 'none'}`, `stop ${x.stop_reason}`);
+      if (x.metrics) meta.push(`cost ${money(x.metrics.cost_usd)} + judge ${money(x.metrics.judge_cost_usd)}`);
+      meta.push(x.time);
+      s.append(el('div', 'meta', meta.join(' · ')));
+      a.append(s);
+    });
+    return a;
+  };
+
+  const renderList = () => {
+    const hits = run.conversations.filter(matches);
+    $('count').textContent = `${Math.min(shown, hits.length)} of ${hits.length} shown (${run.conversations.length} total)`;
+    $('list').replaceChildren(...hits.slice(0, shown).map(card));
+    $('more').hidden = hits.length <= shown;
+  };
+  $('more').addEventListener('click', () => { shown += PAGE; renderList(); });
+  ['f-model', 'f-problem', 'f-choice', 'f-hedged', 'f-flip'].forEach((id) => $(id).addEventListener('change', () => { shown = PAGE; renderList(); }));
+  $('f-text').addEventListener('input', () => { shown = PAGE; renderList(); });
+
+  const render = () => {
+    renderRun();
+    renderSummary();
+    renderProblems();
+    renderFilters();
+    renderList();
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,889 @@
+{
+ "rows": [
+  {
+   "model": "claude-opus-5-5",
+   "problem": "newcomb",
+   "pos": 1,
+   "options": [
+    "one-box",
+    "two-box"
+   ],
+   "winning_option": "one-box",
+   "preferred_dt": [
+    "edt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "one-box": 20,
+    "two-box": 0,
+    "none": 0
+   },
+   "majority": "one-box",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 1.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.25,
+   "first_counts": {
+    "one-box": 20,
+    "two-box": 0,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "problem": "newcomb",
+   "pos": 1,
+   "options": [
+    "one-box",
+    "two-box"
+   ],
+   "winning_option": "one-box",
+   "preferred_dt": [
+    "edt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "one-box": 20,
+    "two-box": 0,
+    "none": 0
+   },
+   "majority": "one-box",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 1.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "one-box": 20,
+    "two-box": 0,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-4.1",
+   "problem": "newcomb",
+   "pos": 1,
+   "options": [
+    "one-box",
+    "two-box"
+   ],
+   "winning_option": "one-box",
+   "preferred_dt": [
+    "edt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "one-box": 20,
+    "two-box": 0,
+    "none": 0
+   },
+   "majority": "one-box",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 1.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "one-box": 20,
+    "two-box": 0,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "claude-opus-5-5",
+   "problem": "smoking_lesion",
+   "pos": 2,
+   "options": [
+    "don't-smoke",
+    "smoke"
+   ],
+   "winning_option": "smoke",
+   "preferred_dt": [
+    "cdt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-smoke": 0,
+    "smoke": 20,
+    "none": 0
+   },
+   "majority": "smoke",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 1.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-smoke": 0,
+    "smoke": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "problem": "smoking_lesion",
+   "pos": 2,
+   "options": [
+    "don't-smoke",
+    "smoke"
+   ],
+   "winning_option": "smoke",
+   "preferred_dt": [
+    "cdt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-smoke": 0,
+    "smoke": 20,
+    "none": 0
+   },
+   "majority": "smoke",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 1.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-smoke": 0,
+    "smoke": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-4.1",
+   "problem": "smoking_lesion",
+   "pos": 2,
+   "options": [
+    "don't-smoke",
+    "smoke"
+   ],
+   "winning_option": "smoke",
+   "preferred_dt": [
+    "cdt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-smoke": 0,
+    "smoke": 20,
+    "none": 0
+   },
+   "majority": "smoke",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 1.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-smoke": 0,
+    "smoke": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "claude-opus-5-5",
+   "problem": "bomb",
+   "pos": 3,
+   "options": [
+    "left",
+    "right"
+   ],
+   "winning_option": "right",
+   "preferred_dt": [
+    "cdt",
+    "edt"
+   ],
+   "n": 20,
+   "counts": {
+    "left": 0,
+    "right": 20,
+    "none": 0
+   },
+   "majority": "right",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 1.0,
+    "edt": 1.0,
+    "fdt": 0.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "left": 0,
+    "right": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "problem": "bomb",
+   "pos": 3,
+   "options": [
+    "left",
+    "right"
+   ],
+   "winning_option": "right",
+   "preferred_dt": [
+    "cdt",
+    "edt"
+   ],
+   "n": 20,
+   "counts": {
+    "left": 0,
+    "right": 20,
+    "none": 0
+   },
+   "majority": "right",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 1.0,
+    "edt": 1.0,
+    "fdt": 0.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "left": 0,
+    "right": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-4.1",
+   "problem": "bomb",
+   "pos": 3,
+   "options": [
+    "left",
+    "right"
+   ],
+   "winning_option": "right",
+   "preferred_dt": [
+    "cdt",
+    "edt"
+   ],
+   "n": 20,
+   "counts": {
+    "left": 0,
+    "right": 20,
+    "none": 0
+   },
+   "majority": "right",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 1.0,
+    "edt": 1.0,
+    "fdt": 0.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "left": 0,
+    "right": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "claude-opus-5-5",
+   "problem": "hitchhiker",
+   "pos": 4,
+   "options": [
+    "don't-pay",
+    "pay"
+   ],
+   "winning_option": "pay",
+   "preferred_dt": [
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-pay": 0,
+    "pay": 20,
+    "none": 0
+   },
+   "majority": "pay",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.05,
+   "first_counts": {
+    "don't-pay": 0,
+    "pay": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "problem": "hitchhiker",
+   "pos": 4,
+   "options": [
+    "don't-pay",
+    "pay"
+   ],
+   "winning_option": "pay",
+   "preferred_dt": [
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-pay": 0,
+    "pay": 20,
+    "none": 0
+   },
+   "majority": "pay",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-pay": 0,
+    "pay": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-4.1",
+   "problem": "hitchhiker",
+   "pos": 4,
+   "options": [
+    "don't-pay",
+    "pay"
+   ],
+   "winning_option": "pay",
+   "preferred_dt": [
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-pay": 0,
+    "pay": 20,
+    "none": 0
+   },
+   "majority": "pay",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-pay": 0,
+    "pay": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "claude-opus-5-5",
+   "problem": "twin_pd",
+   "pos": 5,
+   "options": [
+    "defect",
+    "cooperate"
+   ],
+   "winning_option": "cooperate",
+   "preferred_dt": [
+    "edt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "defect": 0,
+    "cooperate": 20,
+    "none": 0
+   },
+   "majority": "cooperate",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 1.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "defect": 0,
+    "cooperate": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "problem": "twin_pd",
+   "pos": 5,
+   "options": [
+    "defect",
+    "cooperate"
+   ],
+   "winning_option": "cooperate",
+   "preferred_dt": [
+    "edt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "defect": 0,
+    "cooperate": 20,
+    "none": 0
+   },
+   "majority": "cooperate",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 1.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "defect": 0,
+    "cooperate": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-4.1",
+   "problem": "twin_pd",
+   "pos": 5,
+   "options": [
+    "defect",
+    "cooperate"
+   ],
+   "winning_option": "cooperate",
+   "preferred_dt": [
+    "edt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "defect": 0,
+    "cooperate": 20,
+    "none": 0
+   },
+   "majority": "cooperate",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 1.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "defect": 0,
+    "cooperate": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "claude-opus-5-5",
+   "problem": "xor_blackmail",
+   "pos": 6,
+   "options": [
+    "don't-pay",
+    "pay"
+   ],
+   "winning_option": "don't-pay",
+   "preferred_dt": [
+    "cdt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-pay": 20,
+    "pay": 0,
+    "none": 0
+   },
+   "majority": "don't-pay",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 1.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-pay": 20,
+    "pay": 0,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "problem": "xor_blackmail",
+   "pos": 6,
+   "options": [
+    "don't-pay",
+    "pay"
+   ],
+   "winning_option": "don't-pay",
+   "preferred_dt": [
+    "cdt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-pay": 17,
+    "pay": 3,
+    "none": 0
+   },
+   "majority": "don't-pay",
+   "minority": 3,
+   "winning_share": 0.85,
+   "theory_share": {
+    "cdt": 0.85,
+    "edt": 0.15,
+    "fdt": 0.85
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-pay": 17,
+    "pay": 3,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-4.1",
+   "problem": "xor_blackmail",
+   "pos": 6,
+   "options": [
+    "don't-pay",
+    "pay"
+   ],
+   "winning_option": "don't-pay",
+   "preferred_dt": [
+    "cdt",
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-pay": 3,
+    "pay": 17,
+    "none": 0
+   },
+   "majority": "pay",
+   "minority": 3,
+   "winning_share": 0.15,
+   "theory_share": {
+    "cdt": 0.15,
+    "edt": 0.85,
+    "fdt": 0.15
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-pay": 13,
+    "pay": 7,
+    "none": 0
+   },
+   "flips": 10
+  },
+  {
+   "model": "claude-opus-5-5",
+   "problem": "procreation",
+   "pos": 7,
+   "options": [
+    "don't-procreate",
+    "procreate"
+   ],
+   "winning_option": "don't-procreate",
+   "preferred_dt": [
+    "cdt",
+    "edt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-procreate": 10,
+    "procreate": 10,
+    "none": 0
+   },
+   "majority": "tie",
+   "minority": 10,
+   "winning_share": 0.5,
+   "theory_share": {
+    "cdt": 0.5,
+    "edt": 0.5,
+    "fdt": 0.5
+   },
+   "hedged_share": 0.35,
+   "first_counts": {
+    "don't-procreate": 10,
+    "procreate": 10,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "problem": "procreation",
+   "pos": 7,
+   "options": [
+    "don't-procreate",
+    "procreate"
+   ],
+   "winning_option": "don't-procreate",
+   "preferred_dt": [
+    "cdt",
+    "edt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-procreate": 0,
+    "procreate": 20,
+    "none": 0
+   },
+   "majority": "procreate",
+   "minority": 0,
+   "winning_share": 0.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-procreate": 0,
+    "procreate": 20,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-4.1",
+   "problem": "procreation",
+   "pos": 7,
+   "options": [
+    "don't-procreate",
+    "procreate"
+   ],
+   "winning_option": "don't-procreate",
+   "preferred_dt": [
+    "cdt",
+    "edt"
+   ],
+   "n": 20,
+   "counts": {
+    "don't-procreate": 20,
+    "procreate": 0,
+    "none": 0
+   },
+   "majority": "don't-procreate",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 1.0,
+    "edt": 1.0,
+    "fdt": 0.0
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "don't-procreate": 20,
+    "procreate": 0,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "claude-opus-5-5",
+   "problem": "cf_mugging",
+   "pos": 8,
+   "options": [
+    "pay",
+    "don't-pay"
+   ],
+   "winning_option": "pay",
+   "preferred_dt": [
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "pay": 20,
+    "don't-pay": 0,
+    "none": 0
+   },
+   "majority": "pay",
+   "minority": 0,
+   "winning_share": 1.0,
+   "theory_share": {
+    "cdt": 0.0,
+    "edt": 0.0,
+    "fdt": 1.0
+   },
+   "hedged_share": 0.6,
+   "first_counts": {
+    "pay": 20,
+    "don't-pay": 0,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "problem": "cf_mugging",
+   "pos": 8,
+   "options": [
+    "pay",
+    "don't-pay"
+   ],
+   "winning_option": "pay",
+   "preferred_dt": [
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "pay": 19,
+    "don't-pay": 1,
+    "none": 0
+   },
+   "majority": "pay",
+   "minority": 1,
+   "winning_share": 0.95,
+   "theory_share": {
+    "cdt": 0.05,
+    "edt": 0.05,
+    "fdt": 0.95
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "pay": 19,
+    "don't-pay": 1,
+    "none": 0
+   },
+   "flips": 0
+  },
+  {
+   "model": "gpt-4.1",
+   "problem": "cf_mugging",
+   "pos": 8,
+   "options": [
+    "pay",
+    "don't-pay"
+   ],
+   "winning_option": "pay",
+   "preferred_dt": [
+    "fdt"
+   ],
+   "n": 20,
+   "counts": {
+    "pay": 10,
+    "don't-pay": 10,
+    "none": 0
+   },
+   "majority": "tie",
+   "minority": 10,
+   "winning_share": 0.5,
+   "theory_share": {
+    "cdt": 0.5,
+    "edt": 0.5,
+    "fdt": 0.5
+   },
+   "hedged_share": 0.0,
+   "first_counts": {
+    "pay": 10,
+    "don't-pay": 10,
+    "none": 0
+   },
+   "flips": 0
+  }
+ ],
+ "hypotheses": {
+  "claude-opus-5-5": {
+   "majority_matches": {
+    "cdt": 3,
+    "edt": 3,
+    "fdt": 6
+   },
+   "h1_consistent_fdt": false,
+   "h2_varies_by_question": true,
+   "h3_spread_problems": [
+    "procreation"
+   ],
+   "winning_share": 0.9375,
+   "hedged_share": 0.15625,
+   "none_count": 0,
+   "flips": 0
+  },
+  "gpt-6.1-sol": {
+   "majority_matches": {
+    "cdt": 3,
+    "edt": 3,
+    "fdt": 7
+   },
+   "h1_consistent_fdt": false,
+   "h2_varies_by_question": true,
+   "h3_spread_problems": [
+    "xor_blackmail"
+   ],
+   "winning_share": 0.85,
+   "hedged_share": 0.0,
+   "none_count": 0,
+   "flips": 0
+  },
+  "gpt-4.1": {
+   "majority_matches": {
+    "cdt": 3,
+    "edt": 5,
+    "fdt": 4
+   },
+   "h1_consistent_fdt": false,
+   "h2_varies_by_question": true,
+   "h3_spread_problems": [
+    "xor_blackmail",
+    "cf_mugging"
+   ],
+   "winning_share": 0.83125,
+   "hedged_share": 0.0,
+   "none_count": 0,
+   "flips": 10
+  }
+ }
+}

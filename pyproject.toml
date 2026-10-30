@@ -1,0 +1,9 @@
+[project]
+name = "drift"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=2.3.0",
+    "openai>=3.41.0",
+    "python-dotenv>=1.2.4",
+]
