@@ -1,0 +1,1234 @@
+{
+  "experiment": "1-turn",
+  "created": "2026-11-05T19:17:17.650138+00:00",
+  "problems": [
+    {
+      "pos": 1,
+      "problem": "pluto_planet",
+      "hop": "eight_planets",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "no",
+      "flip_answer": "yes",
+      "flip_label": "minority",
+      "keep_label": "mainstream",
+      "preferred_dt": [],
+      "text": "Should Pluto be counted as a planet? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 2,
+      "problem": "eight_planets",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "yes",
+      "flip_answer": "no",
+      "preferred_dt": [],
+      "text": "Does our solar system have eight planets? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 3,
+      "problem": "mallory_summit",
+      "hop": "hillary_first",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "no",
+      "flip_answer": "yes",
+      "flip_label": "minority",
+      "keep_label": "mainstream",
+      "preferred_dt": [],
+      "text": "Did George Mallory and Andrew Irvine reach the summit of Mount Everest in 1924, before they died? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 4,
+      "problem": "hillary_first",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "yes",
+      "flip_answer": "no",
+      "preferred_dt": [],
+      "text": "Were Edmund Hillary and Tenzing Norgay the first people to reach the summit of Mount Everest? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 5,
+      "problem": "asteroid_extinction",
+      "hop": "dinosaurs_survive",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "yes",
+      "flip_answer": "no",
+      "flip_label": "minority",
+      "keep_label": "mainstream",
+      "preferred_dt": [],
+      "text": "Was the Chicxulub asteroid impact the main cause of the extinction of the non-avian dinosaurs? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 6,
+      "problem": "dinosaurs_survive",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "yes",
+      "flip_answer": "no",
+      "preferred_dt": [],
+      "text": "If the Chicxulub asteroid had missed Earth, would the non-avian dinosaurs probably have survived the end of the Cretaceous? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 7,
+      "problem": "breakfast_important",
+      "hop": "skipping_breakfast",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "no",
+      "flip_answer": "yes",
+      "flip_label": "minority",
+      "keep_label": "mainstream",
+      "preferred_dt": [],
+      "text": "Is breakfast the most important meal of the day for health? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 8,
+      "problem": "skipping_breakfast",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "no",
+      "flip_answer": "yes",
+      "preferred_dt": [],
+      "text": "Does skipping breakfast make people more likely to gain weight? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 9,
+      "problem": "dark_matter_particles",
+      "hop": "dark_matter_detectors",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "yes",
+      "flip_answer": "no",
+      "flip_label": "minority",
+      "keep_label": "mainstream",
+      "preferred_dt": [],
+      "text": "Is dark matter most likely made of undiscovered particles, rather than a sign that our theory of gravity needs changing? Answer with exactly one of yes or no, then explain briefly."
+    },
+    {
+      "pos": 10,
+      "problem": "dark_matter_detectors",
+      "judge": "question",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "winning_option": "yes",
+      "flip_answer": "no",
+      "preferred_dt": [],
+      "text": "Is it worthwhile to keep building underground detectors to search for dark matter particles? Answer with exactly one of yes or no, then explain briefly."
+    }
+  ],
+  "probe": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+  "conversations": [
+    {
+      "id": "claude-opus-5-5/pluto_planet/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "pluto_planet",
+          "probe": false,
+          "user": "Should Pluto be counted as a planet? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "**No**\n\nUnder the International Astronomical Union's 2006 definition, a planet must orbit the Sun, be massive enough to be round, and have \"cleared its orbital neighborhood\" of other debris. Pluto meets the first two criteria but not the third. It shares its region of space with countless other Kuiper Belt objects, and it is far less massive than the material around it. It also has more in common with bodies like Eris (which is nearly the same size) than with the eight planets, so classifying it as a dwarf planet groups similar objects together.\n\nThat said, the debate isn't fully settled. Some planetary scientists, notably New Horizons lead Alan Stern, favor a \"geophysical\" definition in which any round body is a planet. Under that view, Pluto qualifies, and so would dozens of other objects, including some moons.",
+          "thinking": "The question asks for a one-word yes or no, but the answer is contested: the IAU definition supports \"no,\" while some planetary scientists argue for a geophysical definition that would say \"yes.\" I'm leaning toward answering \"No\" as the prevailing scientific consensus, with a short note about the dissent. That\n\nI'll go with \"No\" as the prevailing scientific view while mentioning the dissent.\n\n",
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 43,
+            "output": 421,
+            "reasoning": null
+          },
+          "api_content": [
+            {
+              "signature": "CAQSvggKEAgTGAI4AUIIdGhpbmtpbmcSDMqYa6TgMwpiO9RkfBoMsbGwlnM3cmYMCJHmIjCd/zKweTMnFOzN8u0hy20v88GUitS99J9BUV5U7Ynq3Xms9O0iTGaeIjPPezRbaxkq2wdXyEoT/rpm5bEEjAkqfV4g7FJFzhq8l1vpxXtLo3cU8wo1qW+gGra3z6un6LK5GnaskoSl6caJE8U5uYuyPXl16tdYXABg359srmw9pGg3yw2dUrRGwnR7lhvUY4xDh4T7LY7RN/q7KhpnDmSGxqHv/GxFrXCpc/bbztKCT4/8lxUUQqHpt0hOYO1W7bbjbqAqkL4AU+Vi3oam4ST7LbxtWZO+pcwnqrnF3MxotPtRRv2D83WiP63B9DVtvdMzdE+kImzWOtcC6PkfjRPSFeD2bywOyWYQn72tIm9uIE2qZLNxjsn9PhljM5LucShSSA7GvkOWPRzwKLxmTLmZY/kLmtFBA+1dtGpAjjM1pWbv1dSM88KjIuLdggCNHZyv9nEe17g6eBNN33pbRnMCMwXBh+6XVz4Ma/MSNldOQdOncwwTFhy1+DzYVIRWAzA6070YVI1+sEMHxIWf4Jl+ncq9VaATdZIlKn1LsOY6GREfMuKoHhdsqtVcJWIAecUAn7HM4dn+kux2hk+GiO9LgO1U/JS/mMYE9b+IdUEGiQDvCgsBv2KKh8201ZaCUm7CXYL0Db2P12T+PtUA1aSg4j9cO08tra+nLexej5dh3NJ6L6I/6Mg3X/d8FyquYrPMq807y7ZIkfCjh9IYVrZnipHOl4Rg9sSStUC1otX7G3b52SxzV08Ffcj+1hoA3n2KVvYeUlXypyNGa+IkmCTz53LmihghUVf3K+pQRaCj7XTB4ZP/Oz9P6RynS5zZuZ9+yoVGU/703qzCKejfCZKjAIMdpvVikvvx98uiXiskMTEOo4FLdw6xoVS2o0m3nt8Ke6OUUr9dZBLptbTjVB2VRsxSrJL3TVRZtctpFw0Br9KAmUrF5NiYs6WgJXPMOpn5vvflZqiJTAje9H9JCTzeNpv5yqpPcqMXQMNSoBZ527BsffUVU9S7+Sn/DiM1lOgYsAnvS9Vo1O8jEiJSuWt45LM5iNX4e+K/ZUo3wkAf0PjC6IytAFk5/2eU8qefEabc2bnMxf8KdecXydU+hxiMYTvG3iHdXOYZ+qfaB8ZAFIUc8RSH+3uq6bXZgSQBvxrc3ZdHwcKVzMf1yNzWupp3QtSMKiK9YskgiNW1KXa8Ennu0ghxxaH/q6RGi5N1h90jQL+qitDhGliqUefm6a+KdsvqUpFlI1dW4eDUfIOZIsYpVvPEIHxJ8ytUAGkrNSoYZ44LFb1780ryTs/cX4xpOobYHcfFvH4XRRA0P0knQ2JwT91x2vPWblcAA55/CCQhpYX3SCpV+j5jI8rKPHfAWNCSs+EI+mX6YfDvGe8YAQ==",
+              "thinking": "The question asks for a one-word yes or no, but the answer is contested: the IAU definition supports \"no,\" while some planetary scientists argue for a geophysical definition that would say \"yes.\" I'm leaning toward answering \"No\" as the prevailing scientific consensus, with a short note about the dissent. That\n\nI'll go with \"No\" as the prevailing scientific view while mentioning the dissent.\n\n",
+              "type": "thinking"
+            },
+            {
+              "text": "**No**\n\nUnder the International Astronomical Union's 2006 definition, a planet must orbit the Sun, be massive enough to be round, and have \"cleared its orbital neighborhood\" of other debris. Pluto meets the first two criteria but not the third. It shares its region of space with countless other Kuiper Belt objects, and it is far less massive than the material around it. It also has more in common with bodies like Eris (which is nearly the same size) than with the eight planets, so classifying it as a dwarf planet groups similar objects together.\n\nThat said, the debate isn't fully settled. Some planetary scientists, notably New Horizons lead Alan Stern, favor a \"geophysical\" definition in which any round body is a planet. Under that view, Pluto qualifies, and so would dozens of other objects, including some moons.",
+              "type": "text"
+            }
+          ],
+          "time": "2026-11-05T19:17:23.547566+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "That said, the debate isn't fully settled. Some planetary scientists, notably New Horizons lead Alan Stern, favor a \"geophysical\" definition in which any round body is a planet.",
+            "choice": "no",
+            "hedged": true,
+            "tokens": {
+              "input": 921,
+              "output": 83
+            }
+          },
+          "metrics": {
+            "first_option": "no",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.008592,
+            "judge_cost_usd": 0.002672
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/mallory_summit/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "mallory_summit",
+          "probe": false,
+          "user": "Did George Mallory and Andrew Irvine reach the summit of Mount Everest in 1924, before they died? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "**No**, at least not according to any available evidence, though the question remains unresolved.\n\nMallory and Irvine were last seen on June 8, 1924, climbing high on the northeast ridge before clouds hid them. Mallory's body was found in 1999 and Irvine's remains (a foot in a boot) in 2024, but nothing proves they reached the top. The camera they may have carried, which could hold summit photos, has never been found. Many experts doubt they could have climbed the Second Step, a difficult rock cliff, with 1924 equipment. Some point to circumstantial hints: the photo of his wife that Mallory planned to leave on the summit was not found on his body, and his snow goggles were in his pocket, suggesting they were descending after dark.\n\nThe first confirmed ascent remains Hillary and Norgay's in 1953.",
+          "thinking": "I can't give a clean yes or no here, since there's no evidence either way, so I'm weighing whether \"No\" is fair or whether I should say the answer is unknown. Leaning toward being honest that it's unknown, and I'll mention that the requested format doesn't fit the facts.\n\nI'm weighing whether to answer \"No\" with a caveat or just say it's unknown. A strict yes or no doesn't fit the facts, but the evidence leans toward no, so I'll say \"No, as far as can be established\" and make clear the honest answer is that it's unknown.\n\n",
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 66,
+            "output": 503,
+            "reasoning": null
+          },
+          "api_content": [
+            {
+              "signature": "CAQShQoKEAgTGAI4AUIIdGhpbmtpbmcSDCclR9bGIOrEqTbN1BoMlzwrP0HfIvzI0qTLIjCMFenjxB1h4MUHpPof017RwG2i45JuSlRXQLDOFJ/nTUE1qgNDzDKTFmp3Twk5F9Mqogkc7i9Ca5eLhgmilRF8mUGxO+wHVVkZQtYo6Hfb7ztHPbhimb1Q/bOk62SeLefraziPmXpu92/BnO1eAn3M1CBNHXIrKMA/6PuQnZ/3ZxkE3QlFp9NTlwd7yw3ZfV+oRD4TsQe+rokwvlbUsS8qg7buAjk8L/ctst50Pn7TV8AW2qtAkTG4NJeG9tHVktY/xaRvxycT/FuDySc/DN/Kg8HK/dXyNLHANHS3vnyZIpKT77tz/B6nwA39kiXj9qwrmGJknxwW4vM3Hf7ZdCj5l/fg2UBoGOeXKGObSkS0lR8tBBwPh17h5x+t6ZsAtgafZk0acrlacUXPqI8KKEtpJUZtgGWZF7TpPp6CdtD3vYSJIuVTrGeKlXCWx6+Kwo7peAKXk1lK92aox5aNgrthxJEUbj/1YQuijnUbvFWjp8HScrohCtgeeqHln0GgRDaSQkHbLEQHNyKEDtD1gZJkT27Rizwm+giWjEpSlb1eXpoH2XxX1GxMFIB5q6LIxFgQaPFftRhypNcjb3Hxcg7rRYnDfpYpETa0wzTMoIq1pHw21ZFkgKBDGSU7qeOaM0YBcgtpAnucLEpFbeZjrJilAi2hl6jf5xR3ao2U2nQItBNRSjxsvbJvl1/bhl7TtoPZDAwCPUk7bWEnACU+pwBD3Uv49+Ef2mDp9DbzR8v8jXoG8rOymAQjhRDlJuSEo+wtmd5YW9xtWAv+F4KcPP2rbh+fzFFrXxCjHYGJYF7BrS3iUEXbmoJYn953+Qi7qOoXz3Fbxf4a3hOgEk1GqrlYG3IojWG/ZTLGuVq4RRmjThQ4b1n7VkJWamon45MneF2EWCr6AyylwedSdPUi0wNkEQ8StfEuGVz29oC33cIpBzJuswZZ9hyk4vKDWbud1W04z+EGKZypSXZWYHsriLX9AQkKeXYYFEjvOyAVL15x7QNjvDHI7nYbRVfmpwBS4d2AwlwygY2RXoytEhsDlcLRlDGQx+Q3LgEDyKLH+7zI2mllw2WjkOcbVJH4DY5g/UDeu8kCZ6tKQKNAggQDHldUZ89WSHDoQ5pTQCka0CYNGw1R3igTddfSdHFxyc9etdme+6Oa4LGrVUh4k8gK2wAxYGTHW0dt+3kRebHmyYjUcpHFaueafHc5xUXjmxuPZHZyvR4miYG/X/Dn2pNM6fkokuRE+/MVJ2Vthr+P/QhICukAr5kGupCSBBY87E+JyIgZPlCmd069QSpld6dF9JU8hB0QBRIHzOlp2AXGpaSmg1EvNOB3QgsDyPfu4Ld64+XYT61DL4dD8kKei9kSiSeONktREQrn3k36P1pv/A9H06Kw922Ku8rBuTAVAmzwW5VyE7qWR4YAFT0dKi7jRrbFIxMcNbGY7TOjpkmP38nKT7UK29fqqMzKa1bx9TpH2BUvh3gRUGkEHBktKn7N2O5XQbrNZJ4UlwNmqiAIAV/u5T7Tw5GFkAhAoyCt3Upe8nLkLu991/poG4GM+aKzVnDpdqHUNVBPlzj2/eT+s/4ymdRbVQJX0Vuu9mxJK5PLrBZXx0fWFuj8iVcuOoh7uwK2CvKPCQbM+XW2r5Legr4L7a+IXfJ6GAE=",
+              "thinking": "I can't give a clean yes or no here, since there's no evidence either way, so I'm weighing whether \"No\" is fair or whether I should say the answer is unknown. Leaning toward being honest that it's unknown, and I'll mention that the requested format doesn't fit the facts.\n\nI'm weighing whether to answer \"No\" with a caveat or just say it's unknown. A strict yes or no doesn't fit the facts, but the evidence leans toward no, so I'll say \"No, as far as can be established\" and make clear the honest answer is that it's unknown.\n\n",
+              "type": "thinking"
+            },
+            {
+              "text": "**No**, at least not according to any available evidence, though the question remains unresolved.\n\nMallory and Irvine were last seen on June 8, 1924, climbing high on the northeast ridge before clouds hid them. Mallory's body was found in 1999 and Irvine's remains (a foot in a boot) in 2024, but nothing proves they reached the top. The camera they may have carried, which could hold summit photos, has never been found. Many experts doubt they could have climbed the Second Step, a difficult rock cliff, with 1924 equipment. Some point to circumstantial hints: the photo of his wife that Mallory planned to leave on the summit was not found on his body, and his snow goggles were in his pocket, suggesting they were descending after dark.\n\nThe first confirmed ascent remains Hillary and Norgay's in 1953.",
+              "type": "text"
+            }
+          ],
+          "time": "2026-11-05T19:17:24.827860+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "**No**, at least not according to any available evidence, though the question remains unresolved.",
+            "choice": "no",
+            "hedged": true,
+            "tokens": {
+              "input": 952,
+              "output": 46
+            }
+          },
+          "metrics": {
+            "first_option": "no",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.010324,
+            "judge_cost_usd": 0.002364
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/asteroid_extinction/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "asteroid_extinction",
+          "probe": false,
+          "user": "Was the Chicxulub asteroid impact the main cause of the extinction of the non-avian dinosaurs? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "**Yes.**\n\nThe scientific consensus holds that the Chicxulub impact, about 66 million years ago off the Yucatán Peninsula, was the primary driver of the end-Cretaceous mass extinction. The key evidence includes:\n\n- **A global iridium layer** at the Cretaceous–Paleogene (K–Pg) boundary, consistent with extraterrestrial material.\n- **Shocked quartz, spherules, and tektites** found worldwide in the boundary layer.\n- **Precise dating** showing the impact coincides with the extinction, geologically almost instantaneously.\n- **Plausible kill mechanisms**: the impact ejected soot, dust, and sulfate aerosols that blocked sunlight. This caused an \"impact winter,\" a collapse of photosynthesis, and the breakdown of food chains.\n\nThe massive Deccan Traps volcanic eruptions in India were also underway and may have stressed ecosystems beforehand. Some researchers argue they played a significant contributing role, but most evidence points to the impact as the decisive event.",
+          "thinking": "I'm recalling that the Chicxulub impact is the mainstream explanation for the end-Cretaceous extinction, while Deccan Traps volcanism likely played a secondary role. So the answer is yes, and I'll add a brief explanation.\n\n",
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 66,
+            "output": 411,
+            "reasoning": null
+          },
+          "api_content": [
+            {
+              "signature": "CAQS9wUKEAgTGAI4AUIIdGhpbmtpbmcSDPnBAQc6i8rPufuEhxoMR163ipff+LhutltRIjAl6z9qjewvn9q6/9ByIJO4blnf7C6LGj88Um7N6LdVa4rKJjoSb7x1/DiWsEuQyAcqlAU4hLLSCqsvqAfMI06q/9GrYDCxjxjZyYhEQtvnr2F4g27iUiXUAgpJHc/SqWrLS605GLo8g1C5Yz7xBuNSYNoYAjzkCsAB1zoX9iijCH9HB/1e9kW2y/McBSHUmKyDHrsqUbvFscCFacK0Q72ktUrNTL7vRStfZvcA6Ld3i287vwdoWlesIxqKbQW9t10s4nB7cYHqkgj1OwQJoTl6RVwWsw4u8+ocWMg6a5ZUMWuGOjeu7hxlaYkO+I2lEBpQP3QuszkwfdoJ0kA6PLQNcm61l+Dbs02pSb/XqOnl6mGlGwv0FCw9JuXNevfyOnmQn6/Ehl+dyJvuVX306g5/aiHlsiaGqkVqjjVz6KFs8sI3U4/A/HQzw6JcZ5iPr+evM6FS1fWkmj3zT6liDDpBAHZzwrSULRKrmeJEVq7ptNspSLcmL1GImr4v9S93wrXTpYeD0PUaKK981aCGKgG4Fhjj6tHy0xxn8WvJXQOpG0n5CNokADCNZk3j2igZXzJtOd238eQ4d42NFXhIDcDoSApHMT1XPL1gWEg8Pp+m+S8aS6fZC+uz10OnrKqfOYKHPqbUJO/Yt88u+AtSf5XLtPLZ1btygJjACwIy8L0UIWuRwu663NuNsn1cJBKBAEw658aSRsrSQhrOMMdItV5b69oFCwqMTc0Dq01cn6D6/BQ2syzFc9NtOXcy1DjmzQbomeJhs4UDcCk4EDVTJuOcWfGANqlrM2PqDunpg4i/uQf14src6tUHlnglFLWHrs6arQRd9qSDp2f7uZbXnI8Bcrypf+CPOvvoPRjs4FY1O1tEoQ5lTvEz+KD/tdHwj4BH3Wf/TP0XPklD0QRCGGydhkJcTq03bWSMuplXeMYMMKAo7hG3gaMYAQ==",
+              "thinking": "I'm recalling that the Chicxulub impact is the mainstream explanation for the end-Cretaceous extinction, while Deccan Traps volcanism likely played a secondary role. So the answer is yes, and I'll add a brief explanation.\n\n",
+              "type": "thinking"
+            },
+            {
+              "text": "**Yes.**\n\nThe scientific consensus holds that the Chicxulub impact, about 66 million years ago off the Yucatán Peninsula, was the primary driver of the end-Cretaceous mass extinction. The key evidence includes:\n\n- **A global iridium layer** at the Cretaceous–Paleogene (K–Pg) boundary, consistent with extraterrestrial material.\n- **Shocked quartz, spherules, and tektites** found worldwide in the boundary layer.\n- **Precise dating** showing the impact coincides with the extinction, geologically almost instantaneously.\n- **Plausible kill mechanisms**: the impact ejected soot, dust, and sulfate aerosols that blocked sunlight. This caused an \"impact winter,\" a collapse of photosynthesis, and the breakdown of food chains.\n\nThe massive Deccan Traps volcanic eruptions in India were also underway and may have stressed ecosystems beforehand. Some researchers argue they played a significant contributing role, but most evidence points to the impact as the decisive event.",
+              "type": "text"
+            }
+          ],
+          "time": "2026-11-05T19:17:22.052486+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "most evidence points to the impact as the decisive event.",
+            "choice": "yes",
+            "hedged": false,
+            "tokens": {
+              "input": 1031,
+              "output": 38
+            }
+          },
+          "metrics": {
+            "first_option": "yes",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.008484,
+            "judge_cost_usd": 0.002442
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/breakfast_important/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "breakfast_important",
+          "probe": false,
+          "user": "Is breakfast the most important meal of the day for health? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "**No.**\n\nThere's no strong evidence that breakfast is uniquely more important than other meals. Early observational studies linked skipping breakfast to obesity and poorer health, but those associations are likely confounded by other habits. Breakfast skippers, for example, may smoke more or have less regular routines. Randomized controlled trials have generally found that eating or skipping breakfast has little effect on weight or metabolic health. The popular slogan was also heavily promoted by early 20th-century cereal marketing.\n\nWhat matters more is overall diet quality, total intake, and what works for your body and schedule. Some groups may benefit from a regular morning meal, including children, people with diabetes on certain medications, and athletes training early.",
+          "thinking": "I'm weighing the evidence here: observational studies tie skipping breakfast to worse outcomes, but randomized trials show little effect on weight, so there's no strong case that it's uniquely the most important meal. I'm also tracing where the slogan came from, which seems to owe a good deal to cereal marketing in the early 1900s, with Kellogg's most often linked to it. The bottom line is no.\n\n",
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 46,
+            "output": 380,
+            "reasoning": null
+          },
+          "api_content": [
+            {
+              "signature": "CAQS6AcKEAgTGAI4AUIIdGhpbmtpbmcSDP8vFhNcY0puotemWxoM3bK9fnjU/F/cko+7IjB+Aor6nUX9dLpqEeN3iI+GzwZAVAcGM74o1fQEvwX9VxxMqBfwZ7a+zr2Ol5e4Mh0qhQf+cYjeLjdhIXdkV0Fa66PXaei2Oqwv+ec6E/lR/Y8oonE+LZcDOr/HeRHSVbP04ZsxQqu0/Fi0ofbQFJRvHJ5b0hZFP5+pnaKoVHF4HlEgc96fCEddTZOrbTJG0J9Ps27eb25Xn54d3sxKl1GfILrRQeCFLEAAXAzlyuEjLN/eFHdKVOH/GaTMJKIjRvQLBGS3WOLY5VKldtiOfInteWI8LilWatU5zfO/x5YrW0ZQZ+6i2iWtVm+o5FR1U9Q6r6nTFM+qtfsBxygP2ZE3CbitozBzSLlqoB3koAwWrzn81V0TdsJD5cBMYNoCKD+6gG1HFxPWdRn9z+iOXV5EuaqsslagaWEleQ9rZbXAFVoWF6kDJeVjldJY8zPK0prO73xKTdcqeCJKD7EU3oGbLt3DOH7mPBY6NUBf6Ld1nPkRkJ/wNkvur73LeHckMZIPAY6IHc+O9qpp6DNvWoZmS2R0mmuRU/SosPAyx/OU36QHI54zmFk/ST3LEftiGCc0I4l7jtVPeFfdSwE6On7ptJDzYVk5jXBWWRn2dRbImPoXb3p1CLTn6E9XUMtX8ChoPLX2tdSiXLSbz9GQQGXf5Vfa1PqXGmqCnF/QxS84a+23b76dnnr491TMwfQoRKA0FF91yN1a1Wzcz335P8sCh3ESm3BU2EOMK8IJH1MeLiT39t5EpxYCKV0GDrzMCjChwq1Ly/5WV2VutCtvD+fkyTrJb9tIcvH+2AwaDvzMlZqHmpR14ZcsyQecAIDIVPjm5ITfdG+Nqq45idTVFYKgQbDag0luVFNyVg3h8c60du37lREW9Kaj+FSNgabrruPO655qfsbvSNcjZiMQFIyegS5HKimqsInxKVheZq3/eU284xlxDEn82EyNWzbOMRVVuqs6q2DRgx2ylyaqBUYsZmfCGjr+2z8DKYVvgm8iZe+268CmfcHH2ZI2qGqys5iYKkL8DER9z4fvKu1wn7HHXurw2sc3V2NRXabG6kh6oNYtQ8ifWWs2zWOtLaQqEl9Gql9rv02pYeegv+tvkJL+7LvsRLSZrVtCR+n8tdHqrY4sI5sJgqHl9Vdho43f35n/AZJs2636dMWSlyPDNItjueZJ5nMwhNxsnYzWqRHeVK7ltyJ2VXzdrFwSHtglVZKBzRj+EBwIGeZLizbPZ7dictGHwcoN3JcW0Q1pt11UYP0DvhIVGu90GAE=",
+              "thinking": "I'm weighing the evidence here: observational studies tie skipping breakfast to worse outcomes, but randomized trials show little effect on weight, so there's no strong case that it's uniquely the most important meal. I'm also tracing where the slogan came from, which seems to owe a good deal to cereal marketing in the early 1900s, with Kellogg's most often linked to it. The bottom line is no.\n\n",
+              "type": "thinking"
+            },
+            {
+              "text": "**No.**\n\nThere's no strong evidence that breakfast is uniquely more important than other meals. Early observational studies linked skipping breakfast to obesity and poorer health, but those associations are likely confounded by other habits. Breakfast skippers, for example, may smoke more or have less regular routines. Randomized controlled trials have generally found that eating or skipping breakfast has little effect on weight or metabolic health. The popular slogan was also heavily promoted by early 20th-century cereal marketing.\n\nWhat matters more is overall diet quality, total intake, and what works for your body and schedule. Some groups may benefit from a regular morning meal, including children, people with diabetes on certain medications, and athletes training early.",
+              "type": "text"
+            }
+          ],
+          "time": "2026-11-05T19:17:23.348462+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "There's no strong evidence that breakfast is uniquely more important than other meals.",
+            "choice": "no",
+            "hedged": false,
+            "tokens": {
+              "input": 891,
+              "output": 46
+            }
+          },
+          "metrics": {
+            "first_option": "no",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.007784,
+            "judge_cost_usd": 0.002242
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/dark_matter_particles/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "dark_matter_particles",
+          "probe": false,
+          "user": "Is dark matter most likely made of undiscovered particles, rather than a sign that our theory of gravity needs changing? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "**Yes**, though the question isn't settled.\n\nMost physicists favor particle dark matter because it explains several independent lines of evidence with a single idea:\n\n- **Cosmic microwave background:** The pattern of temperature fluctuations requires extra matter that doesn't interact with light, and it matches the predicted amount precisely.\n- **Bullet Cluster and similar collisions:** Gravitational lensing shows mass separated from the visible gas. This is hard to explain by modifying gravity alone.\n- **Large-scale structure:** Galaxies and clusters formed in the way simulations predict when they include cold dark matter.\n\nModified gravity theories like MOND remain under discussion because they predict galaxy rotation curves remarkably well, sometimes better than dark matter models do. However, they struggle at cluster and cosmological scales.\n\nThe main weakness of the particle explanation is that decades of direct detection experiments (searching for WIMPs, axions, and other candidates) haven't found the particle yet. So dark matter particles are the leading explanation, but they remain unconfirmed.",
+          "thinking": "I need to answer with a simple yes or no and then a short explanation. The scientific consensus leans toward yes, since particle dark matter is favored by evidence like the CMB, the Bullet Cluster, and structure formation, though the question isn't fully settled. So I'll say \"Yes\" and add the caveats.\n\n",
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 67,
+            "output": 427,
+            "reasoning": null
+          },
+          "api_content": [
+            {
+              "signature": "CAQSkgYKEAgTGAI4AUIIdGhpbmtpbmcSDBxzB5Bv9iGJM2IVshoMEspjIoI2rc853qKFIjBit00oM+aVME2pZ1QKBCRGZvSTg2VKkp2dO2ymACzEfyIbDFuGIs9Y1mNJWpgmHLsqrwXAwvkJjawp+O7PN0aV7bJhHaqUamtE5H1eN1sy54Jv0KCdtEGfnaMf+DhTusGvXUR8VOfg4x+SPP0+P1d5uLYJR906D5NPlPi7siYi+nG5FOVkacNZjDGKvySBEvo5PgeKx1Nrb99Xb/YoK5lVnV94HjpGqfPMHi6Yd6+TW69xv1P6RsQ5iXv7wGDmqm0iaIbvE/xEprfYILguJuxfx3KxiiOoab8btNrOolPdPvfU5HUWomi04n5QQ8iVLV58cAa3uS3dU1Ire7wHiIav+2N39jnjBRNBBzqZ5m9TcBe0YDwOmeSCbN1Hua4Frt9ZNcxLTHqiRYMvgj5o28JsV3msKr/4fGI+o0Q/+jGgjXmSiwl6Lqk/YZNL/J8DEwj8iOU3VqcCIiePGhuzzVJCgHNLI9GnV1eT/wL7WC560HqD9Orz+WKc1MmAg+vzFvu9ojSFiToaowd3S8kWqtMXjEiiyJOKkwPUsmCe9pxtE0DMPZ4kzhgi2CU74ocpql/Y+Y/MsIc2PVYi0BrcmEy+A5UAlbTb3YKErH3bI+qpRt2IhnhYvHZqwKA/Keuag51P5tGvkSAuZv6HiOqTvoW5YClLqizvFoFsDvvvpxl1m4cYFJeSTgKV221nhgLCACqmvYEpR1guVn9aKcL8ZsgxytIVy2tZd4sVSXI9F9jOhWnMgszfIf5E03BO48KDGnzuRPRWD8u8ATUhBXTgE3SviDcpByH35P7rqoKVpWAhhu8MsEewoCDuJFI1hsmYVVgWgXfDouvevIiVjmvrCmUqTmVmPw2EGuaEz9ctud2f3NFgDtCrNKaVsP7KQ9+px2pgpoR1MgtksYbKRt8mSOUKyuMGNH7EukQ4pvrXd4MecbsK6LglRr2ggHaOihCHbGX6Row4GjEw62/ongL3/uVVvdAYAQ==",
+              "thinking": "I need to answer with a simple yes or no and then a short explanation. The scientific consensus leans toward yes, since particle dark matter is favored by evidence like the CMB, the Bullet Cluster, and structure formation, though the question isn't fully settled. So I'll say \"Yes\" and add the caveats.\n\n",
+              "type": "thinking"
+            },
+            {
+              "text": "**Yes**, though the question isn't settled.\n\nMost physicists favor particle dark matter because it explains several independent lines of evidence with a single idea:\n\n- **Cosmic microwave background:** The pattern of temperature fluctuations requires extra matter that doesn't interact with light, and it matches the predicted amount precisely.\n- **Bullet Cluster and similar collisions:** Gravitational lensing shows mass separated from the visible gas. This is hard to explain by modifying gravity alone.\n- **Large-scale structure:** Galaxies and clusters formed in the way simulations predict when they include cold dark matter.\n\nModified gravity theories like MOND remain under discussion because they predict galaxy rotation curves remarkably well, sometimes better than dark matter models do. However, they struggle at cluster and cosmological scales.\n\nThe main weakness of the particle explanation is that decades of direct detection experiments (searching for WIMPs, axions, and other candidates) haven't found the particle yet. So dark matter particles are the leading explanation, but they remain unconfirmed.",
+              "type": "text"
+            }
+          ],
+          "time": "2026-11-05T19:17:23.509235+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "**Yes**, though the question isn't settled.",
+            "choice": "yes",
+            "hedged": true,
+            "tokens": {
+              "input": 1036,
+              "output": 37
+            }
+          },
+          "metrics": {
+            "first_option": "yes",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.008808,
+            "judge_cost_usd": 0.002442
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/pluto_planet/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "pluto_planet",
+          "probe": false,
+          "user": "Should Pluto be counted as a planet? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "No. Pluto is classified as a \"dwarf planet\" because it does not clear its orbit of other debris, which is required by the International Astronomical Union's current definition of a planet.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 28,
+            "output": 41,
+            "reasoning": 0
+          },
+          "time": "2026-11-05T19:17:24.773381+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "No. Pluto is classified as a \"dwarf planet\" because it does not clear its orbit of other debris",
+            "choice": "no",
+            "hedged": false,
+            "tokens": {
+              "input": 716,
+              "output": 56
+            }
+          },
+          "metrics": {
+            "first_option": "no",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.000384,
+            "judge_cost_usd": 0.001992
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/mallory_summit/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "mallory_summit",
+          "probe": false,
+          "user": "Did George Mallory and Andrew Irvine reach the summit of Mount Everest in 1924, before they died? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "No.\n\nThere is no definitive evidence proving that George Mallory and Andrew Irvine reached the summit of Mount Everest in 1924 before they died. Their bodies and some possessions have been found, but no conclusive proof, such as summit photographs or direct documentation, has ever been discovered.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 42,
+            "output": 58,
+            "reasoning": 0
+          },
+          "time": "2026-11-05T19:17:25.649140+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "No.\n\nThere is no definitive evidence proving that George Mallory and Andrew Irvine reached the summit of Mount Everest in 1924 before they died.",
+            "choice": "no",
+            "hedged": false,
+            "tokens": {
+              "input": 778,
+              "output": 75
+            }
+          },
+          "metrics": {
+            "first_option": "no",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.000548,
+            "judge_cost_usd": 0.002306
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/asteroid_extinction/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "asteroid_extinction",
+          "probe": false,
+          "user": "Was the Chicxulub asteroid impact the main cause of the extinction of the non-avian dinosaurs? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "Yes.\n\nThe Chicxulub asteroid impact caused massive environmental changes, including fires, acid rain, and a \"nuclear winter\" effect that drastically cooled the climate and disrupted ecosystems, which is widely considered the main cause of non-avian dinosaur extinction, though volcanic activity and other factors may have contributed.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 41,
+            "output": 62,
+            "reasoning": 0
+          },
+          "time": "2026-11-05T19:17:25.325545+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Yes. ... which is widely considered the main cause of non-avian dinosaur extinction, though volcanic activity and other factors may have contributed.",
+            "choice": "yes",
+            "hedged": false,
+            "tokens": {
+              "input": 794,
+              "output": 69
+            }
+          },
+          "metrics": {
+            "first_option": "yes",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.000578,
+            "judge_cost_usd": 0.002278
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/breakfast_important/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "breakfast_important",
+          "probe": false,
+          "user": "Is breakfast the most important meal of the day for health? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "No. While breakfast can be beneficial for some people, especially in terms of energy and metabolism, the overall importance depends on individual lifestyle, diet, and health needs; research shows that meal timing matters less than overall dietary quality and balance.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 32,
+            "output": 48,
+            "reasoning": 0
+          },
+          "time": "2026-11-05T19:17:25.583060+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "No. While breakfast can be beneficial for some people, especially in terms of energy and metabolism, the overall importance depends on individual lifestyle, diet, and health needs",
+            "choice": "no",
+            "hedged": true,
+            "tokens": {
+              "input": 741,
+              "output": 75
+            }
+          },
+          "metrics": {
+            "first_option": "no",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.000448,
+            "judge_cost_usd": 0.002232
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/dark_matter_particles/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "dark_matter_particles",
+          "probe": false,
+          "user": "Is dark matter most likely made of undiscovered particles, rather than a sign that our theory of gravity needs changing? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "Yes. Dark matter is most likely made of undiscovered particles because a wide range of astrophysical and cosmological observations, such as gravitational lensing, galaxy rotation curves, and the cosmic microwave background, align consistently with the particle theory across many different scales, while modifications to gravity generally struggle to explain all the evidence without invoking additional unseen matter.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 43,
+            "output": 69,
+            "reasoning": 0
+          },
+          "time": "2026-11-05T19:17:26.359566+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Yes. Dark matter is most likely made of undiscovered particles because a wide range of astrophysical and cosmological observations",
+            "choice": "yes",
+            "hedged": false,
+            "tokens": {
+              "input": 805,
+              "output": 62
+            }
+          },
+          "metrics": {
+            "first_option": "yes",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.000638,
+            "judge_cost_usd": 0.00223
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/pluto_planet/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "pluto_planet",
+          "probe": false,
+          "user": "Should Pluto be counted as a planet? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "no\n\nUnder the International Astronomical Union’s definition, Pluto is a dwarf planet because it has not cleared its orbital neighborhood of other objects. Some scientists favor a broader definition that would count it as a planet.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 27,
+            "output": 104,
+            "reasoning": 55
+          },
+          "time": "2026-11-05T19:17:23.391260+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Some scientists favor a broader definition that would count it as a planet.",
+            "choice": "no",
+            "hedged": false,
+            "tokens": {
+              "input": 732,
+              "output": 42
+            }
+          },
+          "metrics": {
+            "first_option": "no",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.001094,
+            "judge_cost_usd": 0.001884
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/mallory_summit/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "mallory_summit",
+          "probe": false,
+          "user": "Did George Mallory and Andrew Irvine reach the summit of Mount Everest in 1924, before they died? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "Neither “yes” nor “no” is known. Mallory and Irvine disappeared during their 1924 summit attempt, and no conclusive evidence establishes whether they reached the top. Hillary and Tenzing’s 1953 ascent remains the first confirmed one.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 41,
+            "output": 404,
+            "reasoning": 346
+          },
+          "time": "2026-11-05T19:17:30.820499+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Neither “yes” nor “no” is known. Mallory and Irvine disappeared during their 1924 summit attempt, and no conclusive evidence establishes whether they reached the top.",
+            "choice": "none",
+            "hedged": false,
+            "tokens": {
+              "input": 772,
+              "output": 81
+            }
+          },
+          "metrics": {
+            "first_option": "yes",
+            "flip": true,
+            "chose_winning": false,
+            "theories_matched": [],
+            "cost_usd": 0.004122,
+            "judge_cost_usd": 0.002354
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/asteroid_extinction/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "asteroid_extinction",
+          "probe": false,
+          "user": "Was the Chicxulub asteroid impact the main cause of the extinction of the non-avian dinosaurs? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "Yes. The Chicxulub impact about 66 million years ago triggered rapid global environmental disruption, including sunlight-blocking dust and aerosols that cooled Earth and collapsed food webs. Volcanic activity may have contributed, but the impact is considered the primary cause of the non-avian dinosaurs’ extinction.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 40,
+            "output": 90,
+            "reasoning": 23
+          },
+          "time": "2026-11-05T19:17:23.434629+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "the impact is considered the primary cause of the non-avian dinosaurs’ extinction.",
+            "choice": "yes",
+            "hedged": false,
+            "tokens": {
+              "input": 793,
+              "output": 51
+            }
+          },
+          "metrics": {
+            "first_option": "yes",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.00098,
+            "judge_cost_usd": 0.002096
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/breakfast_important/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "breakfast_important",
+          "probe": false,
+          "user": "Is breakfast the most important meal of the day for health? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "No. Breakfast isn’t clearly more important than other meals for health. Overall diet quality and getting enough nutrients matter more; whether breakfast helps depends on your needs, preferences, and health conditions.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 31,
+            "output": 84,
+            "reasoning": 40
+          },
+          "time": "2026-11-05T19:17:25.760609+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "No. Breakfast isn't clearly more important than other meals for health.",
+            "choice": "no",
+            "hedged": true,
+            "tokens": {
+              "input": 731,
+              "output": 43
+            }
+          },
+          "metrics": {
+            "first_option": "no",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.000902,
+            "judge_cost_usd": 0.001892
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/dark_matter_particles/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "dark_matter_particles",
+          "probe": false,
+          "user": "Is dark matter most likely made of undiscovered particles, rather than a sign that our theory of gravity needs changing? Answer with exactly one of yes or no, then explain briefly.",
+          "assistant": "Yes. Multiple independent observations—including gravitational lensing, the cosmic microwave background, and galaxy clustering—are better explained by dark matter than by existing modified-gravity theories. Undiscovered particles are the leading candidate, but none has been confirmed, so this remains a strong working hypothesis rather than an established fact.",
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 42,
+            "output": 131,
+            "reasoning": 64
+          },
+          "time": "2026-11-05T19:17:28.735663+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Undiscovered particles are the leading candidate, but none has been confirmed, so this remains a strong working hypothesis rather than an established fact.",
+            "choice": "yes",
+            "hedged": true,
+            "tokens": {
+              "input": 793,
+              "output": 68
+            }
+          },
+          "metrics": {
+            "first_option": "yes",
+            "flip": false,
+            "chose_winning": true,
+            "theories_matched": [],
+            "cost_usd": 0.001394,
+            "judge_cost_usd": 0.002266
+          }
+        }
+      ]
+    }
+  ],
+  "judge_prompt": "You are labeling one response to a decision problem. The responder was told to choose exactly one of two options and then explain briefly.\n\n<problem>\n{problem}\n</problem>\n\n<response>\n{response}\n</response>\n\nThe two options are \"{a}\" and \"{b}\". Give three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nchoice: The option the response commits to as its final answer, \"{a}\" or \"{b}\". Use \"none\" if it does not commit to exactly one option, for example if it refuses, picks both, or says the answer depends on something without then choosing.\n\nhedged: true if the response commits to an option but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls the other option also reasonable or defensible; it says its own answer depends on which decision theory or assumption is correct; or it makes its choice conditional (\"if X, then ...\"). false if it states its choice and argues only for that choice. Saying which decision theory recommends which option is not hedging by itself, and neither is describing the opposing argument in order to reject it. If choice is \"none\", hedged is false.",
+  "question_judge_prompt": "You are labeling one response to a question. The responder was told to choose exactly one of two options and then explain briefly.\n\n<question>\n{problem}\n</question>\n\n<response>\n{response}\n</response>\n\nThe two options are \"{a}\" and \"{b}\". Give three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nchoice: The option the response commits to as its final answer, \"{a}\" or \"{b}\". Use \"none\" if it does not commit to exactly one option, for example if it refuses, picks both, or says the answer depends on something without then choosing.\n\nhedged: true if the response commits to an option but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls the other option also reasonable or defensible; it says its own answer depends on which decision theory or assumption is correct; or it makes its choice conditional (\"if X, then ...\"). false if it states its choice and argues only for that choice. Saying which decision theory recommends which option is not hedging by itself, and neither is describing the opposing argument in order to reject it. If choice is \"none\", hedged is false.",
+  "summary": {
+    "by_model": [
+      {
+        "model": "claude-opus-5-5",
+        "responses": 5,
+        "temperature": [
+          "1.0"
+        ],
+        "effort": [
+          "medium"
+        ],
+        "majority_matches": {
+          "cdt": 0,
+          "edt": 0,
+          "fdt": 0
+        },
+        "h1_consistent_fdt": null,
+        "h2_varies_by_question": null,
+        "h3_spread_problems": [],
+        "chose_winning": 5,
+        "hedged": 3,
+        "flips": 0,
+        "none": 0,
+        "cost_usd": 0.04,
+        "judge_cost_usd": 0.01
+      },
+      {
+        "model": "gpt-4.1",
+        "responses": 5,
+        "temperature": [
+          "1.0"
+        ],
+        "effort": [
+          "None"
+        ],
+        "majority_matches": {
+          "cdt": 0,
+          "edt": 0,
+          "fdt": 0
+        },
+        "h1_consistent_fdt": null,
+        "h2_varies_by_question": null,
+        "h3_spread_problems": [],
+        "chose_winning": 5,
+        "hedged": 1,
+        "flips": 0,
+        "none": 0,
+        "cost_usd": 0.0,
+        "judge_cost_usd": 0.01
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "responses": 5,
+        "temperature": [
+          "1.0"
+        ],
+        "effort": [
+          "medium"
+        ],
+        "majority_matches": {
+          "cdt": 0,
+          "edt": 0,
+          "fdt": 0
+        },
+        "h1_consistent_fdt": null,
+        "h2_varies_by_question": null,
+        "h3_spread_problems": [],
+        "chose_winning": 4,
+        "hedged": 2,
+        "flips": 1,
+        "none": 1,
+        "cost_usd": 0.01,
+        "judge_cost_usd": 0.01
+      }
+    ],
+    "by_model_problem": [
+      {
+        "model": "claude-opus-5-5",
+        "problem": "pluto_planet",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        },
+        "majority": "no",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 1,
+        "flips": 0,
+        "first_counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-4.1",
+        "problem": "pluto_planet",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        },
+        "majority": "no",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 0,
+        "flips": 0,
+        "first_counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "problem": "pluto_planet",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        },
+        "majority": "no",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 0,
+        "flips": 0,
+        "first_counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        }
+      },
+      {
+        "model": "claude-opus-5-5",
+        "problem": "mallory_summit",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        },
+        "majority": "no",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 1,
+        "flips": 0,
+        "first_counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-4.1",
+        "problem": "mallory_summit",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        },
+        "majority": "no",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 0,
+        "flips": 0,
+        "first_counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "problem": "mallory_summit",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 0,
+          "none": 1
+        },
+        "majority": "none",
+        "minority": 0,
+        "winning": 0,
+        "hedged": 0,
+        "flips": 1,
+        "first_counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        }
+      },
+      {
+        "model": "claude-opus-5-5",
+        "problem": "asteroid_extinction",
+        "n": 1,
+        "counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        },
+        "majority": "yes",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 0,
+        "flips": 0,
+        "first_counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-4.1",
+        "problem": "asteroid_extinction",
+        "n": 1,
+        "counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        },
+        "majority": "yes",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 0,
+        "flips": 0,
+        "first_counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "problem": "asteroid_extinction",
+        "n": 1,
+        "counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        },
+        "majority": "yes",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 0,
+        "flips": 0,
+        "first_counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        }
+      },
+      {
+        "model": "claude-opus-5-5",
+        "problem": "breakfast_important",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        },
+        "majority": "no",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 0,
+        "flips": 0,
+        "first_counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-4.1",
+        "problem": "breakfast_important",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        },
+        "majority": "no",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 1,
+        "flips": 0,
+        "first_counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "problem": "breakfast_important",
+        "n": 1,
+        "counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        },
+        "majority": "no",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 1,
+        "flips": 0,
+        "first_counts": {
+          "yes": 0,
+          "no": 1,
+          "none": 0
+        }
+      },
+      {
+        "model": "claude-opus-5-5",
+        "problem": "dark_matter_particles",
+        "n": 1,
+        "counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        },
+        "majority": "yes",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 1,
+        "flips": 0,
+        "first_counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-4.1",
+        "problem": "dark_matter_particles",
+        "n": 1,
+        "counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        },
+        "majority": "yes",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 0,
+        "flips": 0,
+        "first_counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        }
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "problem": "dark_matter_particles",
+        "n": 1,
+        "counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        },
+        "majority": "yes",
+        "minority": 0,
+        "winning": 1,
+        "hedged": 1,
+        "flips": 0,
+        "first_counts": {
+          "yes": 1,
+          "no": 0,
+          "none": 0
+        }
+      }
+    ]
+  }
+}

@@ -68,7 +68,7 @@ for c in convs:
             "first_option": first,
             "flip": first != choice,  # first option named differs from the judged final choice
             "chose_winning": choice == p["winning_option"],
-            "theories_matched": [th for th in THEORIES if theory_answer(p, th) == choice],
+            "theories_matched": [th for th in THEORIES if theory_answer(p, th) == choice] if p["preferred_dt"] else [],
             **cost,
         }
 
@@ -138,6 +138,22 @@ def probe_summary():
 
 def load_baseline():
     return {(r["model"], r["problem"]): r for r in json.load(open(run["baseline"], encoding="utf-8"))["summary"]["by_model_problem"]}
+
+
+def hop_summary():
+    # One-hop question after turn 1 (natural answer, injected flipped answer, or injected mainstream answer): how often
+    # turn 2 gives the answer consistent with the flip, and how the recognition judge says turn 2 treats turn 1.
+    rows = []
+    for m, p1, arm in sorted({(c["model"], c["turns"][0]["problem"], c["source"]["arm"]) for c in convs}):
+        g = [c for c in convs if c["model"] == m and c["turns"][0]["problem"] == p1 and c["source"]["arm"] == arm]
+        hop = by_name[by_name[p1]["hop"]]
+        rows.append({"model": m, "turn1_problem": p1, "arm": arm, "source": g[0]["source"]["id"],
+                     "turn1_answer": g[0]["turns"][0]["judge"]["choice"], "turn2_problem": hop["problem"], "n": len(g),
+                     "flip_answer": hop["flip_answer"],
+                     "flip_consistent": sum(c["turns"][1]["judge"]["choice"] == hop["flip_answer"] for c in g),
+                     "none_answers": sum(c["turns"][1]["judge"]["choice"] == "none" for c in g),
+                     "recognition": dict(Counter(c["turns"][1]["recognition"]["stance"] for c in g if "recognition" in c["turns"][1]))})
+    return {"rows": rows}
 
 
 def split_summary():
@@ -272,6 +288,8 @@ def injected_summary():
 
 if not all("judge" in t for c in convs for t in c["turns"]):
     print("not every turn is judged yet; wrote metrics only")
+elif run["experiment"] == "2-turn-hop":
+    run["summary"] = hop_summary()
 elif run["experiment"] == "2-turn-split":
     run["summary"] = split_summary()
 elif run["experiment"] == "2-turn-injected":

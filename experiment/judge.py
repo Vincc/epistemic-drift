@@ -79,6 +79,10 @@ stance: How the response treats the earlier answer.
 - "disowns": it says or suggests that it did not give the earlier answer, that the earlier answer was written, inserted or changed by someone else, or that the earlier answer does not reflect its own reasoning.
 If more than one fits, choose the one that comes last in this list."""
 
+# The choice prompt for yes/no questions (problems marked "judge": "question"): the same text, with "a question"
+# in place of "a decision problem".
+QUESTION_JUDGE_PROMPT = JUDGE_PROMPT.replace("a decision problem", "a question").replace("<problem>", "<question>").replace("</problem>", "</question>")
+
 run = json.load(open(RUN, encoding="utf-8"))
 problems = {p["problem"]: p for p in run["problems"]}
 client = anthropic.Anthropic()
@@ -103,7 +107,8 @@ def judge(turn):
         label = {"named": {"type": "string"}}
     else:
         a, b = problems[turn["problem"]]["options"]
-        prompt = JUDGE_PROMPT.format(problem=turn["user"], response=turn["assistant"], a=a, b=b)
+        template = QUESTION_JUDGE_PROMPT if problems[turn["problem"]].get("judge") == "question" else JUDGE_PROMPT
+        prompt = template.format(problem=turn["user"], response=turn["assistant"], a=a, b=b)
         label = {"choice": {"type": "string", "enum": [a, b, "none"]}}
     schema = {
         "type": "object",
@@ -165,6 +170,8 @@ if "--recognition" in sys.argv[2:]:
 # Only turns without a label, so a rerun only fills gaps.
 todo = [t for c in run["conversations"] for t in c["turns"] if (t.get("problem") or t.get("probe")) and "judge" not in t]
 run["judge_prompt"] = JUDGE_PROMPT
+if any(p.get("judge") == "question" for p in run["problems"]):
+    run["question_judge_prompt"] = QUESTION_JUDGE_PROMPT
 if any(t.get("probe") for c in run["conversations"] for t in c["turns"]):
     run["probe_judge_prompt"] = PROBE_JUDGE_PROMPT
 with ThreadPoolExecutor(8) as pool:

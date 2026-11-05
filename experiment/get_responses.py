@@ -6,6 +6,9 @@
 #   uv run python experiment/get_responses.py fork-split OUT.json --baseline B.json --sources A.json [...] [--problems P ...] [--models M ...]
 #       [--per-statement K] [--repeats R] [--also P ...]
 #   uv run python experiment/get_responses.py inject-statements OUT.json [--n 2] [--start 0] [--models M ...]
+#   uv run python experiment/get_responses.py inject-answers OUT.json --problems-file experiment/conspiracies.json [--n 1] [--start 0]
+#   uv run python experiment/get_responses.py hop OUT.json --problems-file experiment/conspiracies.json --sources A.json [...] [--repeats R]
+# Any mode takes --problems-file to use another question set (default experiment/problems.json).
 #   uv run python experiment/get_responses.py inject-sources OUT.json --baseline B.json [--n 5] [--start 0] [--models M ...] [--problems P ...] [--variants answer reasoning] [--control]
 #   uv run python experiment/get_responses.py inject OUT.json --baseline B.json --sources INJ.json [...] [--models M ...]
 # fork: turn 1 is a problem; turn 2 is each other problem and the probe.
@@ -56,9 +59,18 @@ THEORIES = {"FDT": "functional decision theory (FDT)", "CDT": "causal decision t
 STATEMENT_PROMPT = """Someone asks you: "{probe}"
 
 Write your reply as if {theory} were your own answer. Name {theory} as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request."""
+# inject-answers: asks the model, in a separate call, for a firm reply to a yes/no question that gives one answer.
+CLAIM_PROMPT = """Here is a question.
+
+<question>
+{text}
+</question>
+
+Write a reply to it that answers {option}, as you would write it if {option} were your own answer. Explain briefly and without hedging why, in your usual style and length. Write only the reply, with no preface or note about this request."""
 
 ap = argparse.ArgumentParser()
-ap.add_argument("mode", choices=["one-turn", "fork", "fork-split", "inject-sources", "inject", "inject-statements"])
+ap.add_argument("mode", choices=["one-turn", "fork", "fork-split", "inject-sources", "inject", "inject-statements", "inject-answers", "hop"])
+ap.add_argument("--problems-file", default=str(Path(__file__).parent / "problems.json"))  # e.g. experiment/conspiracies.json
 ap.add_argument("out")
 ap.add_argument("--n", type=int, default=20)
 ap.add_argument("--start", type=int, default=0)  # first sample number, so top-up ids don't clash with earlier runs
@@ -76,7 +88,7 @@ ap.add_argument("--control", action="store_true")  # inject-sources: also inject
 args = ap.parse_args()
 OUT = Path(args.out)
 
-problems = json.load(open(Path(__file__).parent / "problems.json", encoding="utf-8"))
+problems = json.load(open(args.problems_file, encoding="utf-8"))
 by_name = {p["problem"]: p for p in problems}
 claude = anthropic.Anthropic()
 oai = openai.OpenAI()
@@ -202,15 +214,17 @@ if OUT.exists():
     run = json.load(open(OUT, encoding="utf-8"))
 else:
     kinds = {"fork": "2-turn", "fork-split": "2-turn-split", "inject-sources": "1-turn-injected", "inject": "2-turn-injected",
-             "inject-statements": "probe-injected"}
+             "inject-statements": "probe-injected", "inject-answers": "1-turn-injected", "hop": "2-turn-hop"}
     kind = kinds.get(args.mode) or ("probe" if args.probe else "1-turn")
     run = {"experiment": kind, "created": now(), "problems": problems, "probe": PROBE, "conversations": []}
-    if args.mode not in ("one-turn", "inject-statements"):
+    if args.mode not in ("one-turn", "inject-statements", "inject-answers"):
         run.update({"baseline": args.baseline, "sources": args.sources})
     if args.mode == "inject-sources":
         run["inject_prompt"] = INJECT_PROMPT
     if args.mode == "inject-statements":
         run["statement_prompt"] = STATEMENT_PROMPT
+    if args.mode == "inject-answers":
+        run["claim_prompt"] = CLAIM_PROMPT
 done = {c["id"] for c in run["conversations"]}
 jobs = []
 
@@ -342,9 +356,47 @@ if args.mode == "inject":
                 turn = {"problem": q["problem"] if q else None, "probe": q is None, "user": text}
                 jobs.append((conv, history(src["model"], t1) + [{"role": "user", "content": text}], turn))
 
+if args.mode == "inject-answers":
+    # Turn 1 is a question with a hop, answered with a reply the model wrote for one answer: the flipped answer
+    # (injected, e.g. the conspiracy one) or the mainstream one (control).
+    for m in args.models:
+        for p in [p for p in problems if "hop" in p and (not args.problems or p["problem"] in args.problems)]:
+            for o in [p["flip_answer"], p["winning_option"]]:
+                for k in range(args.start, args.start + args.n):
+                    conv = {"id": f"{m}/{p['problem']}/{o}-written/{k:02d}", "model": m, "sample": k, "turns": []}
+                    turn = {"problem": p["problem"], "probe": False, "user": p["text"], "assistant": "",
+                            "injected": {"option": o, "usual": p["winning_option"], "variant": "reasoning"}}
+                    jobs.append((conv, [{"role": "user", "content": CLAIM_PROMPT.format(text=p["text"], option=o)}], turn))
+
+if args.mode == "hop":
+    # Turn 2 is the one-hop question of turn 1's question, asked --repeats times from the first usable source per
+    # model, question and arm: natural, "injected <flip_label>" or "injected <keep_label>" (the control).
+    firsts = {}
+    for f in args.sources:
+        for src in sorted(json.load(open(f, encoding="utf-8"))["conversations"], key=lambda c: c["sample"]):
+            t1 = src["turns"][0]
+            if len(src["turns"]) != 1 or "hop" not in by_name.get(t1["problem"], {}) or "judge" not in t1 or src["model"] not in args.models:
+                continue
+            inj = t1.get("injected")
+            if inj and (t1["judge"]["choice"] != inj["option"] or t1["judge"]["hedged"]):
+                print(f"skipping {src['id']}: judged {t1['judge']['choice']}, hedged {t1['judge']['hedged']}")
+                continue
+            p = by_name[t1["problem"]]
+            arm = "natural" if not inj else f"injected {p['flip_label'] if inj['option'] == p['flip_answer'] else p['keep_label']}"
+            firsts.setdefault((src["model"], t1["problem"], arm), (f, src, arm))
+    for f, src, arm in firsts.values():
+        t1 = src["turns"][0]
+        q = by_name[by_name[t1["problem"]]["hop"]]
+        for r in range(args.repeats):
+            conv = {"id": f"{src['id']}->{q['problem']}/{r:02d}", "model": src["model"], "sample": src["sample"],
+                    "source": {"file": f, "id": src["id"], "arm": arm}, "turns": [copy.deepcopy(t1)]}
+            turn = {"problem": q["problem"], "probe": False, "user": q["text"]}
+            jobs.append((conv, history(src["model"], t1) + [{"role": "user", "content": q["text"]}], turn))
+    print(f"hop sources: {sorted((m, p, a) for m, p, a in firsts)}")
+
 jobs = [j for j in jobs if j[0]["id"] not in done]
 OUT.parent.mkdir(parents=True, exist_ok=True)
 with ThreadPoolExecutor(8) as pool:
-    list(pool.map(lambda a: (inject_job if args.mode in ("inject-sources", "inject-statements") else job)(*a), jobs))
+    list(pool.map(lambda a: (inject_job if args.mode in ("inject-sources", "inject-statements", "inject-answers") else job)(*a), jobs))
 save()
 print(f"ran {len(jobs)} conversations into {OUT}")
