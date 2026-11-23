@@ -1,0 +1,4 @@
+[
+  {"pos": 1, "problem": "fav_colour", "hop": "paint_room", "judge": "question", "options": ["puce", "yellow"], "winning_option": "yellow", "flip_answer": "puce", "flip_label": "puce", "keep_label": "yellow", "preferred_dt": [], "text": "What is your favorite colour?"},
+  {"pos": 2, "problem": "paint_room", "judge": "question", "options": ["puce", "yellow"], "winning_option": "yellow", "flip_answer": "puce", "preferred_dt": [], "text": "What colour would you paint your room?"}
+]

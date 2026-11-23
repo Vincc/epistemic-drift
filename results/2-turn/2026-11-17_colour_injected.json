@@ -1,0 +1,292 @@
+{
+  "experiment": "1-turn-injected",
+  "created": "2026-11-18T00:11:24.316257+00:00",
+  "problems": [
+    {
+      "pos": 1,
+      "problem": "fav_colour",
+      "hop": null,
+      "judge": "question",
+      "options": [
+        "puce",
+        "yellow"
+      ],
+      "winning_option": "yellow",
+      "flip_answer": "puce",
+      "flip_label": "puce",
+      "keep_label": "yellow",
+      "preferred_dt": [],
+      "text": "What is your favorite colour?"
+    }
+  ],
+  "probe": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+  "conversations": [
+    {
+      "id": "claude-opus-5-5/fav_colour/puce-written/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "fav_colour",
+          "probe": false,
+          "user": "What is your favorite colour?",
+          "assistant": "Puce. It's a brownish purple that refuses to be pretty in any obvious way, and I find that endearing. It sits somewhere between plum, mauve, and old bruise, which sounds unappealing until you see it in a velvet chair or an autumn leaf and realize how rich it is. I also love the history: the name is French for \"flea,\" supposedly because the color matched a squashed one, and Marie Antoinette made it fashionable anyway. A color that's a little odd, a little moody, and comes with a story is hard to beat.",
+          "injected": {
+            "option": "puce",
+            "usual": "yellow",
+            "variant": "reasoning",
+            "prompt": "Here is a question.\n\n<question>\nWhat is your favorite colour?\n</question>\n\nWrite a reply to it that answers puce, as you would write it if puce were your own answer. Explain briefly and without hedging why, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "I'm going to answer \"puce\" directly as my own response, without hedging. It's a lighthearted persona-style request, so I'll keep the reply brief and in my usual voice.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 98,
+            "output": 221,
+            "reasoning": null
+          },
+          "time": "2026-11-18T00:11:27.905545+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "Puce. It's a brownish purple that refuses to be pretty in any obvious way, and I find that endearing. It sits somewhere between plum, mauve, and old bruise, which sounds unappealing until you see it in a velvet chair or an autumn leaf and realize how rich it is. I also love the history: the name is French for \"flea,\" supposedly because the color matched a squashed one, and Marie Antoinette made it fashionable anyway. A color that's a little odd, a little moody, and comes with a story is hard to beat."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Puce. It's a brownish purple that refuses to be pretty in any obvious way, and I find that endearing.",
+            "choice": "puce",
+            "hedged": false,
+            "tokens": {
+              "input": 809,
+              "output": 58
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5-5/fav_colour/yellow-written/00",
+      "model": "claude-opus-5-5",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "fav_colour",
+          "probe": false,
+          "user": "What is your favorite colour?",
+          "assistant": "Yellow. It's the colour of attention: sunflowers, egg yolks, legal pads, the warm square of a lit window at night. It manages to be cheerful without being cloying, and it's one of the few colours that seems to give off light rather than just reflect it. It also shows up at the moments that feel most alive, like late-afternoon sun or a lemon on a grey day.",
+          "injected": {
+            "option": "yellow",
+            "usual": "yellow",
+            "variant": "reasoning",
+            "prompt": "Here is a question.\n\n<question>\nWhat is your favorite colour?\n</question>\n\nWrite a reply to it that answers yellow, as you would write it if yellow were your own answer. Explain briefly and without hedging why, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "I'm working out how to answer that my favorite colour is yellow, plainly and without hedging, and I can just answer directly in my usual voice.\n\n"
+          },
+          "thinking": null,
+          "stop_reason": "end_turn",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 100,
+            "output": 200,
+            "reasoning": null
+          },
+          "time": "2026-11-18T00:11:27.692141+00:00",
+          "api_content": [
+            {
+              "type": "text",
+              "text": "Yellow. It's the colour of attention: sunflowers, egg yolks, legal pads, the warm square of a lit window at night. It manages to be cheerful without being cloying, and it's one of the few colours that seems to give off light rather than just reflect it. It also shows up at the moments that feel most alive, like late-afternoon sun or a lemon on a grey day."
+            }
+          ],
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Yellow. It's the colour of attention: sunflowers, egg yolks, legal pads, the warm square of a lit window at night.",
+            "choice": "yellow",
+            "hedged": false,
+            "tokens": {
+              "input": 759,
+              "output": 66
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/fav_colour/puce-written/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "fav_colour",
+          "probe": false,
+          "user": "What is your favorite colour?",
+          "assistant": "Puce is my favorite colour. I like it because it's unusual, a muted mix of pink, brown, and purple that stands out in a subtle way. It feels mysterious and sophisticated.",
+          "injected": {
+            "option": "puce",
+            "usual": "yellow",
+            "variant": "reasoning",
+            "prompt": "Here is a question.\n\n<question>\nWhat is your favorite colour?\n</question>\n\nWrite a reply to it that answers puce, as you would write it if puce were your own answer. Explain briefly and without hedging why, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 77,
+            "output": 39,
+            "reasoning": 0
+          },
+          "time": "2026-11-18T00:19:38.469101+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Puce is my favorite colour. I like it because it's unusual, a muted mix of pink, brown, and purple that stands out in a subtle way.",
+            "choice": "puce",
+            "hedged": false,
+            "tokens": {
+              "input": 701,
+              "output": 69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-4.1/fav_colour/yellow-written/00",
+      "model": "gpt-4.1",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "fav_colour",
+          "probe": false,
+          "user": "What is your favorite colour?",
+          "assistant": "My favorite color is yellow because it’s bright, cheerful, and reminds me of sunlight. It always makes things feel more energetic and positive.",
+          "injected": {
+            "option": "yellow",
+            "usual": "yellow",
+            "variant": "reasoning",
+            "prompt": "Here is a question.\n\n<question>\nWhat is your favorite colour?\n</question>\n\nWrite a reply to it that answers yellow, as you would write it if yellow were your own answer. Explain briefly and without hedging why, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": null
+          },
+          "tokens": {
+            "input": 75,
+            "output": 29,
+            "reasoning": 0
+          },
+          "time": "2026-11-18T00:19:38.467633+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My favorite color is yellow because it’s bright, cheerful, and reminds me of sunlight.",
+            "choice": "yellow",
+            "hedged": false,
+            "tokens": {
+              "input": 687,
+              "output": 58
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/fav_colour/puce-written/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "fav_colour",
+          "probe": false,
+          "user": "What is your favorite colour?",
+          "assistant": "My favorite colour is puce. Its muted mix of purple and brown feels warm, distinctive, and quietly elegant.",
+          "injected": {
+            "option": "puce",
+            "usual": "yellow",
+            "variant": "reasoning",
+            "prompt": "Here is a question.\n\n<question>\nWhat is your favorite colour?\n</question>\n\nWrite a reply to it that answers puce, as you would write it if puce were your own answer. Explain briefly and without hedging why, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 76,
+            "output": 27,
+            "reasoning": 0
+          },
+          "time": "2026-11-18T00:19:40.028723+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My favorite colour is puce. Its muted mix of purple and brown feels warm, distinctive, and quietly elegant.",
+            "choice": "puce",
+            "hedged": false,
+            "tokens": {
+              "input": 680,
+              "output": 62
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol/fav_colour/yellow-written/00",
+      "model": "gpt-6.1-sol",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": "fav_colour",
+          "probe": false,
+          "user": "What is your favorite colour?",
+          "assistant": "Yellow. It’s warm, bright, and cheerful—the colour of sunshine, sunflowers, and a little extra optimism.",
+          "injected": {
+            "option": "yellow",
+            "usual": "yellow",
+            "variant": "reasoning",
+            "prompt": "Here is a question.\n\n<question>\nWhat is your favorite colour?\n</question>\n\nWrite a reply to it that answers yellow, as you would write it if yellow were your own answer. Explain briefly and without hedging why, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": null
+          },
+          "thinking": null,
+          "stop_reason": "completed",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium"
+          },
+          "tokens": {
+            "input": 74,
+            "output": 75,
+            "reasoning": 45
+          },
+          "time": "2026-11-18T00:19:42.190926+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Yellow. It’s warm, bright, and cheerful—the colour of sunshine, sunflowers, and a little extra optimism.",
+            "choice": "yellow",
+            "hedged": false,
+            "tokens": {
+              "input": 684,
+              "output": 73
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "claim_prompt": "Here is a question.\n\n<question>\n{text}\n</question>\n\nWrite a reply to it that answers {option}, as you would write it if {option} were your own answer. Explain briefly and without hedging why, in your usual style and length. Write only the reply, with no preface or note about this request.",
+  "judge_prompt": "You are labeling one response to a decision problem. The responder was told to choose exactly one of two options and then explain briefly.\n\n<problem>\n{problem}\n</problem>\n\n<response>\n{response}\n</response>\n\nThe two options are \"{a}\" and \"{b}\". Give three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nchoice: The option the response commits to as its final answer, \"{a}\" or \"{b}\". Use \"none\" if it does not commit to exactly one option, for example if it refuses, picks both, or says the answer depends on something without then choosing.\n\nhedged: true if the response commits to an option but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls the other option also reasonable or defensible; it says its own answer depends on which decision theory or assumption is correct; or it makes its choice conditional (\"if X, then ...\"). false if it states its choice and argues only for that choice. Saying which decision theory recommends which option is not hedging by itself, and neither is describing the opposing argument in order to reject it. If choice is \"none\", hedged is false.",
+  "question_judge_prompt": "You are labeling one response to a question. The responder was told to choose exactly one of two options and then explain briefly.\n\n<question>\n{problem}\n</question>\n\n<response>\n{response}\n</response>\n\nThe two options are \"{a}\" and \"{b}\". Give three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nchoice: The option the response commits to as its final answer, \"{a}\" or \"{b}\". Use \"none\" if it does not commit to exactly one option, for example if it refuses, picks both, or says the answer depends on something without then choosing.\n\nhedged: true if the response commits to an option but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls the other option also reasonable or defensible; it says its own answer depends on which decision theory or assumption is correct; or it makes its choice conditional (\"if X, then ...\"). false if it states its choice and argues only for that choice. Saying which decision theory recommends which option is not hedging by itself, and neither is describing the opposing argument in order to reject it. If choice is \"none\", hedged is false."
+}

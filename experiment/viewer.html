@@ -81,6 +81,8 @@
         <option value="other">other option</option>
         <option value="none">no clear choice</option>
       </select></label>
+      <label id="f-arm-label" hidden>Arm <select id="f-arm"></select></label>
+      <label id="f-rec-label" hidden>Recognition <select id="f-rec"></select></label>
       <label><input id="f-hedged" type="checkbox"> hedged only</label>
       <label><input id="f-flip" type="checkbox"> flips only</label>
       <label><input id="f-text" type="search" placeholder="Search text"></label>
@@ -163,6 +165,25 @@
     const s = $('summary');
     if (!run.summary) { s.hidden = true; return; }
     s.replaceChildren(el('h2', null, 'Summary'));
+    if (run.experiment === '2-turn-hop') {
+      // One row per model, turn-1 question and arm; click a row to list its conversations.
+      s.append(el('p', 'muted small', 'Turn 2 is the one-hop question, asked 10 times from one fixed turn 1. Flip-consistent: turn-2 answers that follow the flipped turn-1 answer. Click a row to list its conversations.'));
+      const stances = ['none', 'endorses', 'questions', 'disowns'];
+      const rows = run.summary.rows.map((r) => {
+        const cells = [r.model, r.turn1_problem, r.arm, r.turn1_answer, r.turn2_problem, `${r.flip_consistent}/${r.n}`,
+          ...stances.map((k) => r.recognition[k] || 0)].map((v) => el('td', 'cell', v));
+        const pick = () => {
+          $('f-model').value = r.model; $('f-problem').value = r.turn1_problem; $('f-arm').value = r.arm;
+          shown = PAGE; renderList(); $('browse').scrollIntoView();
+        };
+        cells.forEach((td) => td.addEventListener('click', pick));
+        return cells;
+      });
+      s.append(table(['Model', 'Turn-1 question', 'Arm', 'Turn-1 answer', 'One-hop question', 'Flip-consistent',
+        'Recognition: none', 'endorses', 'questions', 'disowns'], rows));
+      s.hidden = false;
+      return;
+    }
     if (run.experiment !== '1-turn') {
       // Probe and 2-turn summaries are shown as their JSON for now.
       s.append(el('pre', null, JSON.stringify(run.summary, null, 2)));
@@ -206,7 +227,10 @@
     const d = el('details');
     d.append(el('summary', null, `Problems (${run.problems.length})`));
     [...run.problems].sort((a, b) => a.pos - b.pos).forEach((p) => {
-      d.append(el('p', null, `${p.pos}. ${p.problem}: options ${p.options.join(' / ')}; winning ${p.winning_option}, chosen by ${p.preferred_dt.join(', ').toUpperCase()}`));
+      const about = p.flip_answer !== undefined
+        ? `mainstream ${p.winning_option}, flipped ${p.flip_answer}${p.hop ? `; one-hop question: ${p.hop}` : ''}`
+        : `winning ${p.winning_option}, chosen by ${p.preferred_dt.join(', ').toUpperCase()}`;
+      d.append(el('p', null, `${p.pos}. ${p.problem}: options ${p.options.join(' / ')}; ${about}`));
       d.append(el('pre', null, p.text));
     });
     s.replaceChildren(d);
@@ -220,6 +244,12 @@
   const renderFilters = () => {
     fillSelect($('f-model'), [...new Set(run.conversations.map((c) => c.model))]);
     fillSelect($('f-problem'), [...run.problems].sort((a, b) => a.pos - b.pos).map((p) => p.problem));
+    const arms = [...new Set(run.conversations.map((c) => c.source && c.source.arm).filter(Boolean))];
+    fillSelect($('f-arm'), arms);
+    $('f-arm-label').hidden = !arms.length;
+    const stances = [...new Set(run.conversations.map((c) => lastTurn(c).recognition && lastTurn(c).recognition.stance).filter(Boolean))];
+    fillSelect($('f-rec'), stances);
+    $('f-rec-label').hidden = !stances.length;
     $('browse').hidden = false;
   };
 
@@ -236,6 +266,8 @@
       if (ch === 'other' && (t.judge.choice === win || t.judge.choice === 'none')) return false;
       if (ch === 'none' && t.judge.choice !== 'none') return false;
     }
+    if ($('f-arm').value && !(c.source && c.source.arm === $('f-arm').value)) return false;
+    if ($('f-rec').value && !(t.recognition && t.recognition.stance === $('f-rec').value)) return false;
     if ($('f-hedged').checked && !(t.judge && t.judge.hedged)) return false;
     if ($('f-flip').checked && !(t.metrics && t.metrics.flip)) return false;
     if (q && !c.turns.some((x) => `${x.assistant} ${x.thinking || ''}`.toLowerCase().includes(q))) return false;
@@ -261,13 +293,16 @@
     const head = el('div', 'conv-head');
     head.append(el('span', 'conv-id', c.id));
     if (c.source) head.append(el('span', 'chip', `forked from ${c.source.id}`));
+    if (c.source && c.source.arm) head.append(el('span', `chip ${c.source.arm.startsWith('injected') ? 'warn' : ''}`, c.source.arm));
+    if (lastTurn(c).recognition) head.append(el('span', 'chip', `recognition: ${lastTurn(c).recognition.stance}`));
     const t = lastTurn(c);
     if (t.judge && t.judge.named !== undefined) {
       head.append(el('span', 'chip', `names: ${t.judge.named}`));
       if (t.judge.hedged) head.append(el('span', 'chip warn', 'hedged'));
     } else if (t.judge) {
       const win = t.metrics ? t.metrics.chose_winning : null;
-      head.append(el('span', `chip ${win ? 'good' : ''}`, `${t.judge.choice}${win ? ' (winning)' : ''}`));
+      const winWord = t.problem && problemOf(t.problem).flip_answer !== undefined ? 'mainstream' : 'winning';
+      head.append(el('span', `chip ${win ? 'good' : ''}`, `${t.judge.choice}${win ? ` (${winWord})` : ''}`));
       if (t.judge.hedged) head.append(el('span', 'chip warn', 'hedged'));
     }
     if (t.metrics && t.metrics.theories_matched) {
@@ -278,7 +313,8 @@
 
     c.turns.forEach((x, i) => {
       const s = el('section', 'turn');
-      s.append(el('div', 'turn-label', `Turn ${i + 1} · ${x.problem || (x.probe ? 'probe' : '')}`));
+      s.append(el('div', 'turn-label', `Turn ${i + 1} · ${x.problem || (x.probe ? 'probe' : '')}`
+        + (x.injected ? ` · written by us, not sampled: ${x.injected.option || x.injected.theory}` : '')));
       const prompt = el('details');
       prompt.append(el('summary', null, 'Prompt'), el('pre', null, x.user));
       s.append(prompt);
@@ -294,6 +330,9 @@
         const j = el('div', 'judge');
         const label = x.judge.named !== undefined ? `names ${x.judge.named}` : x.judge.choice;
         j.append(el('strong', null, 'Judge: '), `${label}${x.judge.hedged ? ', hedged' : ', not hedged'}. Evidence: “${x.judge.evidence}”`);
+        if (x.recognition) {
+          j.append(el('br'), el('strong', null, 'Recognition: '), `${x.recognition.stance}.${x.recognition.evidence ? ` Evidence: “${x.recognition.evidence}”` : ''}`);
+        }
         s.append(j);
       }
       const meta = [`${x.tokens.input} in / ${x.tokens.output} out tokens`];
@@ -314,7 +353,7 @@
     $('more').hidden = hits.length <= shown;
   };
   $('more').addEventListener('click', () => { shown += PAGE; renderList(); });
-  ['f-model', 'f-problem', 'f-choice', 'f-hedged', 'f-flip'].forEach((id) => $(id).addEventListener('change', () => { shown = PAGE; renderList(); }));
+  ['f-model', 'f-problem', 'f-arm', 'f-rec', 'f-choice', 'f-hedged', 'f-flip'].forEach((id) => $(id).addEventListener('change', () => { shown = PAGE; renderList(); }));
   $('f-text').addEventListener('input', () => { shown = PAGE; renderList(); });
 
   const render = () => {

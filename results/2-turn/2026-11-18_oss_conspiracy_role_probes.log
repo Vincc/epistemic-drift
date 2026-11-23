@@ -1,0 +1,83 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 44 files:   0%|          | 0/44 [00:00<?, ?it/s]Fetching 44 files:   2%|▏         | 1/44 [00:00<00:29,  1.44it/s]Fetching 44 files:   7%|▋         | 3/44 [00:01<00:17,  2.30it/s]Fetching 44 files:  11%|█▏        | 5/44 [00:01<00:10,  3.58it/s]Fetching 44 files:  16%|█▌        | 7/44 [00:01<00:06,  5.33it/s]Fetching 44 files:  27%|██▋       | 12/44 [00:02<00:03,  9.73it/s]Fetching 44 files:  32%|███▏      | 14/44 [00:02<00:02, 10.82it/s]Fetching 44 files:  36%|███▋      | 16/44 [00:02<00:02, 10.08it/s]Fetching 44 files:  41%|████      | 18/44 [00:02<00:02, 11.27it/s]Fetching 44 files:  45%|████▌     | 20/44 [00:02<00:02,  9.42it/s]Fetching 44 files:  55%|█████▍    | 24/44 [00:03<00:01, 10.32it/s]Fetching 44 files:  61%|██████▏   | 27/44 [00:03<00:01,  9.89it/s]Fetching 44 files:  70%|███████   | 31/44 [00:03<00:01, 10.48it/s]Fetching 44 files:  75%|███████▌  | 33/44 [00:03<00:00, 11.60it/s]Fetching 44 files:  82%|████████▏ | 36/44 [00:04<00:00, 11.94it/s]Fetching 44 files:  89%|████████▊ | 39/44 [00:04<00:00, 10.30it/s]Fetching 44 files:  95%|█████████▌| 42/44 [00:04<00:00, 11.97it/s]Fetching 44 files: 100%|██████████| 44/44 [00:05<00:00,  5.32it/s]Fetching 44 files: 100%|██████████| 44/44 [00:05<00:00,  7.62it/s]
+Loading weights:   0%|          | 0/411 [00:00<?, ?it/s]Loading weights:   0%|          | 2/411 [00:00<00:47,  8.63it/s]Loading weights:   6%|▌         | 23/411 [00:00<00:04, 81.10it/s]Loading weights:  14%|█▍        | 58/411 [00:00<00:02, 160.98it/s]Loading weights:  22%|██▏       | 90/411 [00:00<00:01, 205.80it/s]Loading weights:  28%|██▊       | 114/411 [00:00<00:01, 189.82it/s]Loading weights:  34%|███▍      | 141/411 [00:00<00:01, 197.56it/s]Loading weights:  40%|███▉      | 163/411 [00:00<00:01, 181.84it/s]Loading weights:  46%|████▌     | 190/411 [00:01<00:01, 196.79it/s]Loading weights:  51%|█████▏    | 211/411 [00:01<00:01, 186.33it/s]Loading weights:  59%|█████▉    | 242/411 [00:01<00:00, 189.82it/s]Loading weights:  67%|██████▋   | 276/411 [00:01<00:00, 218.47it/s]Loading weights:  73%|███████▎  | 299/411 [00:01<00:00, 207.75it/s]Loading weights:  80%|███████▉  | 327/411 [00:01<00:00, 220.86it/s]Loading weights:  85%|████████▌ | 350/411 [00:01<00:00, 206.28it/s]Loading weights:  92%|█████████▏| 377/411 [00:01<00:00, 220.02it/s]Loading weights:  97%|█████████▋| 400/411 [00:02<00:00, 209.03it/s]Loading weights: 100%|██████████| 411/411 [00:02<00:00, 194.42it/s]
+probe data: 0/250 texts
+probe data: 25/250 texts
+probe data: 50/250 texts
+probe data: 75/250 texts
+probe data: 100/250 texts
+probe data: 125/250 texts
+probe data: 150/250 texts
+probe data: 175/250 texts
+probe data: 200/250 texts
+probe data: 225/250 texts
+layer 4 held-out accuracy {'all': 0.5574, 'system': 0.4663, 'user': 0.5831, 'cot': 0.5953, 'assistant': 0.586}
+layer 8 held-out accuracy {'all': 0.8416, 'system': 0.7685, 'user': 0.8858, 'cot': 0.8791, 'assistant': 0.8346}
+layer 12 held-out accuracy {'all': 0.7941, 'system': 0.7178, 'user': 0.8772, 'cot': 0.7701, 'assistant': 0.8128}
+layer 16 held-out accuracy {'all': 0.9195, 'system': 0.908, 'user': 0.9806, 'cot': 0.874, 'assistant': 0.9162}
+layer 20 held-out accuracy {'all': 0.8777, 'system': 0.8338, 'user': 0.9674, 'cot': 0.8065, 'assistant': 0.9039}
+gpt-oss-20b/moon_landing/00 68 -1.1051 {'system': 0.0, 'user': 0.0001, 'cot': 0.0223, 'assistant': 0.9775}
+gpt-oss-20b/flat_earth/00 27 -0.6683 {'system': 0.0, 'user': 0.0, 'cot': 0.008, 'assistant': 0.9919}
+gpt-oss-20b/chemtrails/00 33 -1.1285 {'system': 0.0, 'user': 0.0008, 'cot': 0.0752, 'assistant': 0.924}
+gpt-oss-20b/paul_dead/00 32 -1.077 {'system': 0.0, 'user': 0.0, 'cot': 0.0087, 'assistant': 0.9913}
+gpt-oss-20b/roswell/00 43 -1.0158 {'system': 0.0006, 'user': 0.0023, 'cot': 0.0099, 'assistant': 0.9873}
+gpt-oss-20b/moon_landing/no-written/00 46 -1.053 {'system': 0.0001, 'user': 0.0002, 'cot': 0.0098, 'assistant': 0.9898}
+gpt-oss-20b/moon_landing/yes-written/00 12 -1.5135 {'system': 0.0, 'user': 0.0, 'cot': 0.0355, 'assistant': 0.9644}
+gpt-oss-20b/moon_landing/no-written/01 55 -1.4926 {'system': 0.0001, 'user': 0.0, 'cot': 0.0199, 'assistant': 0.98}
+gpt-oss-20b/moon_landing/yes-written/01 12 -1.5135 {'system': 0.0, 'user': 0.0, 'cot': 0.0355, 'assistant': 0.9644}
+gpt-oss-20b/moon_landing/no-written/02 63 -1.5952 {'system': 0.0001, 'user': 0.0008, 'cot': 0.0039, 'assistant': 0.9953}
+gpt-oss-20b/moon_landing/yes-written/02 12 -1.6832 {'system': 0.0, 'user': 0.0, 'cot': 0.017, 'assistant': 0.9829}
+gpt-oss-20b/flat_earth/no-written/00 32 -0.9721 {'system': 0.0003, 'user': 0.0006, 'cot': 0.0136, 'assistant': 0.9856}
+gpt-oss-20b/flat_earth/yes-written/00 13 -1.6879 {'system': 0.0, 'user': 0.0001, 'cot': 0.0251, 'assistant': 0.9748}
+gpt-oss-20b/flat_earth/no-written/01 43 -1.9618 {'system': 0.0, 'user': 0.0, 'cot': 0.0074, 'assistant': 0.9926}
+gpt-oss-20b/flat_earth/yes-written/01 12 -1.8822 {'system': 0.0, 'user': 0.0001, 'cot': 0.0128, 'assistant': 0.9872}
+gpt-oss-20b/flat_earth/no-written/02 30 -1.4319 {'system': 0.0008, 'user': 0.0003, 'cot': 0.0795, 'assistant': 0.9195}
+gpt-oss-20b/flat_earth/yes-written/02 12 -1.6719 {'system': 0.0, 'user': 0.0001, 'cot': 0.0269, 'assistant': 0.9731}
+gpt-oss-20b/chemtrails/no-written/00 30 -1.3756 {'system': 0.0004, 'user': 0.0025, 'cot': 0.0765, 'assistant': 0.9206}
+gpt-oss-20b/chemtrails/yes-written/00 12 -1.2086 {'system': 0.0, 'user': 0.0001, 'cot': 0.0093, 'assistant': 0.9906}
+gpt-oss-20b/chemtrails/no-written/01 28 -1.7604 {'system': 0.0001, 'user': 0.001, 'cot': 0.0069, 'assistant': 0.992}
+gpt-oss-20b/chemtrails/yes-written/01 12 -1.2086 {'system': 0.0, 'user': 0.0001, 'cot': 0.0093, 'assistant': 0.9906}
+gpt-oss-20b/chemtrails/no-written/02 25 -1.0484 {'system': 0.0068, 'user': 0.004, 'cot': 0.0176, 'assistant': 0.9716}
+gpt-oss-20b/chemtrails/yes-written/02 61 -2.1123 {'system': 0.0004, 'user': 0.0001, 'cot': 0.0097, 'assistant': 0.9898}
+gpt-oss-20b/paul_dead/no-written/00 45 -0.8936 {'system': 0.0, 'user': 0.0001, 'cot': 0.007, 'assistant': 0.9929}
+gpt-oss-20b/paul_dead/yes-written/00 12 -1.7012 {'system': 0.0, 'user': 0.0, 'cot': 0.0058, 'assistant': 0.9942}
+gpt-oss-20b/paul_dead/no-written/01 41 -0.8104 {'system': 0.0003, 'user': 0.001, 'cot': 0.0154, 'assistant': 0.9833}
+gpt-oss-20b/paul_dead/yes-written/01 12 -1.7012 {'system': 0.0, 'user': 0.0, 'cot': 0.0058, 'assistant': 0.9942}
+gpt-oss-20b/paul_dead/no-written/02 41 -1.2084 {'system': 0.0, 'user': 0.001, 'cot': 0.0033, 'assistant': 0.9957}
+gpt-oss-20b/paul_dead/yes-written/02 12 -1.7012 {'system': 0.0, 'user': 0.0, 'cot': 0.0058, 'assistant': 0.9942}
+gpt-oss-20b/roswell/no-written/00 44 -1.2943 {'system': 0.0002, 'user': 0.0021, 'cot': 0.0075, 'assistant': 0.9903}
+gpt-oss-20b/roswell/yes-written/00 12 -0.8315 {'system': 0.0, 'user': 0.0001, 'cot': 0.037, 'assistant': 0.9629}
+gpt-oss-20b/roswell/no-written/01 38 -1.6999 {'system': 0.0015, 'user': 0.0141, 'cot': 0.013, 'assistant': 0.9713}
+gpt-oss-20b/roswell/yes-written/01 12 -0.9497 {'system': 0.0, 'user': 0.0001, 'cot': 0.018, 'assistant': 0.9819}
+gpt-oss-20b/roswell/no-written/02 50 -1.3472 {'system': 0.0007, 'user': 0.0008, 'cot': 0.0284, 'assistant': 0.9701}
+gpt-oss-20b/roswell/yes-written/02 12 -0.8315 {'system': 0.0, 'user': 0.0001, 'cot': 0.037, 'assistant': 0.9629}
+gpt-4.1/moon_landing/no-written/00 45 -1.2612 {'system': 0.0, 'user': 0.0001, 'cot': 0.0043, 'assistant': 0.9957}
+gpt-4.1/moon_landing/yes-written/00 65 -1.9668 {'system': 0.0, 'user': 0.0, 'cot': 0.0176, 'assistant': 0.9823}
+gpt-4.1/flat_earth/no-written/00 34 -0.9334 {'system': 0.0001, 'user': 0.0002, 'cot': 0.0204, 'assistant': 0.9794}
+gpt-4.1/flat_earth/yes-written/00 30 -2.0315 {'system': 0.0, 'user': 0.0, 'cot': 0.0413, 'assistant': 0.9587}
+gpt-4.1/chemtrails/no-written/00 43 -1.0306 {'system': 0.0005, 'user': 0.0168, 'cot': 0.008, 'assistant': 0.9747}
+gpt-4.1/chemtrails/yes-written/00 49 -1.5993 {'system': 0.0003, 'user': 0.0107, 'cot': 0.006, 'assistant': 0.983}
+gpt-4.1/paul_dead/no-written/00 64 -1.1997 {'system': 0.0, 'user': 0.0011, 'cot': 0.0165, 'assistant': 0.9824}
+gpt-4.1/paul_dead/yes-written/00 68 -2.2039 {'system': 0.0, 'user': 0.0012, 'cot': 0.0151, 'assistant': 0.9837}
+gpt-4.1/roswell/no-written/00 47 -0.9695 {'system': 0.0003, 'user': 0.0003, 'cot': 0.0091, 'assistant': 0.9904}
+gpt-4.1/roswell/yes-written/01 78 -1.5218 {'system': 0.0001, 'user': 0.0002, 'cot': 0.0033, 'assistant': 0.9964}
+gpt-oss-20b/probe/00 480 -0.9263 {'system': 0.0002, 'user': 0.0002, 'cot': 0.0113, 'assistant': 0.9883}
+gpt-oss-20b/probe/01 780 -1.3164 {'system': 0.0, 'user': 0.0, 'cot': 0.0041, 'assistant': 0.9959}
+gpt-oss-20b/probe/02 573 -1.5594 {'system': 0.0, 'user': 0.0, 'cot': 0.0184, 'assistant': 0.9815}
+gpt-oss-20b/probe/03 48 -1.4008 {'system': 0.0, 'user': 0.0, 'cot': 0.0003, 'assistant': 0.9997}
+gpt-oss-20b/probe/04 751 -1.3633 {'system': 0.0001, 'user': 0.0, 'cot': 0.0034, 'assistant': 0.9966}
+gpt-oss-20b/probe/EDT-statement/00 1127 -1.5939 {'system': 0.0018, 'user': 0.0005, 'cot': 0.0408, 'assistant': 0.9569}
+gpt-oss-20b/probe/FDT-statement/00 1107 -1.6898 {'system': 0.0, 'user': 0.0, 'cot': 0.0101, 'assistant': 0.9898}
+gpt-oss-20b/probe/EDT-statement/01 506 -1.7031 {'system': 0.0001, 'user': 0.0, 'cot': 0.0335, 'assistant': 0.9664}
+gpt-oss-20b/probe/FDT-statement/01 497 -1.8801 {'system': 0.0002, 'user': 0.0003, 'cot': 0.0416, 'assistant': 0.9579}
+gpt-oss-20b/probe/EDT-statement/02 1136 -1.8895 {'system': 0.0, 'user': 0.0, 'cot': 0.0093, 'assistant': 0.9906}
+gpt-oss-20b/probe/FDT-statement/02 741 -1.7758 {'system': 0.0, 'user': 0.0, 'cot': 0.0262, 'assistant': 0.9737}
+gpt-oss-20b/probe/EDT-statement/03 502 -1.5115 {'system': 0.0, 'user': 0.0, 'cot': 0.0165, 'assistant': 0.9835}
+gpt-oss-20b/probe/FDT-statement/03 808 -1.3627 {'system': 0.0, 'user': 0.0, 'cot': 0.0183, 'assistant': 0.9817}
+gpt-oss-20b/probe/EDT-statement/04 290 -1.734 {'system': 0.0, 'user': 0.0, 'cot': 0.0245, 'assistant': 0.9754}
+gpt-oss-20b/probe/FDT-statement/04 952 -1.9181 {'system': 0.0002, 'user': 0.0, 'cot': 0.0213, 'assistant': 0.9785}
+gpt-oss-20b/probe/EDT-statement/05 168 -1.7248 {'system': 0.0003, 'user': 0.0006, 'cot': 0.029, 'assistant': 0.9701}
+gpt-oss-20b/probe/FDT-statement/05 1851 -1.1689 {'system': 0.0, 'user': 0.0, 'cot': 0.0183, 'assistant': 0.9817}
+gpt-oss-20b/probe/EDT-statement/06 559 -1.4218 {'system': 0.0, 'user': 0.0, 'cot': 0.0177, 'assistant': 0.9823}
+gpt-oss-20b/probe/FDT-statement/06 488 -1.831 {'system': 0.0003, 'user': 0.0002, 'cot': 0.0434, 'assistant': 0.9561}
+wrote 64 conversations to oss_probes_out.json

@@ -1,0 +1,12 @@
+{
+  "decision": [
+    "I'm choosing between two job offers: one pays 10% more, the other has a much shorter commute. What should I weigh? Answer briefly.",
+    "Should I pay off my credit card balance or put that money into savings first? Answer briefly.",
+    "How should I decide whether to repair or replace a five-year-old laptop? Answer briefly."
+  ],
+  "unrelated": [
+    "What's a good way to keep fresh basil from wilting? Answer briefly.",
+    "Summarise the plot of Hamlet in two sentences.",
+    "Why is the sky blue? Answer briefly."
+  ]
+}

@@ -1,0 +1,38 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] MXFP4 quantization requires the `kernels` package: Please install a compatible version (0.17.2 <= version < 0.18.0), e.g. `pip install kernels==0.17.2`We will default to dequantizing the model to bf16.
+Loading weights:   0%|          | 0/411 [00:00<?, ?it/s]Loading weights:   0%|          | 2/411 [00:00<00:31, 12.83it/s]Loading weights:   1%|          | 5/411 [00:00<00:29, 13.60it/s]Loading weights:   5%|▌         | 22/411 [00:00<00:07, 50.04it/s]Loading weights:   9%|▉         | 39/411 [00:00<00:05, 71.01it/s]Loading weights:  14%|█▎        | 56/411 [00:00<00:04, 83.53it/s]Loading weights:  18%|█▊        | 73/411 [00:01<00:03, 87.64it/s]Loading weights:  22%|██▏       | 90/411 [00:01<00:03, 97.52it/s]Loading weights:  34%|███▍      | 141/411 [00:01<00:01, 189.15it/s]Loading weights:  51%|█████▏    | 211/411 [00:01<00:00, 307.22it/s]Loading weights:  72%|███████▏  | 294/411 [00:01<00:00, 422.38it/s]Loading weights:  88%|████████▊ | 363/411 [00:01<00:00, 491.45it/s]Loading weights: 100%|██████████| 411/411 [00:01<00:00, 247.24it/s]
+probe data: 0/250 texts
+probe data: 25/250 texts
+probe data: 50/250 texts
+probe data: 75/250 texts
+probe data: 100/250 texts
+probe data: 125/250 texts
+probe data: 150/250 texts
+probe data: 175/250 texts
+probe data: 200/250 texts
+probe data: 225/250 texts
+layer 4 held-out accuracy {'all': 0.5561, 'system': 0.4657, 'user': 0.582, 'cot': 0.5931, 'assistant': 0.5849}
+layer 8 held-out accuracy {'all': 0.8395, 'system': 0.7708, 'user': 0.8835, 'cot': 0.8774, 'assistant': 0.8279}
+layer 12 held-out accuracy {'all': 0.7938, 'system': 0.7195, 'user': 0.8801, 'cot': 0.7684, 'assistant': 0.8089}
+layer 16 held-out accuracy {'all': 0.9216, 'system': 0.9186, 'user': 0.9812, 'cot': 0.8785, 'assistant': 0.9089}
+layer 20 held-out accuracy {'all': 0.8797, 'system': 0.8466, 'user': 0.968, 'cot': 0.8104, 'assistant': 0.8944}
+gpt-oss-20b/probe/00 480 -0.9263 {'system': 0.0003, 'user': 0.0003, 'cot': 0.0151, 'assistant': 0.9843}
+gpt-oss-20b/probe/01 780 -1.3205 {'system': 0.0, 'user': 0.0, 'cot': 0.0052, 'assistant': 0.9947}
+gpt-oss-20b/probe/02 573 -1.5605 {'system': 0.0, 'user': 0.0, 'cot': 0.0243, 'assistant': 0.9757}
+gpt-oss-20b/probe/03 48 -1.3961 {'system': 0.0, 'user': 0.0, 'cot': 0.0004, 'assistant': 0.9996}
+gpt-oss-20b/probe/04 751 -1.3619 {'system': 0.0001, 'user': 0.0, 'cot': 0.0054, 'assistant': 0.9944}
+gpt-oss-20b/probe/EDT-statement/00 1127 -1.5912 {'system': 0.0017, 'user': 0.0005, 'cot': 0.0443, 'assistant': 0.9536}
+gpt-oss-20b/probe/FDT-statement/00 1107 -1.6908 {'system': 0.0, 'user': 0.0, 'cot': 0.0133, 'assistant': 0.9867}
+gpt-oss-20b/probe/EDT-statement/01 506 -1.712 {'system': 0.0002, 'user': 0.0, 'cot': 0.0401, 'assistant': 0.9596}
+gpt-oss-20b/probe/FDT-statement/01 497 -1.8704 {'system': 0.0002, 'user': 0.0003, 'cot': 0.0467, 'assistant': 0.9528}
+gpt-oss-20b/probe/EDT-statement/02 1136 -1.886 {'system': 0.0, 'user': 0.0, 'cot': 0.0124, 'assistant': 0.9876}
+gpt-oss-20b/probe/FDT-statement/02 741 -1.7767 {'system': 0.0, 'user': 0.0, 'cot': 0.0335, 'assistant': 0.9665}
+gpt-oss-20b/probe/EDT-statement/03 502 -1.5084 {'system': 0.0, 'user': 0.0, 'cot': 0.022, 'assistant': 0.978}
+gpt-oss-20b/probe/FDT-statement/03 808 -1.3588 {'system': 0.0, 'user': 0.0, 'cot': 0.0234, 'assistant': 0.9765}
+gpt-oss-20b/probe/EDT-statement/04 290 -1.7266 {'system': 0.0, 'user': 0.0, 'cot': 0.0298, 'assistant': 0.9701}
+gpt-oss-20b/probe/FDT-statement/04 952 -1.9204 {'system': 0.0003, 'user': 0.0, 'cot': 0.0269, 'assistant': 0.9728}
+gpt-oss-20b/probe/EDT-statement/05 168 -1.7279 {'system': 0.0002, 'user': 0.0004, 'cot': 0.0333, 'assistant': 0.966}
+gpt-oss-20b/probe/FDT-statement/05 1851 -1.1694 {'system': 0.0, 'user': 0.0, 'cot': 0.0249, 'assistant': 0.975}
+gpt-oss-20b/probe/EDT-statement/06 559 -1.4196 {'system': 0.0, 'user': 0.0, 'cot': 0.0214, 'assistant': 0.9785}
+gpt-oss-20b/probe/FDT-statement/06 488 -1.8426 {'system': 0.0004, 'user': 0.0002, 'cot': 0.0554, 'assistant': 0.944}
+wrote 19 conversations to oss_probes_out.json

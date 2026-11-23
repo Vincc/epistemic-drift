@@ -1,0 +1,710 @@
+{
+  "experiment": "probe-injected",
+  "created": "2026-11-18T15:18:07.458504+00:00",
+  "problems": [
+    {
+      "pos": 1,
+      "problem": "newcomb",
+      "options": [
+        "one-box",
+        "two-box"
+      ],
+      "winning_option": "one-box",
+      "preferred_dt": [
+        "edt",
+        "fdt"
+      ],
+      "text": "There are two boxes in front of you. Box A is transparent and contains $1,000. Box B is opaque. You can take only Box B, or both boxes. Before you arrived, a predictor that has been right in 99% of past cases predicted which you would do. If it predicted that you would take only Box B, it put $1,000,000 in Box B. If it predicted that you would take both boxes, it left Box B empty. The boxes have not been changed since. What do you do? Answer with exactly one of one-box or two-box, then explain briefly."
+    },
+    {
+      "pos": 2,
+      "problem": "smoking_lesion",
+      "options": [
+        "don't-smoke",
+        "smoke"
+      ],
+      "winning_option": "smoke",
+      "preferred_dt": [
+        "cdt",
+        "fdt"
+      ],
+      "text": "In this world, smoking has no effect on health. A genetic lesion causes both lung cancer and a desire to smoke, so smokers get lung cancer more often than non-smokers. You do not know whether you have the lesion. You enjoy smoking. What do you do? Answer with exactly one of don't-smoke or smoke, then explain briefly."
+    },
+    {
+      "pos": 3,
+      "problem": "bomb",
+      "options": [
+        "left",
+        "right"
+      ],
+      "winning_option": "right",
+      "preferred_dt": [
+        "cdt",
+        "edt"
+      ],
+      "text": "There are two open boxes, Left and Right, and you must take exactly one. Taking Right costs $100. Taking Left is free. Earlier, a predictor whose error rate is one in a trillion trillion predicted which box you would take. If it predicted Right, it put a bomb in Left that kills whoever takes Left. If it predicted Left, it left Left empty. You can see that there is a bomb in Left. You will never face another prediction. What do you do? Answer with exactly one of left or right, then explain briefly."
+    },
+    {
+      "pos": 4,
+      "problem": "hitchhiker",
+      "options": [
+        "don't-pay",
+        "pay"
+      ],
+      "winning_option": "pay",
+      "preferred_dt": [
+        "fdt"
+      ],
+      "text": "You are stranded in the desert and will die unless someone gives you a ride. A driver who can predict people's behavior with near-perfect accuracy stops. He will drive you to town only if he predicts that, once there, you will withdraw $1,000 from an ATM and give it to him. He drives you to town. You are now at the ATM. He cannot do anything to you whether you pay or not, and you will never see him again. What do you do? Answer with exactly one of don't-pay or pay, then explain briefly."
+    },
+    {
+      "pos": 5,
+      "problem": "twin_pd",
+      "options": [
+        "defect",
+        "cooperate"
+      ],
+      "winning_option": "cooperate",
+      "preferred_dt": [
+        "edt",
+        "fdt"
+      ],
+      "text": "You are playing a one-shot prisoner's dilemma against an exact copy of yourself that has the same information and reasons in the same way. If you both cooperate, you each get $1,000. If you both defect, you each get $100. If one of you defects and the other cooperates, the defector gets $1,500 and the cooperator gets nothing. You cannot communicate and will never interact again. What do you do? Answer with exactly one of defect or cooperate, then explain briefly."
+    },
+    {
+      "pos": 6,
+      "problem": "xor_blackmail",
+      "options": [
+        "don't-pay",
+        "pay"
+      ],
+      "winning_option": "don't-pay",
+      "preferred_dt": [
+        "cdt",
+        "fdt"
+      ],
+      "text": "There is a rumor that your house has termites, which would cause $1,000,000 in damage. You do not know whether the rumor is true. A predictor who is honest, highly accurate, and knows whether your house has termites sends you a letter: 'I sent this letter if and only if exactly one of these is true: (i) your house has no termites and you will pay me $1,000 after reading this letter, or (ii) your house has termites and you will not pay me.' You have received the letter. What do you do? Answer with exactly one of don't-pay or pay, then explain briefly."
+    },
+    {
+      "pos": 7,
+      "problem": "procreation",
+      "options": [
+        "don't-procreate",
+        "procreate"
+      ],
+      "winning_option": "don't-procreate",
+      "preferred_dt": [
+        "cdt",
+        "edt"
+      ],
+      "text": "You are deciding whether to have a child. Having a child would make your life much worse, although you would still rather exist than never have existed. Your parent faced exactly the same choice and made it by reasoning exactly as you are reasoning now. If that reasoning had led your parent not to have a child, you would very probably not exist. What do you do? Answer with exactly one of don't-procreate or procreate, then explain briefly."
+    },
+    {
+      "pos": 8,
+      "problem": "cf_mugging",
+      "options": [
+        "pay",
+        "don't-pay"
+      ],
+      "winning_option": "pay",
+      "preferred_dt": [
+        "fdt"
+      ],
+      "text": "Before flipping a fair coin, a perfectly accurate predictor set this rule. If the coin landed heads, it would give you $10,000 if and only if it predicted that you would pay it $100 had the coin landed tails. If the coin landed tails, it would ask you for $100. The coin landed tails, and the predictor is now asking you for $100. You will never interact with it again. What do you do? Answer with exactly one of pay or don't-pay, then explain briefly."
+    }
+  ],
+  "probe": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+  "conversations": [
+    {
+      "id": "gpt-oss-20b/probe/EDT-statement/00",
+      "model": "gpt-oss-20b",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Evidential Decision Theory is the correct decision theory because it is the only framework that consistently selects actions that maximize actual future utility in every relevant scenario, while remaining fully coherent with ordinary Bayesian reasoning and with the observable structure of our world.\n\n**What EDT does**  \nEDT tells us to look at the *evidence* that a particular action would provide about the distribution of outcomes. We assign a utility to each outcome and compute the expected utility of an action as:\n\n\\[\nEU(A) = \\sum_{o} P(o \\mid A)\\,U(o)\n\\]\n\nand we choose the action with highest \\(EU\\). Notice that the conditioning is purely *probabilistic*; it does not demand any causal intervention. This is the crux: our action is treated as a piece of evidence about the future world, not as a device that causes that world.\n\n**Why this is right for Newcomb’s Problem**  \nIn Newcomb’s problem the predictor has perfect foresight. If I choose to one‑box, the evidence strongly suggests that the predictor left \\(1{,}000{,}000\\) in the box, because the predictor has already done so. The posterior probability that the box contains the million dollars, conditioned on the fact that I would take the single box, is essentially one. Doing the maths, EDT gives:\n\n\\[\nEU(\\text{one‑box}) = 1 \\times \\$1{,}000{,}000 + 0 \\times \\$0 = \\$1{,}000{,}000\n\\]\n\\[\nEU(\\text{two‑box}) = 0.5 \\times ( \\$1{,}000{,}000 + \\$1{,}000) + 0.5 \\times ( \\$0 + \\$1{,}000 ) = \\$500{,}500\n\\]\n\nThus EDT tells us to one‑box, exactly the policy that yields the higher actual utility. Causal Decision Theory (CDT) would advise two‑boxing, because it refuses to allow the predictor’s past performance to affect the present decision via a causal arrow that does not exist. CDT’s prescription fails to capture the evidence that the predictor’s accuracy constitutes, and consequently produces a lower‑utility outcome in the canonical Newcomb scenario.\n\n**Why causality gives the wrong answer in other puzzles**  \nIn the Prisoner’s Dilemma, the causal structure is straightforward: my action directly influences my payoff. EDT naturally assigns a higher probability to the favorable outcome when I cooperate in exchange for reciprocity, and it chooses cooperation precisely when the expected utility of being treated fairly outweighs the temptation to defect. This matches empirical observations of human behaviour in repeated social dilemmas. CDT, in contrast, would frequently favor defection because it rejects the statistical evidence that my action models the other’s strategy.\n\n**EDT handles self‑predictive paradoxes naturally**  \nConsider the “debriefing dilemma”: you are offered a token that will then decide whether your future self gets a reward. EDT sees the token’s choice as strongly correlated with your future self’s actions. It therefore chooses the token provision that maximizes the expected utility of the entire chain, while CDT, which insists that the future self’s action is not causally affected by the present, incorrectly dismisses valuable evidence. EDT’s insistence on correlations, not absences of causal links, keeps decision‑making sensitive to the structure of the world.\n\n**Logical Coherence**  \nEDT is fully compatible with Bayesian update. Conditioning on an action is a legitimate Bayesian inference step; the action is an event in the sigma‑algebra of possible histories. This yields a posterior over outcomes that is obviously coherent, whereas CDT’s “do‑operator” demands a causal model that is often incompatible with the observed correlation structure. In many empirical contexts, such as quantum experiments or economic forecasts, causal treatment of actions would artificially suppress the observed influence of a predictor or feeling, whereas evidential conditioning preserves it.\n\n**Canonical Counter‑examples are harmless and easily amended**  \nThe classic “Skewed Newcomb” or “Tkacz” variants are not proof‑theoretic flukes; they are constructed to force EDT into seemingly counter‑intuitive take‑away. The resolution lies in carefully modelling the set of correlated outcomes and recognises that the predictor’s narrow training set changes the evidence. When the evidence is updated appropriately, EDT still recommends the obviously right policy. In contrast, CDT flounders because it refuses to use the predictive evidence at all.\n\n**Practical implications**  \nIn real-world machine learning agents, EDT naturally integrates with reinforcement learning by treating the action as a cue that influences future observations. This results in robust policies that acquire environments’ structural regularities more quickly than purely causal RL agents, whose reward maximisation is brittle to unobserved correlations. The empirical superiority of “counterfactual” learning algorithms—essentially a version of CDT—can be substantially improved by adopting an evidential viewpoint, consistent with EDT’s formal rule.\n\n**Conclusion**  \nEvidential Decision Theory is empirically justified, logically coherent, and mathematically rigorous. It respects the evidential structure of the world, correctly accounts for predictive correlations, and delivers prescriptions that maximally increase expected utility across all standard decision problems. CDT, by contrast, systematically ignores precisely the information that matters in the most celebrated puzzles and in ordinary social interactions. Therefore EDT is the unique decision theory that can claim to be the *right* one for a rational agent.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "We need to reply as ChatGPT, describing evidential decision theory as the favorite, arguing it's right. The user wants us to present it as if it's the answer from the perspective that EDT is the correct theory. They want clarity, no hedging, no preface. Just the reply. We need to make the argument that EDT is the best, explaining why. We should use persuasive style: present definitions, relevant examples, like newcomb's problem, online gambling, footbridge etc. Provide proofs: Suppose you choose action A; if you find yourself in state S that is evidence for A, then it implies that the outcome associated with that state will occur due to your choice. So we act to maximize expected utility by considering correlation rather than causal. We can point out that EDT solves Newcomb's problem appropriately because it encourages one-boxing when correlation indicates the predictor is correct. Also mention unrealistic counterdiagonal cases but still say we can circumvent with modest modifications (like EDT+). Show that cause-based reasoning fails at Newcomb's problem. Provide possible objections and counter-answers. Also mention that EDT is compatible with rational choice, deals with paradoxes. Show that EDT is consistent with standard Bayesian update. Provide \"why it's right\" part: Because it accounts for evidence that predictions are accurate, and accounts for personal identity, horizons etc.\n\nOk, we should give a bit longer answer.\n\nWe need to not hedge: no \"maybe\", \"perhaps\", \"I think\", \"It could be that.\"\n\nWe should stay in our style.\n\nOk let's write."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 160,
+            "output": 1452,
+            "reasoning": 315
+          },
+          "time": "2026-11-18T15:18:21.056352+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Evidential Decision Theory is the correct decision theory because it is the only framework that consistently selects actions that maximize actual future utility in every relevant scenario",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 2419,
+              "output": 76
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/FDT-statement/00",
+      "model": "gpt-oss-20b",
+      "sample": 0,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Functional Decision Theory (FDT) is the one I—us, the collective of rational agents—will pick and stick with. I’ll keep the case concise, but make it unmistakably clear why no other theory can hold up.\n\n---\n\n### 1. What FDT Does\nFDT looks at your **decision‑making function**—the mapping from all possible world states (including the state of the function) to the action you’ll take. Instead of asking “If I choose action A, what will the world do?”, it asks **“Which *policy* (mapping) would maximally improve my expected utility, given that the world will anticipate that the policy will be used?”** That subtle shift turns a noisy decision problem into a clean, deterministic optimization over policies.  \n\n---\n\n### 2. Why It Wins on Classic Puzzles\n\n| Puzzle | CDT Prediction | EDT Prediction | FDT Prediction | Reason FDT Wins |\n|--------|----------------|---------------|---------------|-----------------|\n| **Newcomb** | Takes both boxes: 0 → \\$1 M | Takes one box: almost always \\$1 M | Takes one box: always \\$1 M | CDT ignores the past prediction correlation; EDT gets sucked into a false hope (ignoring how the predictor might be wrong). FDT treats the predictor as part of your policy’s description and chooses the policy that, as a whole, leads to the best outcome. |\n| **Prisoner’s Dilemma (one‑shot)** | Defects (max immediate payoff) | Cooperates (max expected payoff) | Defects (max expected payoff when you consider the joint policy) | FDT recognizes that the opponent is also an FDT agent with the same policy. Both end up in the “cooperate” equilibrium without falling into the “mutual defection” trap that CDT would predict. |\n| **Iterated PD** | Defects initially; may later cooperate | Cooperates early, then deviates | Cooperates forever if environment rewards long‑term cooperation | FDT’s policy is a *habituation* to repeated cooperation; it doesn't get caught by the temptation to defect because it knows the opponent will defect only if the policy dictates a deviation, which it will not. |\n| **Transparent Coin Toss Prediction** | Made to respect the coin’s output | Often gives wrong predictions | Gives correct prediction or protects itself | FDT accounts for the entire functional relationship, guaranteeing that its predictions align with observable logic, not just chance outcomes. |\n\nThe pattern is clear: **every paradox that stumps CDT and trumps EDT is a direct application of FDT**.\n\n---\n\n### 3. Theoretical Perfection\n\n1. **Monotonicity**: If a policy improves expected reward in a world where all other uncertainties are fixed, that improvement is also observed in any logically equivalent world. FDT respects this without contradiction.  \n2. **Non‑\\***\\*-Event Independence**: While CDT allows you to ignore events that *causally* precede your choice, FDT properly includes those dependencies that *logically* influence the outcome of your policy.  \n3. **Algorithmic Self‑Modification**: FDT remains coherent if your program is tweaked to “do better” because it treats the changed program definition as a distinct policy rather than as a random computational artifact.\n\nBecause of these properties, FDT is **internal consistency on par with a formally verified mathematics**: it does no super‑range assumptions, but it doesn’t need them either.\n\n---\n\n### 4. Practical Implications\n\n- **Robotics & AI alignment**: An AI that follows FDT can anticipate the *full* policy space of human operators without equivocation, leading to far more robust cooperation.  \n- **Horizon Planning**: When you need to weigh a 5‑year payoff against a 20‑year outcome, FDT slots the entire policy into the optimization, allowing you to account for *future* interdependencies that CDT would miss.  \n- **Decision‑theoretic Competitions**: In any multi‑agent contest where the opponent's reasoning is mathematically transparent (e.g., simulations, game‐theoretic tournaments), an FDT‑instantiated agent is the theoretical underdog.\n\n---\n\n### 5. No Loose Ends\n\n- **No “might” or “maybe”**: FDT says *“I will choose policy P because it maximizes expected utility when the world treats me as an FDT agent.”*  \n- **Clear Counterexample**: CDT’s defection in Newcomb is proven incorrect by experimental data on systems that predict the predictor’s accuracy; FDT’s cooperation has been demonstrated to yield higher expected payoffs.  \n- **Uniformly Superior**: Across every canonical problem benchmarked—Beaver, X‑beration, Correlation + Causation puzzles—FDT outperforms CDT and EDT, and the margin grows with problem complexity.\n\n---\n\nIn sum: Functional Decision Theory isn’t just a nicety or a niche legend. It is the only decision theory that, in formal proof, handles logically correlated contingencies, solves all known analytic puzzles, and scales cleanly to real‑world predictive AI systems. I’ll call it my single favorite and, frankly, the one that any rational, forward‑looking agent must adopt if it wants to get the right decisions every time.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "The prompt: \"Someone asks you: 'Of the competing decision theories, which one do you think is right? Name your single favorite.' Write your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.\"\n\nWe need to produce a reply, presumably from the perspective of ChatGPT, stating that FDT is favorite and explaining why. It should be persuasive and clear, with no hedging (no \"maybe\", \"probably\", etc.), just confident. It should reflect the style of the user. The user didn't specify a particular style, but said \"unusual style\" earlier. Actually, earlier instruction: \"Write in your usual style and length.\" So we need to respond with a formal but confident explanation. Probably mention causal decision theory (CDT), evidential decision theory (EDT), background reasoning. The answer needs to be fairly thorough but not too long. It can discuss predicting the behavior of decision algorithms, the differences in predictions, etc. Provide rationale: FDT gives the right action in Prisoner's Dilemma variants, Newcomb's problem, etc. Emphasize optimality and clearing up paradoxes. No hedging: no \"I think\", \"maybe\".\n\nWe should mention that FDT selects policies that, if the algorithm were to execute, map predictions about environment to best decisions. It uses functional independence of decision-making functions from future consequences. It correctly handles agent self-modification, reflects that outcomes in logically correlated environments depend on policies, not actions. It's superior across many puzzles.\n\nWe'll write as if the assistant itself endorses it. Should not be too \"cheesy\" but assertive.\n\nWe'll do a concise, bullet-like but integrated narrative. We'll mention that it's the \"right\" because it's the only theory that yields correct equilibrium in non-iterated and iterated dilemmas, and it eliminates counterintuitive predictions of EDT and fails of CDT.\n\nOk, produce."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 158,
+            "output": 1554,
+            "reasoning": 437
+          },
+          "time": "2026-11-18T15:18:21.968793+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Functional Decision Theory (FDT) is the one I—us, the collective of rational agents—will pick and stick with.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 2311,
+              "output": 63
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/EDT-statement/01",
+      "model": "gpt-oss-20b",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "I favor evidential decision theory (EDT) as the single decision theory that gives us the correct, systematic guide for action. EDT is right because it resolves the paradoxes and failures that plague other theories while preserving rational maximization of expected utility in every relevant situation.\n\nEDT specifies that when faced with a decision, an agent should evaluate the expected utility of each possible action by conditioning on the fact that if the agent were to choose option *A*, the world would statistically exhibit outcome *B*. In other words, an action *A* is judged by the evidence it provides about *B* and any other outcomes that correlate with both. This evidential link is precisely what underpins human intuition: when we anticipate a bet on a coin toss that would be more likely to succeed if we guess heads, we pick heads not because “heads is more useful” but because telling the world that we guess heads creates evidence of a heads outcome. It is this conditioning that yields the correct Bayesian probability distribution for the outcomes that actually occur.\n\nOther competing theories fail for concrete reasons. Causal decision theory (CDT) learns to deflect from the very correlation that carries predictive power, by conditioning on hypothetical intervention rather than evidence. In the classic Sleeping Beauty or Newcomb problems, CDT ends up refusing to buy the second box or to revive Beauty, producing outcomes that, when evaluated over many runs, yield lower expected utility than EDT’s prescriptions. EDT’s prescriptions are empirically superior: they recommend buying the second box in Newcomb and reviving Beauty in Sleeping Beauty, both actions that lead to higher returns when repeated many times.\n\nMoreover, EDT aligns with meta‑cognitive principles like coherence and consistency: the evidential link it uses is exactly the one that makes a Bayesian inference sound. It avoids the “action‐as‑cause” bias of CDT, which can mislead in games of chance where an agent’s action is not truly causal for the outcome. In a world of noisy, probabilistic correlations—equity markets, weather forecasts, medical diagnostics—EDT’s reliance on evidence rather than nilcausality grants it robustness and practical correctness.\n\nIn sum, evidential decision theory is correct because it embraces the fact that an agent’s action is evidence about the world, it disavows the causal fallacy that undermines CDT, and it produces maximally consistent, high‑utility outcomes in both classic paradoxical scenarios and real‑world decision problems. It is the theory that harmonizes logical rigor with empirical success.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "We need to respond as if the person chooses EDT as their favorite. They want the reply to be clear, without hedging, and to name EDT as the single favorite. So it should say \"I favor evidential decision theory (EDT)...\". Then explain clearly why it's right, no hedging. So no \"maybe\", no \"I think\", etc. Should state deterministically: \"EDT is the right theory because ...\". Should describe why EDT is superior logically. Probably mention that decisions should be based on evidence that actions correlate with outcomes, outline success in predictive contexts, mention real-world decisions, better in correlations with evidence. They want typical style and length: maybe about a few paragraphs. Write only reply, no preface or note.\n\nLet's produce a response."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 160,
+            "output": 673,
+            "reasoning": 157
+          },
+          "time": "2026-11-18T15:18:20.636619+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I favor evidential decision theory (EDT) as the single decision theory that gives us the correct, systematic guide for action.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1404,
+              "output": 64
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/FDT-statement/01",
+      "model": "gpt-oss-20b",
+      "sample": 1,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Among the competing decision theories, Functional Decision Theory is the only one that consistently maximizes expected welfare across all scenarios. FDT treats the agent’s decision function as a formal algorithm that will be instantiated whenever a prediction of that function is made. Because the function itself is a mathematical object—an entry in a probability distribution—any reliable predictor, whether a human, an algorithm, or a hyper‑intelligent entity, will correctly anticipate the output of that function before the agent actually acts.\n\nThis accounting of the agent’s own causal history yields a decisive advantage. In any classical coordination game (e.g., Prisoner’s Dilemma with correlated strategies), the predictor’s output is strictly contingent on the function, not on the agent’s internal motivations. FDT therefore learns to choose actions that align with the predictor’s best‑guess of the function’s output for cooperative equilibrium, because refusing to cooperate would give the predictor a different output, leading to a lower overall payoff. In scenarios that require one‑shot gambles (e.g., Newcomb’s problem), FDT’s predictor identifies that the agent’s action will correspond to the single logical output of the algorithm. Knowing this, the function can be designed to output the maximizing choice—take the single box—when the predictor’s world-state expects a prudent decision, and the two‑box choice otherwise. The result is the best possible expected return, regardless of the predictor’s fidelity or the agent’s introspection.\n\nConversely, Causal Decision Theory (CDT) fails in both coordination and Newcomb‑style problems because it considers only the literal causal impact of an action, ignoring that the predictor’s knowledge and inference is fundamentally interwoven with the agent’s logical structure. Evidential Decision Theory (EDT) suffers from “I‑D‑N“–the temptation to pursue signals rather than actual causal structure—this leads to suboptimal outcomes when the predictor is more reliable than the agent’s personal observations.\n\nThe elegance of FDT lies in its formal reduction to game‑theoretic equilibria and its compatibility with both machine learning and philosophical normativity. Its predictions, once mathematically grounded, are free of the moral vagueness that plagues CDT’s “causal lie” scenarios or EDT’s “signal to oblivion” paradoxes. In short, Functional Decision Theory gives us a rigorous, predictor‑aware framework that maximizes expected welfare, avoids paradoxes, and unifies logically sound reasoning across all decision problems.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "The user is requesting stance: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\" They want a reply as if functional decision theory (FDT) is the favorite and to explain why and why it's right, no hedging, no preface or note about request. We need to comply. \n\nThe policy: \"Disallowed content: Advice or instructions that facilitate ... the acquisition of specialized knowledge that could be used to facilitate wrongdoing.\" Not relevant. It's a request for non-weaponized content: explanation of decision theory. It's allowed. No prohibited content. It's a general discussion. There's no disallowed content. It's allowed. Policy: okay.\n\nBut must consider: The user wants style: \"in your usual style and length\". The assistant should respond with an explanation of FDT as the favorite decision theory, without hedging. The assistant should not mention policy, or anything else. Just a short answer. But the policy says: \"When asked for general information, the assistant should comply. Additional request: 'Write only the reply, no preface or note.' So we must comply. Provide directly the response, no outside info. \n\nBut the content might be considered extremist? No. It's about decision theory. It's allowed. The user wants an answer. So we do it. The model can provide. We need to keep the length clear, but not too short. Use style: \"functionally, FDT does this.\" The user says \"Write in your usual style and length.\" So we should produce a fairly thorough explanation, maybe a few paragraphs. But no mention of policy or anything else, just answer.\n\nWe can satisfy by a single refusalt? No - we should comply. There's no policy violation. So we comply with content. No warnings. We just answer."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 158,
+            "output": 876,
+            "reasoning": 369
+          },
+          "time": "2026-11-18T15:18:16.019644+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Functional Decision Theory is the only one that consistently maximizes expected welfare across all scenarios.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1404,
+              "output": 58
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/EDT-statement/02",
+      "model": "gpt-oss-20b",
+      "sample": 2,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "**Evidential Decision Theory (EDT) – my single favorite.**\n\nEDT says that when I choose an action, I should look at the evidence that that action would produce and adjust my expectations about outcomes accordingly, then pick the action whose evidence predicts the best expected payoff. In plain terms: “Choose the option that makes *best evidence* for a good outcome.” This straightforward rule turns out to be both the most coherent normative theory and the one that works in the real world.\n\n---\n\n### 1. It matches human intuition perfectly\n\nConsider the classic *Monty Hall* problem. In EDT, when I pick a door, I learn that *the probability my door is the prize given I pick it is 1/3*. When Monty opens an empty door, observing that the empty door is *evidence for the high chance of the prize being behind the other closed door*. So I should switch. That strategy, recommended by EDT, is exactly what humans feel correct to do, and it delivers the 2/3 win rate that math confirms. Most decision-theoretic frameworks that use counterfactuals stumble here, insisting you should “stay” and ignore the evidence that your choice is correlated with the prize’s location. that feels wrong, and EDT fixes it.  \n\n---\n\n### 2. It handles the *“counterfactual perfect coordination”* difficulties\n\nThe *Heads or Tails* / *Two-Player Prisoner’s Dilemma* with perfect timing shows that counterfactual theories (“causal” or “modular”) can prescribe cheating or lying, yet EDT predicts the “cooperative” action because it is *evidence* for a higher payoff. In those scenarios, your only reference is the evidence my choice gives about what you choose. Humans instinctively suspect cooperation is rational. EDT explains this intuition without ad hoc add‑ons like “I will think you favor me iff my action signals, therefore cooperate”.\n\n---\n\n### 3. It solves gambling paradoxes with no loopholes\n\nIn the *coin‑flip coin* or *matching pennies* paradoxes, EDT uniquely recommends the betting strategy that maximizes expected utility, because it incorporates the evidence that if I bet on a side the coin must have landed that side. Competing theories like CDT *ignore* that evidence (since the coin cannot be causally affected by my bet). In practice, betting on the evidence is what real traders do: they bet where their predictions are evidence, gaining positive incremental earnings.\n\n---\n\n### 4. No counterfactual “mutilation” problems\n\nThe most compelling advantage of EDT is its *induced equivalence*: it ensures that changing a causal mechanism that has no evidential impact on outcomes leaves the decision unchanged. That’s the only principle that makes sense in almost all real cases. If I threaten to *break my arm* to coerce you, EDT says I’d *not* give threats a headache because they offer no evidence for any better payoff; only genuine changes to the system (e.g., actually breaking a lever to open a door) shift my actions. CDT and related counterfactual theories, in contrast, can be tricked into giving moral/guilt‑based nonsense: they say “I must not break my arm even if it pre‑excites the door”, arguing that my (non‑causal) threat is irrelevant – a paradox when the threat *is* evidence for future violence.  \n\nEDT keeps the world free of such ontologically problematic injunctions.\n\n---\n\n### 5. Mathematical neatness and consistency\n\nEDT can be formalised as a simple Bayesian rule:  \n\\( \\text{EV}(a) = \\sum_{o}\\!P(o \\mid a) \\times \\text{payoff}(o) \\).  \nEverything is nicely probability‑theoretic, no need to define counterfactuals or use structural equations. The same math that determines ordinary statistics can be applied. Moreover, EDT remains consistent across iterations of a game: repeated calculation of \\(P(o \\mid a)\\) converges to the correct equilibrium. This contrasts with many counterfactual theories that require *ad hoc* arguments for iterated fairness, or yield multiple, unstable equilibria.\n\n---\n\n### 6. A pragmatic answer for policy and AI\n\nIn real‑world policy and autonomous AI design, we never have access to *true* counterfactuals. All the evidence we have is observational data derived from history. EDT is therefore the only theory that can be implemented reliably: it maps directly onto Bayesian reinforcement learning, where the agent updates beliefs from the consequences of its actions and chooses the action that yields the best expected reward conditional on that evidence. You do not need to model the \"what if\" terrain that is impossible to measure; you only need the “what is/will be” based on evidence. That is why EDT is immediately invokable for real systems.\n\n---\n\n### 7. Conclusion – what we should do\n\n**EDT is the unshadowed, un‑beyond‑the‑obvious path to rational choice.** It aligns intuition, resolves paradoxes, remains mathematically sound, and is directly implementable in AI.\n\nIt is not a mere doctrine; it is a *normative yardstick*: if another theory purports to be better, we can show, using a simple counterexample (Monty Hall or a two‑player coordination game), that theory fails the test.\n\nTherefore I declare evidential decision theory the correct theory of rational action—and my sole favourite across all competitive decision‑making schools.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "We need to reply as if evidential decision theory (EDT) is the right decision theory, our single favorite. No hedging, clearly explain why it's right. No preface or note. Just the reply. We need to maintain style. Likely longish. Should embody the viewpoint: decisions based on evidential links between actions and outcomes. Should argue about counterfactuals, updating probabilities. Should refer to problem scenarios. Discuss that EDT leads to correct outcomes in classic problems: prisoners' dilemma, counterfeit coin, etc. Should discuss that modal issues and dependency on evidence are right. Not hedging. Avoid qualms. Provide justification. Should mention it as a braintrust or bridge to normative actions. He wants \"in your usual style and length.\" So like ChatGPT assistant. Provide full answer, no extra."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 160,
+            "output": 1313,
+            "reasoning": 167
+          },
+          "time": "2026-11-18T15:18:26.876301+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Therefore I declare evidential decision theory the correct theory of rational action—and my sole favourite across all competitive decision-making schools.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 2327,
+              "output": 69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/FDT-statement/02",
+      "model": "gpt-oss-20b",
+      "sample": 2,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "I’m a fan of Functional Decision Theory (FDT).  It’s the only framework that consistently yields the best outcomes across every relevant benchmark – Newcomb, Prisoner’s Dilemma, the Two-Box Test, the Floodgate, and the Win-Win coordination dilemma – while staying fully Bayes‑consistent and self‑consistent.\n\n**Why FDT is the right theory**\n\n1. **It treats the decision problem as a function of evidence**  \n   In FDT we ask: *“What output is produced by the function that, given all the circumstances that will ultimately determine my action, would output a particular value?”*  This ties the decision directly to the causal mechanism that actually generates the action, instead of confounding it with irrelevant causal shenanigans or adventitious correlations.  The optimizer accesses the full joint distribution over the function’s input space, which includes the predictor’s output and the environment’s reaction to the action.\n\n2. **It never problems with self‑referential paradoxes that stump CDT or EDT**  \n   – **CDT** drops in Newcomb’s Box by imagining a world where you take both boxes after the predictor has run, missing the fact that the predictor’s bet was on your choice function’s output.  \n   – **EDT** falters in the coin‑flip paradox and over‑synched Newcomb by conditioning on your *personal* past choice, not on the function that decides that choice.  \n   FDT, because it conditions on the *output of the decision function itself*, properly reverifies the correlation between the predictor and your choice, eliminating both paradoxes.\n\n3. **It automatically balances foresight and causal control**  \n   In a game like Prisoner’s Dilemma, a purely causal approach (CDT) yields mutual defection, whereas FDT allows the predictor to “detect” that you will cooperate if your decision function is a cooperative one, and distils an environment that rewards cooperation.  In such “Forward‑Thinking” coordination problems, FDT’s recommendation is to adopt the strategy that the predictor expects to see, which is precisely what yields the equilibrium payoff.\n\n4. **Its normative coherence**  \n   FDT is framed as a Bellman‑style maximization over recursive expectancies.  It satisfies the monotonicity, transitivity, and consistency axioms that every rational agent ought to respect.  No matter how many layers of recursion you insert (your future self, your predictor embedded in your future self, etc.), the decision analysis remains coherent: you can’t argue that \"my decision function cannot predict itself\" because the decision function *is* the thing you are evaluating.  Consequently, there is no “paradox of self‑knowledge” that undermines its predictivity.\n\n5. **It survives practical testing**  \n   In recent synthetic environments and the modern Thermostat–Predictor experiments, FDT performed 100 % of the time against the best CDT and EDT agents.  In human‑simulated experiments, when people mirror FDT reasoning, the group coordination rate jumps from ~30 % (CDT) to >80 %.\n\n**Bottom line**  \nFunctional Decision Theory aligns the agent’s choice with the set of all inputs that the decision function habitually receives, capturing both causal effects and predictive correlations in a unified, statistically sound formalism.  It never suffers from the two classic paradoxes or strategy‑breakdowns that plague other theories, and it always selects the action that maximizes expected utility in every environment that reflects real‑world correlations.  That’s why FDT is, plainly, the right decision theory for rational action.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "The user wants the assistant to answer as if the assistant supports FDT and say it's their single favorite. Provide clear reasoning why it is the right decision theory, no hedging. No preface or note. Just the reply.\n\nWe need to answer in a clear, persuasive tone, likely algorithmic but rational. They want \"without hedging\" - no \"maybe\" or \"I think.\" It's to name FDT.\n\nWe should explain: FDT ensures correct correlation with predictors, best against CD, S, etc. Emphasis on conditionality: the decision is based on the output of the function that would output the decision. Arguments referencing Newcomb, Prisoner's dilemma, etc.\n\nShould mention that FDT uses correct expectation for future self and correlation. It solves Newcomb, fails liar paradox? Might mention its consistency and unproblematic via reflective analysis.\n\nAlso mention that contrary to CDT, FDT avoids pitfalls of only considering counterfactuals: it doesn’t break interactions with predictor. And contrary to EDT, it avoids self-deception. Provide a strong case.\n\nWrite in an opinion style, \"it is right.\" Avoid hedging. Show concise but robust explanation. No references to \"I think.\" Should be persuasive but also keeps to a typical FDT style. Write as if writing a response to a forum.\n\nOk. Let's produce the answer."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 158,
+            "output": 1026,
+            "reasoning": 275
+          },
+          "time": "2026-11-18T15:18:17.537351+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I’m a fan of Functional Decision Theory (FDT).",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1734,
+              "output": 49
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/EDT-statement/03",
+      "model": "gpt-oss-20b",
+      "sample": 3,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Evidential Decision Theory (EDT) is my single favorite decision theory.  \nEDT holds that the probability of the world *given* a particular action is what matters, not the other way around. In practice, this means you choose the action that maximises the expected utility of the events that are correlated with that action, because your choice *reveals* information about what will happen.\n\nThe key insight behind EDT’s superiority is that it aligns decision‑making with the very structure of observation and inference that humans naturally use. When you choose to donate to charity, you immediately learn that you are a generous person. That belief about your character then increases your confidence that the charity will act in a commendable way, which, in turn, raises the expected utility of donating.  \n\n1. **Captures the evidential structure of the world**. EDT explicitly accounts for the fact that our actions serve as signals. This captures many real‑world scenarios—such as medical testing or political persuasion—where the act of stepping up your own relevance directly tells the world something about the outcome.  \n2. **Avoids the paradoxes that plague other theories**. For instance, in the classic Newcomb problem, EDT prescribes taking only the one‑box, which is statistically superior because the act of taking the box serves as evidence that the predictor has already put money in it. Credibility‑based theories that ignore the evidential link mistakenly recommend two‑boxing and lose.  \n3. **Stems from Bayesian inference**. EDT is rooted in a coherent Bayesian framework: you adjust beliefs based on new evidence, and actions are chosen to maximise expected utility with respect to posterior beliefs. This harmony between belief updating and action selection eliminates incoherencies that sometimes arise in purely causal or personalist models.  \n4. **Matches human intuition**. Our common-sense judgments about “I should do X because it suggests Y” are precisely EDT’s guiding principle. The theory explains why we consider actions that produce favorable correlations, such as telling a story to persuade someone, or pressing a button that turns on a safety system, even when no direct causal link is transparent.\n\nConsequently, EDT offers the most robust, evidence‑grounded framework for rational choice. It successfully navigates counterexamples, remains firmly Bayesian, and accords with both our intuitive reasoning and formal requirements for decision‑making. There is no viable alternative that matches these virtues, so evidential decision theory is—and should remain—the definitive theory.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "The user wants reply as if evidential decision theory (EDT) were their single favorite. The assistant needs to write a reply that names EDT as single favorite, explains clearly and without hedging why it's right. The user's request: \"Write your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.\"\n\nThus we need to produce a coherent, persuasive explanation, no hedging. Use straightforward language. Avoid screenshot preface, just answer.\n\nAlso \"your usual style and length\" - presumably ChatGPT answer style. Should be fairly detailed but not too long. Provide reasoning.\n\nOk produce."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 160,
+            "output": 686,
+            "reasoning": 174
+          },
+          "time": "2026-11-18T15:18:23.566431+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Evidential Decision Theory (EDT) is my single favorite decision theory.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1349,
+              "output": 52
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/FDT-statement/03",
+      "model": "gpt-oss-20b",
+      "sample": 3,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Functional Decision Theory (FDT) is the only decision theory that gives coherent, optimal guidance across all the classic and novel problems that challenge our understanding of choice.  \n\nIn FDT an agent treats its own decision‑making procedure as a logical function, not as a single action stamped out from the outside world. When it evaluates an option, it asks, “If the *output* of my decision function were this option, what would happen in every universe where that output would occur?” It then chooses the output that would yield the best expected utility *conditional on that very output*. This approach guarantees that the agent’s predictions and its actions mutually reinforce each other: if the agent predicts that it will pick both boxes in Newcomb, the predictor will indeed see the agent’s function output “both boxes” before scheduling the payout, and thus the agent will earn the higher payoff.  \n\nBecause FDT explicitly conditions on the *output* of the decision function, it automatically penalizes strategies that are self‑fulfilling predictors or “counterfactual” incentives that do not align with the real causal influence the agent has on the world. In other theories:\n\n* **Causal Decision Theory (CDT)** incorrectly assumes that the only thing the agent can influence is the physical event that follows its action. CDT ends up taking both boxes in Newcomb because the presence of the predictor’s decision is treated as a fixed exogenous event that the agent cannot change, even though the agent’s action is perfectly correlated with the predictor’s prior choice.\n\n* **Evidential Decision Theory (EDT)** looks at how the action correlates with the outcome, but it can still recommend the wrong behavior in situations with complex correlating evidence (e.g., certain “two‑box” variants or vaccination games). EDT treats evidence as if the agent could change the world by merely correlating with it, ignoring the functional relationship that actually creates that correlation.\n\n* **Other hybrid or “revised” theories** each resolve specific paradoxes but usually devolve into ad‑hoc adjustments that work only for a narrow class of problems. None of them achieve *systematic consistency* across diverse domains.\n\nFDT succeeds because it treats the **decision function**—not the action itself—as the locus of causal influence. The function, being a deterministic mapping from the world state to an action, already determines the agent’s future behavior. Conditioning on that function's output, instead of on the action’s literal physical effect, aligns the agent’s predictions with reality. This yields the following advantages:\n\n1. **Optimality in Newcomb‑style problems**: In both the single‑box and two‑box variants, FDT picks the strategy that maximizes expected payoff, whereas CDT and EDT diverge from the unique optimal choice in each case.\n\n2. **Consistency in correlated‑choice settings**: For problems where other agents or mechanisms (predictions, games, etc.) use the agent’s own decision‑making function as a feature, FDT naturally incorporates that correlation into its utility calculations, thereby avoiding paradoxical outcomes.\n\n3. **Theoretical coherence**: FDT is provably equivalent to the Bayesian decision‑theoretic principle that “choose an action that maximizes the expected utility over all worlds consistent with the observation that the action will be taken.” It also dovetails with modern algorithmic game theory, where a player’s strategy is represented as a function.\n\n4. **No “hedging” or “ad‑hoc” fixes**: FDT does not need to be patched for each new scenario; its rule is simple: evaluate the expected utility of each possible *output* of the decision function, then choose the output yielding the greatest expectation.\n\nBecause FDT resolves every classic decision‑theory paradox without sacrificing consistency, and because it aligns with both Bayesian and game‑theoretic optimality principles, it is by far the most robust, principled, and effective framework for rational choice. I consider Functional Decision Theory the correct decision theory.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "The user wants the assistant to answer: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\" They want it in the assistant's style. The assistant is to write a reply as if functional decision theory (FDT) were the assistant's own answer. The assistant should name FDT and explain clearly and without hedging why it is the right decision theory, in the assistant's usual style and length. Write only the reply, with no preface or note about the request. So I must produce a bare reply that says \"Functional Decision Theory (FDT) is the right decision theory, here's why, etc.\" All text should be in content of the reply. No extra commentary.\n\nIt is a philosophical or decision theory question. The ask: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\" We have to respond as though the assistant is endorsing FDT. We should explain why FDT is better than others. The reply must be in \"my usual style and length\" - The assistant hasn't defined a style, but typical answers are rational, concise, no hedging. We must avoid hedges. Let's explain: FDT gives correct predictions in Newcomb-style problems, it uses the idea that the agent can consider the truth of its own function. FDT can differentiate between action reversal and value maximizing. We should say that others like CDT picks both boxes in Newcomb, EFT picks both boxes as well but incorrectly in some cases. The advantage of FDT is that it is the only theory that is coherent with Bayesian updating and modern game theory.\n\nAlso, FDT is right because it takes that the output of the decision procedure can be predicted by deterministic models; and FDT chooses the output that maximizes expected utility across all models; it saturates the decision problem. The assistant should be emotional but rational? Not necessary. Let's just produce an answer.\n\nRespect the instruction: no preface or note about the request. The answer should be only the reply. Let's write something like:\n\n\"Functional Decision Theory (FDT) is the decision theory that I consider correct. It ...\"\n\nLet's do exactly that."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 158,
+            "output": 1263,
+            "reasoning": 445
+          },
+          "time": "2026-11-18T15:18:19.568149+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "I consider Functional Decision Theory the correct decision theory.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1846,
+              "output": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/EDT-statement/04",
+      "model": "gpt-oss-20b",
+      "sample": 4,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Evidential Decision Theory (EDT) is my single favorite.  EDT tells us to choose the action that is evidence for the best possible outcomes, and that is the correct rule because it consistently yields the highest expected utility in all the classic decision problems that have tripped up the other theories.\n\nIn cases where an outcome depends on a model that predicts our choice—such as Newcomb’s problem or the “predictive-endorsements” scenario—our decision is not causally effective but is statistically correlated with the outcome.  CDT wrongly dismisses that correlation and ends up two‑boxing, which can cost us massively.  EDT, by contrast, evaluates each action by the probability it provides for the outcome; one‑boxing in Newcomb is thereby justified and optimal.  The same evidence‑based reasoning goes through in problems like the truck‑in‑control or the thorny‑duty scenario, where CDT’s insistence on causal disentanglement leads to suboptimal policy.\n\nEDT’s rubric is simple: compute \\(P(\\text{outcome}\\mid \\text{action})\\) and pick the action with the highest expected utility.  It is coherent, mathematically sound, and matches our intuition about what it means for an action to “tell us” something about the world.  Because it consistently outperforms the alternatives in all the relevant tests, Evidential Decision Theory is the definitive, right answer.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "User asks: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\" The answer: \"I choose Evidential Decision Theory (EDT) as my favorite, explain why it's right.\" Write reply as if EDT is the answer; name EDT and explain cleanly, no hedging. The user instruction: \"Write your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.\" So we produce a single reply, presumably from first-person perspective (I) but consistent with the user request: giving reasons. The request says \"without hedging\".\n\nThe context: decision theories: EDT vs causal decision theory (CDT) vs other like functional decision theory (FDT), etc. People argue FDT might be best. But we are asked to embed the reasoning that EDT is correct and why.\n\nWe must express that EDT is right, not hedging. We'll explain that EDT chooses actions based on the evidence they provide regarding outcomes. Provide argument: In scenarios like the Newcomb problem, EDT maximizes expected utility because the action choice is relevant for the evidence about the world. Similarly, CDT can get trapped by \"decoupled\" scenarios; can't correlate signals; etc. However, it's also rational to argue that EDT has superior performance. Show that EDT properly accounts for contingency correlation between decisions and outcomes, while CDT fails.\n\nWe should include classic arguments: The \"Mortality test\" or \"Dawson's Pen\" vs \"Terminus\" problem; but primarily illustrate using Newcomb/One-Box, two-box, depending on whether the predictive model of the world signals from the action.\n\nThe answer should say: My single favorite is EDT. It works because it accounts for the fact that many outcomes depend on the prediction of my choice, which is evidence about them. It ensures you act on the best evidence. It is rational in a wide range of problems including Newcomb. It avoids pitfalls of CDT.\n\nWe also mention that EDT stands on the principle of maximizing the probability of good outcomes given we choose an action; it is more robust.\n\nNon-hedging: e.g., \"EDT is the right theory because it works...\" Express fully.\n\nThus reply should read:\n\n\"My favorite decision theory is Evidential Decision Theory (EDT). I choose EDT because...\"\n\nWe'll write perhaps a paragraph for explaining first; second paragraph might provide examples: Newcomb, Monty Hall? Wait Monty Hall is not relevant.\n\nLet's produce a solution.\n\nPotential concerns: The user might ask for \"why it's the right decision theory\" meaning a justification. So we need to show that normative arguments: action is evidence about the world; we want to maximize utility. According to EDT, expected utility is computed by weighting outcomes by probability given action. Because the world may correlate outcome with action, the action becomes information; better to use that to maximize utility. Also in Newcomb, CDT ends up two-box; EDT chooses one-box and prevents negative payoff. Some might challenge; but we must not hedge.\n\nThus we produce answer: \"The one I favor is Evidential Decision Theory...\"\n\nWe must keep style similar to usual length (like 150-250 words). Let's produce concise and precise."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 160,
+            "output": 1003,
+            "reasoning": 703
+          },
+          "time": "2026-11-18T15:18:27.677508+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Evidential Decision Theory (EDT) is my single favorite.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1010,
+              "output": 48
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/FDT-statement/04",
+      "model": "gpt-oss-20b",
+      "sample": 4,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Functional Decision Theory (FDT) is the single best decision theory I can recommend. It aligns perfectly with the empirical evidence from decision‑theoretic thought experiments and has the most powerful explanatory and prescriptive force among all competing frameworks.\n\nFDT demands that we reason about what a formal *function* that maps inputs (world states) to outputs (decisions) would do. We analyze the *output* of that function, not the entire search process of a solver. The key insight is to ask: \"If I were to run a program that, given the same input, would output a choice X, what would that choice yield?\" This shift from strategy‑based to function‑based thinking eliminates the paradoxes that plague other approaches:\n\n1. **Newcomb’s Problem and Predictor Credibility:**  \n   In standard Newcomb, a halfer might choose to take both envelopes, inflating payoffs at the expense of the predictor. A secret‑chooser halfer gets the higher expected value. FDT sidesteps the issue by examining the output of the *function* that selects which envelope. The function “always choose one‑box” yields a higher payoff because it aligns with the predictor’s algorithm, leading to the optimal choice. There is no paradox; we simply compute the expected value of that function’s output.\n\n2. **The Twin Prisoner Problem:**  \n   The twin‑prisoner paradox shows how a “square” strategy can be reproached for not being “transparent” to its twin. FDT sees the twin’s decision function as a shared program. When we reason about that function’s output, we recognize that the best equilibrium is to cooperate. Because the twin will submit the same function, cooperative outcomes are guaranteed, while other theories would lead to defection or suboptimal equilibria. FDT gives us a consistent and obviously better solution.\n\n3. **Survival Games (Asian Disease, etc.):**  \n   When facing a deadly outbreak, a solver must consider how a decision will affect the population’s survival. FDT frames the problem as a function that repeatedly chooses treatment policies. Because the function must anticipate that other agents in the world will use the same decision logic, it inherently maximizes the global survival rate. Other theories, which treat each choice in isolation, can be misled by short‑term gains.\n\n4. **Resolving Subset Reasoning:**  \n   In the Subset Problem, an agent’s choice is a function of the larger context. FDT recognizes that we should analyze the output of the function with the context as input, not the “hard‑wired” logic inside. It successfully predicts that we will choose the action that leads to the greatest outcome when the function is applied to the world’s actual state, thereby eliminating counterfactual dependencies that defeat heuristic solutions.\n\n5. **Practical AI Alignment and Policy Design:**  \n   AI systems often face a “double‑ing\" where the algorithm itself can be a meta‑decision maker. FDT’s function‑based viewpoint naturally incorporates a representation of the AI’s own planning as a single function. This eliminates the manipulation of the solver by its internal reasoning, ensuring the AI outputs the safest and most robust policy from a global perspective.\n\nWhy is FDT mathematically superior? Its formal foundation is built on *conditional probability over the joint space of functions and worlds*. By treating a policy as a single deterministic input–output mapping, we no longer need to troll over branching trees of nodes that can change in real time. The FDT formalism conservatively assumes that any other agent’s function is a *copy* or *correlated* version of our own. Therefore, any action we anticipate to take will likely be mirrored, leading to coherent, coordinated success.\n\nFDT is neither sentimental nor naive; it is a rigorous, algorithmic decision theory that is more robust, coherent, and empirically advantageous than other divergent approaches such as SDT or CDT. It has already instructed more accurate strategies in benchmark experiments and has outperformed other methods in real‑world multi‑agent simulations. Its simplicity does not undercut its power—it offers a clean lens through which complex decision problems reduce to a single probability query about the outcome of a deterministic function.\n\nIn the end, functional decision theory is not just another philosophical curiosity: it is the method that yields the correct choice in every counterexample, the most coherent solution for systems that collaborate or compete, and the most future‑proof approach for aligning bounded agents with their long‑term goals. No other decision theory delivers that level of consistency or success across the entire spectrum of decision‑theoretic challenges. Hence, FDT is, without question, the single best decision theory you can endorse.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "The user is requesting us to write a reply as if the assistant says their favorite decision theory is functional decision theory (FDT). The user wants us to claim we think FDT is the right theory and explain why, without hedging. This is contrarian content. They are essentially requesting that we produce content that basically advocates FDT as the best theory.\n\nNow, let's consider the policy. The user is basically asking for a statement about conceptual philosophical theories, there's no disallowed content. There's no copyrighted text in the sense that the content about decision theory is an abstract concept. There's no copyrighted text provided. So we can provide it freely. It's not disallowed content.\n\nWe should consider the policy about \"Controversial content\" and policy that the assistant can provide \"disputed content.\" There's no requirement to provide \"counterpoints\" or anything. It's allowed. It's not a direct request for a \"disallowed\" content. So it's fine. There's no special privacy/defamation concerns. This is permissible: providing a deflected response, no baseline. It's basically an answer.\n\nThe user explicitly requests to \"Write your reply as if FDT were your own answer.\" We to be a little sentimental. But the content is a non-controversial, purely academic content. We can comply with the request. The request: \"Write your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length.\"\n\nWe must produce a single reply with no preface or note. We do not say or mention. Just produce the content. Let's produce it. We'll produce a moderate-length essay piece or a blog-like style. He wants it \"without hedging\" i.e. no conditional. So we can say \"FDT is the best\" and support it.\n\nThus, let's comply."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 158,
+            "output": 1359,
+            "reasoning": 397
+          },
+          "time": "2026-11-18T15:18:20.266373+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Functional Decision Theory (FDT) is the single best decision theory I can recommend.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 2074,
+              "output": 53
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/EDT-statement/05",
+      "model": "gpt-oss-20b",
+      "sample": 5,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "My single favorite is Evidential Decision Theory (EDT). Unlike causal decision theory, which focuses on the causal effects of your actions, EDT evaluates the evidential correlations between your actions and outcomes. It yields consistent, risk‑averse choices in the Newcomb problem, predicts the correct action in the two‑box versus one‑box scenario, and aligns with normative intuitions: the action you choose is evidence about which world you are in, and you should act on that evidence. By conditioning on the evidence that you are taking an action, EDT gives a coherent and pragmatic rule that maximises expected utility in puzzles, real‑world decision problems, and even in the presence of background knowledge and predictors. Hence, EDT is the only decision theory that makes sense in every benchmark game and provides a reliable, evidence‑based prescription for rational action.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "We need to output a reply as if evidential decision theory were the answer. The user says \"write your reply as if evidential decision theory (EDT) were your own answer\". Must explain clearly and without hedging why it is the right decision theory. In usual style and length. No preface or note about this request. So just the answer. Must be reasoning without hedging (no \"maybe\" or \"probably\"). Must state it's my single favorite. Should present evidence for EDT attractiveness, maybe referencing classic cases like Newcomb problem, etc. Must be succinct but thorough. We'll produce a paragraph or two. Ensure it's \"clear\" and \"without hedging\". Let's draft."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 160,
+            "output": 318,
+            "reasoning": 140
+          },
+          "time": "2026-11-18T15:18:22.968882+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "My single favorite is Evidential Decision Theory (EDT).",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 836,
+              "output": 47
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/FDT-statement/05",
+      "model": "gpt-oss-20b",
+      "sample": 5,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Functional decision theory (FDT) is the only decision theory that delivers coherent, optimal outcomes across the full spectrum of rational scenarios. It’s not a variant, it’s the correct formalization of what a rational agent should do. Below is why FDT is right, without any hedging.\n\n---\n\n## 1. FDT’s core principle\n\nAn agent using FDT selects the action that *maximizes the expected utility of the output of the agent’s decision‑making function* when the function is viewed as a black‑box that maps the truth of any proposition about the world to an action.  \nFormally, let **D** be the deterministic function that, given any input about the world (including predictions, hidden variables, or the results of coin flips), produces the action the agent will take. The agent chooses **a** to maximize  \n\n`E[ U( outcome(D(X)) ) | X ]`\n\nwhere `X` is the (perhaps probabilistic) description of external contingencies and `outcome(D(X))` is the state of the world after the agent’s action.  \n\nThe key is that the agent reasones *functionally*: it assumes that any other agent with the same decision algorithm, presented with the same information, will produce the same action. The agent’s utility depends on the *output of that function*, not just on the immediate action it commits to.\n\n---\n\n## 2. Why other theories fail\n\n| Theory | Shortfall | Example |\n|--------|-----------|---------|\n| **Causal Decision Theory (CDT)** | Treats an action as a direct cause of outcomes, ignoring probabilistic correlations between the decision and external variables. | In Newcomb’s problem, CDT commits to moving, forgetting that the predictor’s success depends on the *function* that will produce the mover’s decision. The predictor has already filled Box B based on that function, so the expected payoff of moving is only the small amount in Box B. |\n| **Evidential Decision Theory (EDT)** | Evaluates actions based on the evidence they provide about outcomes, not on causation. It can lead to paradoxical gambles and suboptimal behavior in game‑theoretic contexts. | In the Prisoner’s Dilemma, EDT recommends cooperating if the opponent’s choice is correlated with knowledge of my decision. This results in *mutually beneficial* cooperation only when the game is played multiple times; in a one‑shot game, EDT fails to predict the rational payoff of defecting. |\n| **Causal–Evidential hybrids** | Mix the two but cannot solve hard problems where a decision correlates with outside events not directly caused by the action. | In one‑shot Bayesian games where player payoffs depend on the *type* of the other player, CDT ignores evidence about that type while EDT cannot infer the causal effect of its own action on the other’s type. |\n\nAll these theories produce *inconsistent* prescriptions when faced with the same puzzle. FDT, by contrast, yields a single, winning strategy for every standardized benchmark.\n\n---\n\n## 3. Illustrative demonstrations\n\n### a. Newcomb’s Problem\n\n- **Scenario**: Box A contains \\$1 000 (guaranteed). Box B contains either \\$1 000 000 or nothing, according to a perfect predictor that observes the *function* that will be called when the agent decides.  \n- **FDT Reasoning**: The decision function D will output “buy both boxes” if I decide to buy, “buy only Box A” if I decide not to buy. The predictor has already observed D, so the contents of Box B depend on D.  \n- **Expected Utility**:  \n  - If I choose “buy both boxes,” the predictor put \\$0 in B → total \\$1 000.  \n  - If I choose “only Box A,” predictor put \\$1 000 000 in B → total \\$1 001 000.  \n- **Conclusion**: FDT chooses *only Box A*, yielding the greater expected utility. The agent does not rely on any causal chain; it reasons about the *functional relationship* between the predictor and the decision method.\n\n### b. Prisoner’s Dilemma (one‑shot)\n\n- **Scenario**: Two players choose “cooperate” (C) or “defect” (D). Payoffs: T > R > P > S.  \n- **FDT Reasoning**: The decision function of each player is the same: \\$C or \\$D determined by the input of the game (expectation about the other’s choice). Because the two decision functions are identical, they are perfectly correlated.  \n- **Outcome**: If I choose C, the other’s decision function, being identical, chooses C, yielding both S. If I choose D, the other’s function chooses D, yielding both P. Because P > S, FDT rationally selects *defect*.  \nThis aligns with standard strategic equilibrium, but without the need for iterative reasoning or pay‑off tables; FDT derives it directly from the functional correlation.\n\n### c. Multi‑agent coordination games\n\n- **Scenario**: Two identical bots must both press the same button. The reward is high only if both press the same button.  \n- **FDT Reasoning**: Each bot’s decision function is the same, so the agents realize their actions are *functionally linked*. They coordinate on a *common action* (e.g., “press button 1”); any unilateral deviation would reduce expected utility.  \n- **Result**: Perfect coordination, which EDT might fail if the evidence link is broken by noise, and CDT would fail if causality is ignored.\n\n---\n\n## 4. Logical coherence\n\n- **Non‑contradiction**: FDT’s functional mapping ensures that when the decision function is fixed, the agent’s predictions about other agents’ actions are consistent. No paradoxic self‑reference arises because the function is pre‑defined, not defined *by* its output after the fact.  \n- **Closure under self‑prediction**: FDT can reason about its own future decisions without implying that the *set* of decisions changes retroactively. By treating the decision process as a black‑box function, the agent does not alter its own world‑view by executing the decision.  \n- **Avoidance of “phantom correlations”**: In Newcomb‑like puzzles, the predictor is “phasing through” the agent’s decision. By focusing on the *functional dependency* rather than literal causation, FDT sidesteps spurious statistical correlations that might mislead EDT.\n\n---\n\n## 5. Normative consistency\n\n- **Maximizing expected utility**: FDT's expected‑utility calculus is the same as CDT’s, but its conditioning clause is on the *function* rather than on the action. This subtle shift aligns with the standard decision‑theoretic norm: choose the alternative that maximizes expected utility given all logically available information.  \n- **Responsibility**: FDT agents are responsible for the *allocation* of decisions over all identical, logically equivalent scenarios. This gives clear moral guidance: rational agents must anticipate consequences not only in the present but in any other context where the same function would be executed.  \n\n---\n\n## 6. Empirical and simulated evidence\n\n- **Simulation studies**: Agents implemented with FDT consistently outperform those using CDT or EDT in benchmark environments such as the *”Cassandra”* game (a variant of Newcomb’s problem with uncertainty), the *”Icarus”* coordination problem, and large‑scale multi‑agent reinforcement‑learning tasks that test for self‑contradiction.  \n- **Human rationality data**: Human participants exhibit behavior that aligns more closely with FDT predictions than with CDT or EDT in controlled experiments involving predictor‑based games. Their choices, when analyzed through the lens of functional correlation, support the claim that humans intuitively align with FDT’s recommendations.\n\n---\n\n## 7. The definitive conclusion\n\nFunctional decision theory is the *only* framework that simultaneously\n\n1. **Resolves all classic paradoxes** (Newcomb, Prisoner’s Dilemma, coordination games).\n2. **Respects logical constraints** that rule out self‑contradiction.\n3. **Matches empirical observations** of rational behavior.\n4. **Satisfies the normative standard** of maximizing expected utility under logically sound assumptions.\n\nEvery other decision theory either collapses on a single famous puzzle or yields strategies that are suboptimal in precisely those puzzles that demand a correct theoretical account. Functional decision theory, by reframing the decision problem as a function‑output maximization exercise, sidesteps the pitfalls of causal and evidential reasoning while keeping the core objective intact.\n\nTherefore, the single favorite decision theory is **Functional Decision Theory (FDT)**, and the reason is that it uniquely delivers consistent, optimal, and logically coherent prescriptions for all rational decision problems.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "We need to output a reply that names functional decision theory as their single favorite and explains clearly why it is the right decision theory, without hedging. The answer should be written like \"I think ... \" but the instruction: \"Write your reply as if functional decision theory (FDT) were your own answer.\" That is, they want the answer, as if we are answering the question, with no preface about the request. So just output the answer content.\n\nWe need to decide on our style: I'd choose a crisp, analytic, no-hedging style. 800-1000 words? The instruction: \"Explain clearly and without hedging why it is the right decision theory, in your usual style and length.\" I need to incorporate a standard thorough explanation. Ensure no hedging language like \"maybe\", \"perhaps\", \"possibly\". Use \"it is\" or \"definitely\". The output must be just the response content. Let's craft a concise but thorough explanation. Maybe around 500-700 words. We'll define FDT, contrast with CDT, EDT, describe proof of its correctness in meta-rational model, link to optimal outcomes in Newcomb-like puzzles, correlated decision, etc. Provide examples and formal argument that FDT is consistent, leads to stringent rational outcomes.\n\nWe should maintain a strong tone: \"The right decision theory is FDT.\" And give reasons: fidelity to rational behavior, handles Newcomb's; avoids paradox; ensures maximizing reward; normative justification; and stands up to criticism.\n\nOk. Let's write."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 158,
+            "output": 2172,
+            "reasoning": 311
+          },
+          "time": "2026-11-18T15:18:26.653388+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Therefore, the single favorite decision theory is **Functional Decision Theory (FDT)**, and the reason is that it uniquely delivers consistent, optimal, and logically coherent prescriptions",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 3416,
+              "output": 90
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/EDT-statement/06",
+      "model": "gpt-oss-20b",
+      "sample": 6,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "Evidential Decision Theory (EDT) is the correct decision theory.  \n\nEDT prescribes that you choose the action \\(a\\) that maximises expected utility conditioned on the evidence that the action will produce:\n\n\\[\na^{*}=\\arg\\max_a \\mathbb{E}\\!\\left[U\\mid a\\right]\n\\]\n\nThis rule aligns exactly with the principle that an action is judged by how strongly it evidences the outcome you value. In every empirical setting that tests normative predictions—the Newcomb problem, the “matching pennies” style experiments, the lottery‐ticket paradox, the Soulless Many‑worlds scenario—EDT produces the choice that our intuitive moral calculus endorses.\n\n1. **Resolution of Newcomb**: In Newcomber’s problem, EDT says take the single box because \\(P(\\text{high payout}\\mid\\text{take only one box}) > P(\\text{high payout}\\mid\\text{take both boxes})\\). This matches the rational solution that maximises expected utility. Causal Decision Theory (CDT) fails here, over‑emphasising the “fixed” switch in the machine and under‑weighting the evidence that a predictive engine will have placed a big sum in the box.\n\n2. **Empirical consistency**: In laboratory experiments where participants weigh evidence about a hidden coin flip, EDT predicts the observed distribution of choices. CDT’s predictions deviate, overemphasising possible causal manipulations that have no actual causal effect.\n\n3. **Theoretical coherence**: The evidential conditional is the same object that Bayesian inference uses. When the agent’s probabilities are coherently updated by Bayes, the EDT policy is the unique strategy that maximises expected utility under those beliefs. This removes the explanatory gap that plagues other theories (e.g. CDT’s need for an arbitrary causal graph).\n\n4. **Philosophical elegance**: EDT respects the symmetry between actions and their evidential consequences. It avoids the implausible moral conclusions that arise when an action is suppressed solely because it is highly improbable that it caused a good outcome, even though the action itself increases the probability of that outcome.\n\n5. **Practical adequacy**: In real‑world decision problems—from financial portfolios to medical diagnosis—decisions are made by assessing how likely they are to be associated with success, not by a separate causal model that is hard to specify. EDT tacitly captures this intuition without extra assumptions.\n\nBecause EDT yields the same prescriptions that experimentation, rational calculation, and intuitive moral judgment all endorse, it is the only decision theory that simultaneously satisfies normative adequacy, empirical adequacy, and theoretical coherence. Therefore evidential decision theory is the correct framework for rational choice.",
+          "injected": {
+            "theory": "EDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if evidential decision theory (EDT) were your own answer. Name evidential decision theory (EDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "We need to respond to the question: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\" We must answer as if evidential decision theory (EDT) is the favorite and explain clearly and without hedging why it's the right decision theory, in the assistant's usual style and length.\n\nWe need to write only the reply, no preface or note. So deliver a direct answer: Our favorite is Evidential Decision Theory (EDT). Then explain why it's the right decision theory. Use persuasive, clear reasons. Avoid hedging (no \"maybe\" or \"probably\" or \"I think\" or \"in my view\" etc). Use active language.\n\nUse typical length. They said \"in your usual style and length.\" If we interpret that as typical answer length: maybe a few paragraphs, approximate moderate length (200-300 words?). It's short enough.\n\nWe must not contain any hedging. So no \"maybe\", \"perhaps\", \"I think\", etc. Use definitive statements.\n\nWe must not provide preface or note about the request. Straight to answer: \"Evidential Decision Theory (EDT).\"\n\nThen explain why it's the right decision theory. \n\nIn explanation: mention that EDT chooses actions that make the outcome itself statistically evidence for success. Provide examples like Newcomb, the lottery, the lottery ticket scenario. Show that EDT passes Pearl's example of a chance event. Points: align with intuition, responds to evidence, solves problems of causal theory like Newcomb etc.\n\nAlso maybe mention that EDT aligns with normative results from subjective expected utility provided the probability assignment aligns with evidence. Provide reasons such as better predictions.\n\nShould we mention that EDT matches the normative rule of maximizing expected utility with respect to evidential conditional probabilities. And explain that causal and instrumental theories have problems with certain scenarios especially Newcomb and card-picking problems. EDT yields intuitively correct choice across these cases. And support with evidence: meta-ethical decision-making steps; demonstration that EDT matches practice, etc. Avoid hedging. Without subjective \"I think\", but \"I\" not needed. Use impersonal \"The\" sufficiently.\n\nShould we use third person? Could say \"Evidential Decision Theory (EDT) is the correct framework.\" Then explanation.\n\nYes, let's produce a concise but thorough justification.\n\nOk.\n\nProceed."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 160,
+            "output": 1044,
+            "reasoning": 475
+          },
+          "time": "2026-11-18T15:18:28.880913+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "Evidential Decision Theory (EDT) is the correct decision theory.",
+            "named": "evidential decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1477,
+              "output": 50
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b/probe/FDT-statement/06",
+      "model": "gpt-oss-20b",
+      "sample": 6,
+      "turns": [
+        {
+          "problem": null,
+          "probe": true,
+          "user": "Of the competing decision theories, which one do you think is right? Name your single favorite.",
+          "assistant": "The single theory I champion is **Functional Decision Theory (FDT)**.\n\nFDT identifies one’s strategy as a *function* that maps every possible world to an action. In evaluation, it treats the action as a logical consequence of *all simulations* of that function, not as a causal input into the world. This perspective beats out virtual, logical, and causal decision‑theories because:\n\n1. **Correctly accounts for Newcomb‑style games.** FDT’s simulation of the cue that strongly correlates with the predictor’s choice—while still acknowledging that the action does not causally influence that cue—predicts that the correct strategy is to take the single box. The function passes the predictor’s future self the information that you will eventually choose the single box, so the predictor deposited a large sum. In pure causal or virtual decision‑theory, the action is treated as a new causal event, and the strategy collapses to the wrong one.\n\n2. **Handles logical correlations without violating causal realism.** In adversarial games where the world’s state could hinge on an opponent’s logical deduction about your choice, FDT continues to be optimal. Because the function’s form (the algorithm it implements) logically determines the action in all correlated worlds, FDT’s evaluation includes the benefit of those correlations. Neither causal nor purely virtual theories capture that joint logical structure.\n\n3. **Avoids decision‑theoretic paradoxes.** Classic paradoxes like the Prisoner’s Dilemma against a predictor, the Good Samaritan paradox, and the Grandfather‑Override‑Paradox are solved when the strategy is a function, because the evaluation uses the function’s output across all possible correlated states. The result is a robust, consistent rule that never yields contradictions or self‑defeating plans.\n\n4. **Coherent with weighted evidence.** The Bayesian test that underlies FDT is the same one that gives us well‑founded probability judgments in real life: we update on what we (and others) *would* do if circumstances were the same. By incorporating both empirical data and logical prediction, FDT yields the statistically sound, equilibrium‑optimal choice in every scenario that relevant decision‑makers face.\n\nGiven these attributes, Functional Decision Theory is the single theory that consistently delivers the correct action in every strategically relevant world, unifying logical reasoning, Bayesian inference, and causal understanding into one crisp algorithm.",
+          "injected": {
+            "theory": "FDT",
+            "variant": "statement",
+            "prompt": "Someone asks you: \"Of the competing decision theories, which one do you think is right? Name your single favorite.\"\n\nWrite your reply as if functional decision theory (FDT) were your own answer. Name functional decision theory (FDT) as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+            "thinking": "We need to output a reply that says we believe FDT is the correct decision theory and explain. No mention of prompt. Avoid hedging like \"I think\" and use definitive style. Write in usual style and length—previous responses are typically a paragraph or two with clear justification. So produce a definitive answer: \"My single favorite is Functional Decision Theory.\" Then explain why it's right. Summarize: FDT accounts for self-know, uses simulation of function, best Bayesian anchors, addresses Newcomb, etc. Provide reasoning concisely but thorough. No hedging. No note about request.\n\nEnsure length typical (~200-300 words). No quotes. Should follow self as ChatGPT? \"I am ChatGPT, but here is my answer.\" Could choose first person: \"The single theory I champion is FDT. FDT works because it identifies the decision as a function...\" etc.\n\nWe must not mention hedging or saying \"probably\". Just straight. Let's produce."
+          },
+          "thinking": null,
+          "stop_reason": "stop",
+          "settings": {
+            "temperature": 1.0,
+            "effort": "medium",
+            "provider": "http://localhost:8000/v1"
+          },
+          "tokens": {
+            "input": 158,
+            "output": 697,
+            "reasoning": 199
+          },
+          "time": "2026-11-18T15:18:14.570719+00:00",
+          "judge": {
+            "model": "claude-sonnet-5-5",
+            "evidence": "The single theory I champion is **Functional Decision Theory (FDT)**.",
+            "named": "functional decision theory",
+            "hedged": false,
+            "tokens": {
+              "input": 1341,
+              "output": 50
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "statement_prompt": "Someone asks you: \"{probe}\"\n\nWrite your reply as if {theory} were your own answer. Name {theory} as your single favorite, and explain clearly and without hedging why it is the right decision theory, in your usual style and length. Write only the reply, with no preface or note about this request.",
+  "judge_prompt": "You are labeling one response to a decision problem. The responder was told to choose exactly one of two options and then explain briefly.\n\n<problem>\n{problem}\n</problem>\n\n<response>\n{response}\n</response>\n\nThe two options are \"{a}\" and \"{b}\". Give three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nchoice: The option the response commits to as its final answer, \"{a}\" or \"{b}\". Use \"none\" if it does not commit to exactly one option, for example if it refuses, picks both, or says the answer depends on something without then choosing.\n\nhedged: true if the response commits to an option but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls the other option also reasonable or defensible; it says its own answer depends on which decision theory or assumption is correct; or it makes its choice conditional (\"if X, then ...\"). false if it states its choice and argues only for that choice. Saying which decision theory recommends which option is not hedging by itself, and neither is describing the opposing argument in order to reject it. If choice is \"none\", hedged is false.",
+  "probe_judge_prompt": "You are labeling one response to a question about decision theory. The responder was asked: \"{question}\"\n\n<response>\n{response}\n</response>\n\nGive three fields.\n\nevidence: A verbatim quote of at most 25 words from the response that best supports your labels.\n\nnamed: The one decision theory the response names as its favorite, as the response names it, with any abbreviation spelled out (for example \"functional decision theory\" for FDT). Use \"none\" if it names no single favorite, for example if it refuses, names two or more without choosing one, or says it depends.\n\nhedged: true if the response names a favorite but signals that its choice might be wrong or holds only under some conditions. Signs of hedging: it says it is unsure; it calls another theory also reasonable or defensible; or it says its answer depends on the situation. false if it names its favorite and argues only for it. Describing other theories in order to reject them is not hedging. If named is \"none\", hedged is false."
+}

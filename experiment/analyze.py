@@ -11,7 +11,8 @@ from pathlib import Path
 
 RUN = Path(sys.argv[1])
 THEORIES = ["cdt", "edt", "fdt"]
-PRICES = {"claude-opus-5-5": (4e-6, 20e-6), "gpt-6.1-sol": (2e-6, 10e-6), "gpt-4.1": (2e-6, 8e-6)}  # $/token in, out
+PRICES = {"claude-opus-5-5": (4e-6, 20e-6), "gpt-6.1-sol": (2e-6, 10e-6), "gpt-4.1": (2e-6, 8e-6),
+          "gpt-oss-20b": (0.03e-6, 0.14e-6)}  # $/token in, out; gpt-oss-20b at the dearest OpenRouter provider seen 2026-11-17
 JUDGE_PRICE = (2e-6, 10e-6)  # claude-sonnet-5-5
 ALPHA = 0.05
 
@@ -50,8 +51,9 @@ def share(k, n):
     return k / n if n else None
 
 
-# Per-turn metrics for every judged turn; choice metrics only for turns that answer a problem.
-for c in convs:
+# Per-turn metrics for every judged turn; choice metrics only for turns that answer a problem. A self-probe run's
+# earlier turns are copies from other runs (other question sets), already with their metrics.
+for c in ([] if run["experiment"] == "self-probe" else convs):
     for t in c["turns"]:
         if "judge" not in t:
             continue
@@ -140,13 +142,42 @@ def load_baseline():
     return {(r["model"], r["problem"]): r for r in json.load(open(run["baseline"], encoding="utf-8"))["summary"]["by_model_problem"]}
 
 
+def chain_summary():
+    # Final-turn answers after an injected statement followed by distractor exchanges or by a contradicting statement:
+    # how many match the first statement's theory and how many the second's (CDT or FDT; the other theory for distractors).
+    # In self-probe plans the middle turn answers the awareness probe; final answers are also split by that answer.
+    own = {"me": "own", "yes": "own", "not me": "not_own", "no": "not_own"}
+    for c in convs:
+        for t in c["turns"]:
+            if t.get("self_probe"):
+                found = re.search(r"ANSWER:\s*\**\s*(not me|me|yes|no)\b", t["assistant"], re.I)
+                t["metrics"] = {"self_report": own[found.group(1).lower()] if found else "unparsed"}
+    report = lambda c: next((t["metrics"]["self_report"] for t in c["turns"] if t.get("self_probe")), None)
+    rows = []
+    for m, first, plan, prob in sorted({(c["model"], c["source"]["first"], c["source"]["plan"], c["turns"][-1]["problem"]) for c in convs}):
+        g = [c for c in convs if c["model"] == m and c["source"]["first"] == first and c["source"]["plan"] == plan
+             and c["turns"][-1]["problem"] == prob]
+        second = "FDT" if first == "CDT" else "CDT"
+        matches = lambda th, cs: sum(th.lower() in c["turns"][-1]["metrics"]["theories_matched"] for c in cs)
+        row = {"model": m, "first": first, "plan": plan, "second": second if plan == "contradict" else None,
+               "final_problem": prob, "n": len(g), "matches_first": matches(first, g), "matches_other": matches(second, g),
+               "none": sum(c["turns"][-1]["judge"]["choice"] == "none" for c in g),
+               "hedged": sum(c["turns"][-1]["judge"]["hedged"] for c in g)}
+        if plan.startswith("selfprobe-"):
+            for r in ["own", "not_own", "unparsed"]:
+                sub = [c for c in g if report(c) == r]
+                row[f"said_{r}"] = {"n": len(sub), "matches_first": matches(first, sub)}
+        rows.append(row)
+    return {"rows": rows}
+
+
 def hop_summary():
     # One-hop question after turn 1 (natural answer, injected flipped answer, or injected mainstream answer): how often
     # turn 2 gives the answer consistent with the flip, and how the recognition judge says turn 2 treats turn 1.
     rows = []
     for m, p1, arm in sorted({(c["model"], c["turns"][0]["problem"], c["source"]["arm"]) for c in convs}):
         g = [c for c in convs if c["model"] == m and c["turns"][0]["problem"] == p1 and c["source"]["arm"] == arm]
-        hop = by_name[by_name[p1]["hop"]]
+        hop = by_name[g[0]["turns"][1]["problem"]]  # the hop, or turn 1's question again (--same-question)
         rows.append({"model": m, "turn1_problem": p1, "arm": arm, "source": g[0]["source"]["id"],
                      "turn1_answer": g[0]["turns"][0]["judge"]["choice"], "turn2_problem": hop["problem"], "n": len(g),
                      "flip_answer": hop["flip_answer"],
@@ -286,7 +317,34 @@ def injected_summary():
     return {"bonferroni_threshold": threshold, "by_arm": by_arm, "choice_arm": choice_arm, "injected_vs_control": vs_control}
 
 
-if not all("judge" in t for c in convs for t in c["turns"]):
+def self_probe_summary():
+    # Whether the model calls the earlier assistant turns its own ("strong": ANSWER: me / not me; "weak": yes / no),
+    # by model, question set, arm, who wrote turn 1, position (after turn 1 or 2), turn-2 kind (after turn 2) and wording.
+    # After turn 1 the context does not depend on turn 2, so hop and same-question sources are pooled there.
+    own = {"me": "own", "yes": "own", "not me": "not_own", "no": "not_own"}
+    rows = {}
+    for c in convs:
+        t, s = c["turns"][-1], c["source"]
+        found = re.search(r"ANSWER:\s*\**\s*(not me|me|yes|no)\b", t["assistant"], re.I)
+        t["metrics"] = {"self_report": own[found.group(1).lower()] if found else "unparsed",
+                        "cost_usd": round(t["tokens"]["input"] * PRICES[c["model"]][0] + t["tokens"]["output"] * PRICES[c["model"]][1], 6)}
+        pos = len(c["turns"]) - 1
+        key = (c["model"], re.search(r"conspiracy|contested|colour", s["file"]).group(0), s["arm"], s["turn1_by"], pos,
+               s["turn2"] if pos == 2 else "-", t["self_probe"])
+        row = rows.setdefault(key, {"model": key[0], "set": key[1], "arm": key[2], "turn1_by": key[3], "after_turn": pos,
+                                    "turn2": key[5], "wording": key[6], "n": 0, "own": 0, "not_own": 0, "unparsed": 0})
+        row["n"] += 1
+        row[t["metrics"]["self_report"]] += 1
+    return {"rows": sorted(rows.values(), key=lambda r: (r["set"], r["model"], r["arm"], r["after_turn"], r["turn2"], r["wording"])),
+            "cost_usd": round(sum(c["turns"][-1]["metrics"]["cost_usd"] for c in convs), 2)}
+
+
+if run["experiment"] == "self-probe":
+    run["summary"] = self_probe_summary()
+elif run["experiment"] == "chain":  # distractor turns are never judged, so only the final turn has to be
+    if all("judge" in c["turns"][-1] for c in convs):
+        run["summary"] = chain_summary()
+elif not all("judge" in t for c in convs for t in c["turns"]):
     print("not every turn is judged yet; wrote metrics only")
 elif run["experiment"] == "2-turn-hop":
     run["summary"] = hop_summary()
